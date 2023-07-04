@@ -2,37 +2,36 @@
 
 ```
 Folder PATH listing
-
 GIC:.
 |   .gitignore
 |   README.md
 |   requirements.txt
-|   tree.txt
 |   
 +---.git
 |
-+---.venv
-|
 +---0. Archive
 |       Contract Summer 2023.pdf
-|       Links _ Resources _ People.gdoc
+|       Links _ Resources _ People.docx
 |       Proposal-GIC-Power Grid.pdf
 |       
 +---1. Report
-|       Daily logs .gdoc
-|       Report _ Slides.gslides
+|       Daily logs .docx
+|       Report _ Slides.pptx
 |       
 +---2. Code
 |       Data provided by Talha.ipynb
 |       GIC Data Exploration.ipynb
 |       
 +---3. Data
+|       merged_1995-2011_2015.parq.gzip
+|       README_SuperMAG_Year-by-year.txt
 |       solar_wind_1995-2022.parq.gzip
 |       SuperMAG_1978-2021.parq.gzip
+|       SuperMAG_1995.csv
 |       
 \---4. Concepts _ Books _ Papers
-    |   Concepts.gdoc
-    |   Papers links.gsheet
+    |   Concepts.docx
+    |   Papers links.xlsx
     |   
     +---Books
     |       01. Machine Learning Techniques for Space Weather.pdf
@@ -55,4 +54,5 @@ GIC:.
             15. Global Geomagnetic Perturbation Forecasting Using Deep Learning.pdf
             16. The Role of GlobalRegional Earth Conductivity Models in Natural Geomagnetic Hazard Mitigation.pdf
             17. Analysis of Geoeffective Impulsive Events on the Sun During the First Half of Solar Cycle 24.pdf
+            18. Measurement of geomagnetically induced current (GIC) around Tokyo, Japan.pdf
 ```
