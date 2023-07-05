@@ -37,22 +37,22 @@ GIC:.
     |       01. Machine Learning Techniques for Space Weather.pdf
     |       
     \---Papers
-            01. Replica _ team _ Keesee et al. 2022.pdf
-            02. Team _ Pinto et al. 2022.pdf
-            03. Team _ Physics-Informed Machine Learning A Survey.pdf
-            04. Team _ Analysis_of_Magnetometer_Data_from_a_Strong_G3_Geomagnetic_Disturbance.pdf
-            05. Team _ Real-Time_Monitoring_Applications_for_the_Power_Grid_under_Geomagnetic_Disturbances.pdf
-            06. Team _ Sarker 2021.pdf
-            07. Team _ Siddique et al. 2022.pdf
-            08. Modelling_considerations_for_the_Hydro_One_real-time_GMD_management_system.pdf
-            09. A_Machine_Learning_Approach_to_Detection_of_Geomagnetically_Induced_Currents_in_Power_Grids.pdf
-            10. A_Review_of_Geomagnetically_Induced_Current_Effects_on_Electrical_Power_System_Principles_and_Theory.pdf
-            11. Deep_Learning-Based_Channel_Prediction_for_Edge_Co.pdf
-            12. Impact of geomagnetic disturbances on power transformers.pdf
-            13. Insight into impact of geomagnetically induced currents on power.pdf
-            14. Optimal_Placement_of_GIC_Blocking_Devices_Considering_Equipment_Thermal_Limits_and_Power_System_Operation_Constraints.pdf
-            15. Global Geomagnetic Perturbation Forecasting Using Deep Learning.pdf
-            16. The Role of GlobalRegional Earth Conductivity Models in Natural Geomagnetic Hazard Mitigation.pdf
-            17. Analysis of Geoeffective Impulsive Events on the Sun During the First Half of Solar Cycle 24.pdf
-            18. Measurement of geomagnetically induced current (GIC) around Tokyo, Japan.pdf
+            01. [Link](https://www.frontiersin.org/articles/10.3389/fspas.2020.550874/full) Replica _ team _ Keesee et al. 2022.pdf
+            02. [Link](https://www.frontiersin.org/articles/10.3389/fspas.2022.869740/full) Team _ Pinto et al. 2022.pdf
+            03. [Link](https://arxiv.org/abs/2211.08064) Team _ Physics-Informed Machine Learning A Survey.pdf
+            04. [Link](https://ieeexplore.ieee.org/document/9750736) Team _ Analysis of Magnetometer Data from a Strong G3 Geomagnetic Disturbance.pdf
+            05. [Link](https://ieeexplore.ieee.org/document/9320114) Team _ Real-Time Monitoring Applications for the Power Grid under Geomagnetic Disturbances.pdf
+            06. [Link](https://www.mdpi.com/2076-3263/12/1/27) Team _ Sarker 2021.pdf
+            07. [Link](https://www.mdpi.com/2076-3263/12/1/27) Team _ Siddique et al. 2022.pdf
+            08. [Link](https://ieeexplore.ieee.org/abstract/document/6673069?casa_token=HDPm8ZLy3_YAAAAA:n97uiGps4ET-G6Jg8DVMRvVm8awpLxl_k-RxQAJSppDk7wfWWHIep8XdWtQclyBoJTvLEZhfYw) Modelling considerations for the Hydro One real-time GMD management system.pdf
+            09. [Link](https://ieeexplore.ieee.org/abstract/document/8922626?casa_token=hxKIZkn98KoAAAAA:KDbYorTQm_kz0LkVBMn1ystWSqNKMm_BPJyRVptBC5tb8I5KZLejHWdwcfhmSFTfIv70lGcAzg) A Machine Learning Approach to Detection of Geomagnetically Induced Currents in Power Grids.pdf
+            10. [Link](https://ieeexplore.ieee.org/abstract/document/9241698) A Review of Geomagnetically Induced Current Effects on Electrical Power System Principles and Theory.pdf
+            11. [Link](https://ieeexplore.ieee.org/abstract/document/8805349) Deep Learning-Based Channel Prediction for Edge Co.pdf
+            12. [Link](https://link.springer.com/article/10.1007/s41872-021-00179-8) Impact of geomagnetic disturbances on power transformers.pdf
+            13. [Link](https://www.sciencedirect.com/science/article/pii/S0378779620307252?casa_token=Vtbz2fn5_E8AAAAA:IU8o4Wv9gX98aAT9z8-1R8SrYMk3ZYl-xt158Bhx1NRLwSZGIIUAMWpfPp8eDgep3FKNnz6ASw) Insight into impact of geomagnetically induced currents on power.pdf
+            14. [Link](https://ieeexplore.ieee.org/abstract/document/7938414?casa_token=hdssR4UZ9JYAAAAA:-QTLlm5n6ICz1oewenSNR5scQ7X7mZVHTXBozXnGL274cqq7awGmFuE4P--3DjaNQcYnIWC3xw) Optimal Placement of GIC Blocking Devices Considering Equipment Thermal Limits and Power System Operation Constraints.pdf
+            15. [Link](https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2022SW003045) Global Geomagnetic Perturbation Forecasting Using Deep Learning.pdf
+            16. [Link](https://link.springer.com/article/10.1007/s10712-019-09579-z) The Role of GlobalRegional Earth Conductivity Models in Natural Geomagnetic Hazard Mitigation.pdf
+            17. [Link](https://link.springer.com/article/10.1007/s11207-023-02119-4) Analysis of Geoeffective Impulsive Events on the Sun During the First Half of Solar Cycle 24.pdf
+            18. [Link](https://earth-planets-space.springeropen.com/articles/10.1186/s40623-021-01422-3) Measurement of geomagnetically induced current (GIC) around Tokyo, Japan.pdf
 ```
