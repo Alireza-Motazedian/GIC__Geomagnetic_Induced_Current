@@ -15,7 +15,7 @@ GIC:.
 |       Proposal-GIC-Power Grid.pdf
 |       
 +---1. Report
-|       Daily logs .docx
+|       Daily logs.md
 |       Report _ Slides.pptx
 |       
 +---2. Code
