@@ -1,0 +1,192 @@
+Daily logs (Summer 2023)
+=====
+
+- 8 h/day   
+    - Every hour:    
+        - 45 minutes: Work   
+        - 15 min: Break (Meditation, Drinking water, Walking, Nap, Workout)   
+
+- Week 7 _ July 03 - 07
+    - 07-07-2023 Friday
+        - 09-10: 
+        - 10-11: 
+        - 11-12: 
+        - 12-01: 
+        - 01-02: 
+        - 02-03: 
+        - 03-04: 
+        - 04-05: 
+    - 07-06-2023 Thursday
+        - 09-10: 
+        - 10-11: 
+        - 11-12: 
+        - 12-01: 
+        - 01-02: 
+        - 02-03: 
+        - 03-04: 
+        - 04-05: 
+    - 07-05-2023 Wednesday
+        - 09-10: 
+        - 10-11: 
+        - 11-12: 
+        - 12-01: 
+        - 01-02: 
+        - 02-03: 
+        - 03-04: 
+        - 04-05: 
+    - 07-04-2023 Tuesday
+        - 09-10: Code: Merge dataset
+        - 10-11: Code: Merge dataset
+        - 11-12: Code: Data exploration (dfe)
+        - 12-01: Code: Data exploration (dfn)
+        - 01-02: Code: Data exploration (Plots)
+        - 02-03: Concept of features
+        - 03-04: Concept of features
+        - 04-05: Learning concept of dealing with missing values
+    - 07-03-2023 Monday
+        - 09-10: Learning concept of the project (example)
+        - 10-11: Learning concept of the project (example) 
+        - 11-12: Discussion with Talha (dataset)
+        - 12-01: Discussion with Talha (dataset)
+        - 01-02: Code: Merge dataset
+        - 02-03: Code: Data exploration (dfe)
+        - 03-04: Code: Data exploration (dfn)
+        - 04-05: Code: Data exploration (Plots)
+- Week 6 _ June 26 - 30
+    - 06-30-2023 Friday
+        - 09-10: Paper/ Concepts
+        - 10-11: Paper/ Concepts
+        - 11-12: Paper/ Concepts
+        - 12-01: Paper/ Concepts
+        - 01-02: Paper/ Concepts
+        - 02-03: Paper/ Concepts
+        - 03-04: Paper/ Concepts
+        - 04-05: GitHub
+    - 06-29-2023 Thursday
+        - 09-10: Paper
+        - 10-11: Paper
+        - 11-12: Paper
+        - 12-01: Code/Data
+        - 01-02: Code/Data
+        - 02-03: Code/Data
+        - 03-04: Hyper-parameter tuning process
+        - 04-05: GitHub
+    - 06-28-2023 Wednesday
+        - 09-10: Paper
+        - 10-11: Paper
+        - 11-12: Paper
+        - 12-01: Paper
+        - 01-02: Paper
+        - 02-03: Report
+        - 03-04: GitHub
+        - 04-05: Report
+    - 06-27-2023 Tuesday
+        - 09-10: Headache 
+        - 10-11: Headache 
+        - 11-12: Headache 
+        - 12-01: Headache 
+        - 01-02: Time Series Analysis: MA (q)
+        - 02-03: Time Series Analysis: AR (p)
+        - 03-04: Time Series Analysis: ARMA (p,q)
+        - 04-05: Time Series Analysis: ARIMA (p,d,q)
+    - 06-26-2023 Monday
+        - 09-10: writing code to comparison
+        - 10-11: writing code to comparison
+        - 11-12: writing code to comparison
+        - 12-01: writing code to comparison
+        - 01-02: writing code to comparison
+        - 02-03: paper
+        - 03-04: paper
+        - 04-05: paper
+- Week 5 _ June 19 - 23
+    - 06-23-2023 Friday
+        - Feature selection (SuperMAG)
+        - There is no description of data on the website.
+        - There are two ways to download the data. I checked all of them and the data are different.
+        - Find a description through website - not good
+        - Search to find a description
+        - Both descriptions are in Code
+        - Write a code to compare data
+
+    - 06-22-2023 Thursday
+        - Data Exploration
+        - Feature selection
+    - 06-21-2023 Wednesday
+        - Data Exploration
+        - GitHub
+    - 06-20-2023 Tuesday
+        - Data Exploration
+        - ??? Feature selection 
+        - ??? https://omniweb.gsfc.nasa.gov/html/omni_min_data.html
+        - ??? https://omniweb.gsfc.nasa.gov/html/hro_interface.html
+        - 
+    - 06-19-2023 Monday
+        - Holiday
+
+- Week 4 _ June 12 - 16
+    - 06-16-2023 Friday
+        - Meeting with Talha to discuss how to download the dataset 
+        - Year-by-year downloads of data
+        - Preparing the way data is downloaded in Google Colab
+
+    - 06-15-2023 Thursday
+        - Files management
+        - Google Docs: Resources
+        - Google Docs: Concepts
+        - Website data
+    - 06-14-2023 Wednesday
+        - Data acquisition
+        - Cleaning data
+    - 06-13-2023 Tuesday
+        - Data acquisition
+    - 06-12-2023 Monday
+        - Data acquisition
+- Week 3 _ June 5 - 9
+    - 06-09-2023 Friday
+        - Reading the paper to replicate it
+        - 
+    - 06-08-2023 Thursday
+        - Githup
+        - 
+    - 06-07-2023 Wednesday
+        - Meeting
+        - Reading papers
+    - 06-06-2023 Tuesday
+        - Reading a couple of PIML’s pages
+        - Preparing report
+    -     - 06-05-2023 Monday
+        - Group discussion (Talha, Sabby, Alireza)
+Talha provided us with lots of information about GIC, ML, Magnemoter System, and Microcontroller, ...
+        - Reading a couple of PIML’s pages
+- Week 2 _ May 29 - June 2
+    - 06-02-2023 Friday
+        - Reading 2 papers 
+        - Analyzing and extracting concepts
+    - 06-01-2023 Thursday
+        - Reading a paper titled Physics-Informed Machine Learning (PILM) - Long survay
+
+    - 05-31-2023 Wednesday
+        - Discussion with Talha
+        - Reading a paper titled Physics-Informed Machine Learning (PILM) - Long survay
+    - 05-30-2023 Tuesday
+        - Reading and thinking about SuperMAG's thermal effect
+    - 05-29-2023 Monday
+        - Holiday
+        - Reading Chapter 1 of ML for Space weather
+
+- Week 1 _ May 22 - 26
+    - 05-26-2023 Friday
+        - Reading the paper bySiddique et al. 2022. It is long survey
+    - 05-25-2023 Thursday
+        - Meeting
+        - Search to learn the fundamental concepts of our project
+    - 05-24-2023 Wednesday
+        - Discussion with Talha
+        - Literature Review
+    - 05-23-2023 Tuesday
+        - Literature Review
+        - Solar wind and SuperMAG data site review
+    - 05-22-2023 Monday
+        - Literature Review 
+        - System set-up
+        - Data acquisition with the help of Talha
