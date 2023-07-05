@@ -11,7 +11,7 @@ GIC:.
 |
 +---0. Archive
 |       Contract Summer 2023.pdf
-|       Links _ Resources _ People.docx
+|       Links _ Resources _ People.md
 |       Proposal-GIC-Power Grid.pdf
 |       
 +---1. Report
