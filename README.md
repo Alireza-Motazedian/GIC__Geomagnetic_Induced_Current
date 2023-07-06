@@ -31,7 +31,6 @@ GIC:.
 |       
 \---4. Concepts _ Books _ Papers
     |   Concepts.docx
-    |   Papers links.xlsx
     |   
     +---Books
     |       01. Machine Learning Techniques for Space Weather.pdf
