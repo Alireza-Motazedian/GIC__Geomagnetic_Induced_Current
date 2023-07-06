@@ -1,0 +1,391 @@
+
+Geomagnetic Induced Currents (GIC)
+=====
+
+**Alireza Motazedian**
+
+
+**Disclaimer**: This file contains a web search for personal use. In case of using the materials in our works, we need to take care of plagiarism issues first. 
+
+
+## Table of contents
+
+- [0. Jargon](#0-jargon)  
+- [1. Introduction](#1-introduction)  
+    - [1.1. Solar wind: What is it and how does it affect Earth?](#11-solar-wind-what-is-it-and-how-does-it-affect-earth)	
+    - [1.2. Geomagnetic Induced Currents (GIC)](#12-geomagnetic-induced-currents-gic)	
+    - [1.3. Concept of UT](#13-concept-of-ut)	
+- [2. Website](#2-website)	
+    - [2.1. SuperMAG](#21-supermag)	
+        - [2.1.1 SuperMAG](#211-supermag)	
+        - [2.1.2. Subtract Baseline](#212-subtract-baseline)	
+        - [2.1.3. High Fidelity and Low Fidelity](#213-high-fidelity-and-low-fidelity)	
+    - [2.2. Solar wind](#22-solar-wind)	
+- [3. Data Variable Definitions](#3-data-variable-definitions)	
+    - [3.1. Solar wind (description)](#31-solar-wind-description)	
+    - [3.2. SuperMAG (description)](#32-supermag-description)	
+- [4. Machine Learning](#4-machine-learning)	
+    - [4.1. Time Series Analysis](#41-time-series-analysis)	
+    - [4.2. Kriging Techniques](#42-kriging-techniques)	
+    - [4.3. ADAM](#43-adam)	
+- [5. Papers](#5-papers)	
+    - [5.1. PILM: A Survey on Problems, Methods and Applications](#51-pilm-a-survey-on-problems-methods-and-applications)	
+    - [5.2. a real-time GMD monitoring system](#52-a-real-time-gmd-monitoring-system)	
+
+
+
+# 0. Jargon
+1. PIML: Physics-Informed Machine Learning 
+2. PINN: Physics-Informed Neutral Network
+3. PDE: Partial Differential Equation
+4. ODE: Ordinary Differential Equation
+5. SDE: Stochastic Differential Equation
+6. GCN: Graph Convolutional Network
+7. FDM: Finite Difference Method 
+8. FVM: Finite Volume Method
+9. SGD: Stochastic Gradient Descent
+10. CNN: Convolutional Neural Network
+11. LSTM: Long-Short Term Memory network 
+12. RNN: Recurrent Neural Networks 
+13. GRU: Gated Recurrent Unit 
+14. MLP: Multi-Layer Perceptron
+15. NTK: Neural Tangeting Kernel 
+16. TFC: Theory of Functional Connections
+17. HNN: Hamiltonian Neural Networks
+18. VAE: Variational Auto-Encoders
+19. GMD: Geomagnetic Disturbances
+20. CME: Coronal Mass Ejection
+21. SWPC: Space Weather Prediction Center 
+22. NOAA: National Oceanic and Atmospheric Administration 
+23. DASI: Distributed Arrays of Small Instruments
+24. NSF: National Science Foundation 
+25. GDV: Geographic Data View
+26. PGMD: Pseudo-Geographic Mosaic Display
+27. POD: Proper Orthogonal Decomposition
+28. FNO: Fourier Neural Operator 
+29. FFT: Fast Fourier Transformation
+30. GEM: Geospace Environment Modeling
+31. RELU: REctified Linear Unit
+32. MSE: Mean Square Error
+32. RMSE: Root Mean Square Error
+33. ADAM: Adaptive Moment Estimation
+
+# 1. Introduction
+
+## 1.1. Solar wind: What is it and how does it affect Earth?
+ 
+Solar wind is a stream of charged particles, mainly protons and electrons, flowing from the Sun into space. It is a continuous flow of high-speed particles that carries the Sun's magnetic field throughout the solar system. The solar wind is created by the Sun's hot outer atmosphere, known as the corona, which has temperatures reaching millions of degrees Celsius. The solar wind affects Earth in several ways:
+
+1.	**Aurora Formation**: The solar wind plays a crucial role in the formation of auroras, also known as the northern lights (aurora borealis) in the Northern Hemisphere and the southern lights (aurora australis) in the Southern Hemisphere. When solar wind particles interact with Earth's magnetosphere, they create a beautiful display of colorful lights in the polar regions.
+
+2.	**Magnetic Field Interaction**: The solar wind carries the Sun's magnetic field, which interacts with Earth's magnetosphere. This interaction can cause various effects, including geomagnetic storms and disturbances in Earth's magnetic field. Geomagnetic storms can lead to disruptions in satellite communications, power grids, and navigation systems.
+
+3.	**Space Weather**: The solar wind and its variations contribute to space weather, which refers to the dynamic conditions in the space environment surrounding Earth. Space weather can impact satellite operations, spacecraft trajectories, and astronaut safety during spacewalks or extended missions in space. Understanding and predicting solar wind behavior is crucial for space weather forecasting and protecting space-based assets.
+
+4.	**Radiation Hazard**: The solar wind carries energetic particles that can pose a radiation hazard to astronauts and satellites in space. Exposure to high-energy particles from the solar wind can damage DNA and increase the risk of cancer and other health effects in humans. It is necessary to consider radiation protection measures for space missions beyond Earth's protective magnetosphere.
+
+In summary, the solar wind, as a continuous flow of charged particles from the Sun, affects Earth's magnetic field, causes aurora formations, contributes to space weather phenomena, and presents radiation hazards for space activities. Understanding the behavior of the solar wind is essential for studying and mitigating its impacts on Earth and space-based systems.
+
+![](./images_GIC/GIC_1.png)
+
+## 1.2. Geomagnetic Induced Currents (GIC)
+
+Geomagnetic Induced Currents (GICs) are created as a result of the interaction between the Earth's magnetic field and varying external magnetic fields caused by geomagnetic disturbances, particularly during geomagnetic storms. The process by which GICs are created can be explained as follows:
+
+1.	**Solar Activity**: Geomagnetic storms and GICs are primarily driven by solar activity. The Sun constantly emits a stream of charged particles called the solar wind. Occasionally, solar eruptions like coronal mass ejections (CMEs) occur, which release a large amount of plasma and magnetic fields into space.
+
+2.	**Interaction with the Earth**: When the solar wind and its embedded magnetic fields reach the Earth, they interact with the Earth's magnetic field, which surrounds our planet and extends into space. The Earth's magnetic field is generated by the motion of molten iron within the planet's core.
+
+3.	**Magnetic Field Disturbances**: The interaction between the solar wind and the Earth's magnetic field can cause variations in the Earth's magnetic field. These variations are typically stronger during geomagnetic storms triggered by intense solar activity.
+
+4.	**Induced Electric Fields**: The changing magnetic field induces electric fields in the Earth's conductive crust and near-surface materials. This occurs due to Faraday's law of electromagnetic induction, which states that a changing magnetic field induces an electric field in a conductor.
+
+5.	**Conductive Materials**: The induced electric fields drive electric currents through conductive materials on or near the Earth's surface. Common conductive materials include power transmission lines, pipelines, and other long metallic structures.
+
+6.	**Path of Least Resistance**: The induced currents flow through the path of least resistance, following conductive paths such as power grids and pipelines. These currents can circulate through extensive networks, potentially affecting multiple regions.
+
+The magnitude of GICs depends on various factors, including the intensity and duration of the geomagnetic disturbance, the characteristics of the Earth's magnetic field at the location, the conductivity of the materials, and the configuration of the infrastructure.
+
+Monitoring and predicting geomagnetic disturbances are essential for assessing the potential risk of GICs and implementing measures to mitigate their effects on critical infrastructure.
+
+## 1.3. Concept of UT
+The magnetometer operates on Coordinated Universal Time (UT) and has a lag of 5 hours. 
+This means that local midnight in Ottawa occurs at 05:00 UT. The lag is important because it helps align the magnetometer readings with specific time references and allows for consistent analysis and comparison of the data.
+
+# 2. Website 
+
+## 2.1. SuperMAG
+
+### 2.1.1 SuperMAG
+SuperMAG is a worldwide collaboration of organizations and agencies that provide ground-based magnetometer measurements. These instruments are used to monitor variations in Earth's magnetic field, providing valuable data for understanding various geomagnetic phenomena like auroras, solar storms, and the interaction between solar wind and Earth's magnetosphere.
+
+### 2.1.2. Subtract Baseline
+In the context of SuperMAG data, "Subtract Baseline" could refer to the process of removing the baseline or background magnetic field level from the observed data. This helps to isolate the variations or fluctuations in the magnetic field that are of interest.
+
+In other words, the 'baseline' represents the average or normal state of the magnetic field, and by subtracting this from the actual measurements, scientists can better see and analyze the deviations or anomalies in the field. This could be particularly important for identifying and studying events like magnetic storms or substorms.
+In short, "Subtract Baseline" is a data preprocessing step that helps isolate the signal of interest (in this case, magnetic variations) from the overall data.
+
+### 2.1.3. High Fidelity and Low Fidelity
+The terms "High Fidelity" and "Low Fidelity" in the context of data typically refer to the level of detail, accuracy, and quality of the data.
+
+High Fidelity data is generally more accurate and has more detailed information. It often comes from higher quality or more precise instruments and measurements. It has a higher resolution, meaning it has more data points over a given interval, which can give a more detailed picture of changes over time.
+
+Low Fidelity data, on the other hand, is generally less detailed and may be less accurate. It has a lower resolution, meaning it has fewer data points over the same interval. This might mean that some detail is lost, but it can also make the data easier to handle and process, particularly in large quantities or over large timescales.
+
+SuperMAG service includes data with two different temporal resolutions, 1-min, and 1-sec. The latter is a subset of the former as not all stations provide 1-sec data. 
+The 1-min data and all derived products can be accessed by selecting the 'Low Fidelity' option under Indices, Data, Polar Plots, Movies, and Products. 
+The 1-sec data and all derived products can be accessed by selecting the 'High Fidelity' option under Data and Polar Plots.
+
+## 2.2. Solar wind
+
+# 3. Data Variable Definitions 
+
+## 3.1. Solar wind (description)
+Here is a description for each column in your "Solar wind Omniweb" dataset:
+
+⮚	**year**: The year in which the observation was made.
+
+⮚	**day**: The day of the year when the observation was made, typically ranging from 1 to 365 (or 366 in leap years).
+
+⮚	**hour**: The hour of the day (in a 24-hour format) when the observation was made.
+
+⮚	**minute**: The minute of the hour when the observation was made.
+
+⮚	**Field magnitude average**: This is the average magnitude of the Interplanetary Magnetic Field (IMF) over the given period. 
+
+The Interplanetary Magnetic Field (IMF) is a crucial aspect of our solar system, extending from the Sun into interplanetary space. It's carried out into space by the solar wind, a stream of charged particles emitted from the Sun's upper atmosphere. The IMF varies and has complex structures based on the Sun's rotation and solar activities like solar flares and sunspots.
+
+Two main types of IMF exist:  
+✔	**The Parker Spiral**: This type of IMF is named after solar astrophysicist Eugene Parker. It is a spiral-shaped magnetic field resulting from the rotation of the Sun. The Sun rotates faster at its equator than at its poles, causing the magnetic field lines to take on a spiral shape, much like the water from a spinning garden hose.
+ 
+![](./images_GIC/GIC_2.png)
+
+![](./images_GIC/GIC_3.png)
+
+![](./images_GIC/GIC_4.png)
+
+✔	**The Interplanetary Shock**: This is a rapid change in the IMF caused by a significant solar event like a coronal mass ejection (CME). A CME is a massive burst of solar wind and magnetic fields rising above the solar corona or being released into space. These shocks can travel through space and affect planets' magnetic fields, including Earth's.
+
+![](./images_GIC/GIC_5.png)
+Interplanetary shock wave S f developed in the solar wind as a result of a chromospheric flare or a coronal mass ejection on the Sun S, and force lines of the interplanetary magnetic field B sw. Spacecraft are schematically shown in the neighborhood of the Lagrange point L 1 and the Earth's bow shock S b and in the magnetosheath between S b and the magnetopause m which is the boundary of the magnetosphere M (shown in section with an image of the Earth's magnetic field); broken curve corresponds to the Earth's (E) orbit.  
+
+
+The "field magnitude average" metric is a measure of the IMF's average strength over a specific period. It incorporates the average of the IMF's three components: the north-south component, the east-west component, and the radial component (the component that points towards or away from the Sun). 
+
+The IMF and its influence are not static but subject to change based on solar activity. Therefore, scientists employ various tools and techniques, including satellite observations and mathematical models, to track and forecast changes in the IMF. Understanding these changes is pivotal for our comprehension of the Sun-Earth connection, which can influence space weather and potentially disrupt technologies that our society heavily relies upon.
+
+Here are some additional details about the field magnitude average metric:  
+●	The units of the field magnitude average metric are nanotesla (nT).  
+●	The average IMF strength is about 5nT.  
+●	The strongest IMF storms can have field strengths of up to 100nT.  
+●	The field magnitude average metric is typically calculated over a period of days or weeks.
+
+The term "heliosphere" is used to denote the vast bubble-like region surrounding the Sun, dominated by the solar wind and its associated IMF. This region acts as a protective shield for the planets within our solar system against cosmic radiation. When we refer to the IMF as the "Heliospheric Magnetic Field," we emphasize its role and reach throughout the heliosphere.
+
+![](./images_GIC/GIC_6.png)
+![](./images_GIC/GIC_7.png)
+
+
+⮚	**Bx**, **By**, **Bz**: These are components of the IMF in the Geocentric Solar Magnetospheric (GSM) coordinate system. 
+
+![](./images_GIC/GIC_8.png)
+The geocentric coordinate system is not a planar coordinate system based on a map projection. It is a geographic coordinate system in which the earth is modeled as a sphere or spheroid in a right-handed XYZ (3D Cartesian) system measured from the center of the earth.
+
+
+
+●	**Bx**: This component represents the IMF along the Earth-Sun direction. It indicates the strength and direction of the magnetic field aligned with the line connecting the Earth and the Sun. It can be thought of as the "north-south" component of the IMF.
+
+●	**By**: This component represents the IMF perpendicular to the Earth-Sun line but within the ecliptic plane. The ecliptic plane is the plane defined by the Earth's orbit around the Sun. By indicates the strength and direction of the magnetic field in the east-west direction within this plane.
+
+●	**Bz**: This component represents the IMF perpendicular to the ecliptic plane. It indicates the strength and direction of the magnetic field pointing either northward or southward. A positive Bz value indicates a northward-directed magnetic field, while a negative Bz value indicates a southward-directed magnetic field.
+
+![](./images_GIC/GIC_9.png)
+
+⮚	**Speed**: The speed of the solar wind, usually measured in kilometers per second.
+
+●	The speed of the solar wind is usually measured in kilometers per second (km/s).  
+●	The speed of the solar wind can vary from about 300 km/s to about 800 km/s.  
+●	The speed of the solar wind is influenced by the Sun's magnetic field, the solar activity, and the distance from the Sun.  
+●	CMEs can cause the speed of the solar wind to increase significantly.
+
+
+⮚	**Vx**, **Vy**, **Vz**: These are the components of the solar wind velocity in the GSM coordinate system.
+●	**Vx**: This component represents the velocity of the solar wind in the direction from the Earth towards the Sun. This is along the X-axis of the GSM system. A negative Vx value would typically indicate solar wind moving from the Sun towards the Earth.
+
+●	**Vy**: This component represents the velocity of the solar wind in the direction perpendicular to the Earth-Sun line, within the plane of the Earth's orbit around the Sun (the ecliptic plane). This is along the Y-axis of the GSM system.
+
+●	**Vz**: This component represents the velocity of the solar wind in the direction perpendicular to the ecliptic plane, essentially northward or southward relative to the Earth-Sun line. This is along the Z-axis of the GSM system.
+
+⮚	**Proton density**: The density of protons in the solar wind.
+
+●	The proton density of the solar wind is usually measured in protons per cubic centimeter (p/cc).  
+●	The proton density of the solar wind can vary from about 1 p/cc to about 100 p/cc.  
+●	The proton density is influenced by the Sun's magnetic field, the solar activity, and the distance from the Sun.  
+●	CMEs can cause the proton density of the solar wind to increase significantly.
+
+⮚	**Proton temperature**: The temperature of the solar wind protons.
+
+●	The proton temperature of the solar wind is usually measured in Kelvin (K).  
+●	The proton temperature of the solar wind can vary from about 1 million K to about 10 million K.  
+●	The proton temperature is influenced by the Sun's magnetic field, the solar activity, and the distance from the Sun.  
+●	CMEs can cause the proton temperature of the solar wind to increase significantly.
+
+⮚	**Flow pressure**: The dynamic pressure of the solar wind.
+
+●	The flow pressure of the solar wind is usually measured in nanopascals (nPa).  
+●	The flow pressure of the solar wind can vary from about 1 nPa to about 100 nPa.  
+●	The flow pressure is influenced by the density and speed of the solar wind.  
+●	CMEs can cause the flow pressure of the solar wind to increase significantly.
+
+⮚	**Electric field**: 
+The solar wind's electric field is a critical parameter in understanding space weather and geomagnetic activities. It arises due to the motion of the charged particles in the solar wind across the Interplanetary Magnetic Field (IMF). This motion of charged particles creates an electric field, which is perpendicular to both the solar wind velocity and the IMF direction. Visualize the solar wind velocity vector (V) and the IMF vector (B) within this 3D space. The electric field vector (E) will be perpendicular to both V and B. In reality, these vectors may not align perfectly with the axes of the GSM system, but it's important to understand that E, V, and B are mutually perpendicular in the frame of the solar wind.
+
+●	The electric field in the solar wind is usually measured in volts per meter (V/m).  
+●	The electric field in the solar wind can vary from about 0.1 V/m to about 1000 V/m.  
+●	The electric field is influenced by the solar wind speed and the IMF.  
+●	CMEs can cause the electric field in the solar wind to increase significantly.
+
+![](./images_GIC/GIC_10.png)
+![](./images_GIC/GIC_11.png)
+![](./images_GIC/GIC_12.png)
+
+⮚	**SYM/H**:
+
+The SYM/H index is a very important tool in the study of geomagnetism and space weather, specifically for monitoring and studying geomagnetic storms. This index is derived from magnetic field measurements taken at several locations around the Earth, and it provides a measure of the changes in the Earth's magnetic field in response to solar activity.
+
+Here's how it works:
+Geomagnetic storms are global disturbances in the Earth's magnetic field caused by changes in the solar wind. These disturbances can cause the Earth's magnetic field to fluctuate, and the SYM/H index is designed to measure these fluctuations.
+
+✔	**Symmetric part of the disturbance**: When a geomagnetic storm occurs, it causes disturbances in the Earth's magnetic field that can be roughly divided into two parts: a symmetric part and an asymmetric part. The symmetric part represents the average global effect of the storm, while the asymmetric part represents localized effects. The SYM/H index specifically measures the symmetric part of the disturbance in the horizontal plane at the Earth's surface.
+
+✔	**Measurement in the horizontal plane**: The SYM/H index focuses on changes in the horizontal component of the Earth's magnetic field. This is important because it's the horizontal component that primarily interacts with the Earth's surface and atmosphere, causing the effects we associate with geomagnetic storms.
+
+✔	**Monitoring and studying geomagnetic storms**: The SYM/H index provides a way to quantify the intensity of a geomagnetic storm. By tracking changes in the SYM/H index, researchers can monitor the progress of a storm, measure its peak intensity, and study its effects. A larger change in the SYM/H index corresponds to a stronger storm.
+
+●	The SYM/H index is usually measured in nanotesla (nT).  
+●	The SYM/H index is a measure of the symmetric part of the disturbance magnetic field in the horizontal plane at the Earth's surface.  
+●	The disturbance magnetic field is the magnetic field that is caused by the interaction of the solar wind with the Earth's magnetic field.  
+●	Geomagnetic storms are caused by large solar storms, such as coronal mass ejections (CMEs).  
+●	The SYM/H index is a useful tool for space weather forecasting.
+
+## 3.2. SuperMAG (description)
+
+# 4. Machine Learning
+## 4.1. Time Series Analysis
+
+## 4.2. Kriging Techniques
+Kriging, also known as Gaussian process regression, is a statistical method used for interpolation and spatial prediction in various fields, including geostatistics, soil science, geology, and public health. It is named after the South African mining engineer Danie Krige, who played a key role in its development. 
+
+Kriging involves a multistep process that includes exploratory statistical analysis of the data, variogram modeling, creating the surface, and optionally exploring a variance surface. The method is particularly appropriate when there is a spatially correlated distance or directional bias in the data. 
+
+The key idea behind kriging is to estimate the value of a variable at unsampled locations based on a limited set of sampled data points. It leverages the spatial correlation structure of the data, assuming that nearby locations are more similar than distant ones. Kriging aims to provide the best linear unbiased prediction (BLUP) at the unsampled locations, taking into account the spatial autocorrelation. 
+
+The method is based on the concept of a Gaussian process, where the values at different locations are considered as random variables following a multivariate normal distribution. By estimating the spatial autocovariance or semivariogram from the data, kriging allows for the interpolation of values at any unobserved location within the study area. 
+
+Kriging provides several advantages, including the ability to incorporate spatial dependence, quantify uncertainty through prediction variances, and produce smooth surfaces. It can be applied to various types of data, such as continuous variables (e.g., pollutant concentrations) or discrete variables (e.g., presence/absence of a disease). The choice of kriging variant depends on the specific characteristics of the data and the desired spatial predictions. In practice, kriging is implemented through specialized software packages and programming languages like R or SAS. 
+
+Overall, kriging is a powerful geostatistical technique that enables spatial interpolation and prediction by incorporating spatial autocorrelation and providing estimates with uncertainty measures. It has wide-ranging applications in fields that require spatial data analysis and prediction.
+
+## 4.3. ADAM
+ADAM, short for Adaptive Moment Estimation, is a popular optimization algorithm used in machine learning and deep learning for training models. It's an extension to stochastic gradient descent, which is a commonly used optimization method for training neural networks.
+ADAM offers several advantages over basic stochastic gradient descent:
+
+Efficient computation: ADAM only requires first-order gradients (derivatives), and the computation requirements are invariant to diagonal rescaling of the gradients.
+
+Memory requirement: ADAM has a minimal memory requirement as it only needs to keep track of past gradients.
+
+Invariance to the scale of the gradients: ADAM performs well with problems that have noisy and/or sparse gradients.
+
+Parameter updates are invariant to rescaling: Each parameter's update rule in ADAM is essentially independent, which makes it perform well with objectives that have a non-uniform curvature.
+
+Appropriate for non-stationary objectives: Non-stationary objectives are ones where the optimal solution changes over time. ADAM performs well in these situations.
+
+Suitable for problems with very noisy or infrequent gradients: ADAM is often used in reinforcement learning and in training generative adversarial networks where the gradients can be very noisy.
+
+Hyperparameters have intuitive interpretations and typically require little tuning: The default values for ADAM's hyperparameters often perform well, so it's a good choice when you want to quickly train a model without having to do extensive hyperparameter tuning.
+
+ADAM works by maintaining a moving (exponentially decaying) average of past gradients and using this information to adapt the learning rate for each weight in the model individually. This adaptive learning rate approach makes it particularly effective when dealing with sparse data and/or large-scale problems.
+
+However, despite these benefits, it's worth noting that there are also cases where ADAM might not work as well as other methods, such as RMSProp, SGD with momentum, or others. The choice of optimizer often depends on the specific characteristics of the problem at hand.
+
+# 5. Papers
+
+## 5.1. PILM: A Survey on Problems, Methods and Applications
+ Introduction
+- Traditional machine learning algorithms have limitations in incorporating prior knowledge or constraints about physical systems. 
+Traditional machine learning algorithms are designed to learn patterns and relationships from data without any prior knowledge or constraints about the physical system being modeled. These algorithms are often based on statistical methods that aim to optimize a specific objective function, such as minimizing prediction error or maximizing accuracy. However, in many real-world applications, there is often prior knowledge or constraints about the physical system that can be leveraged to improve the accuracy and efficiency of machine learning models. For example, in predicting GIC, there is prior knowledge about the Earth's magnetic field and its interactions with solar wind and other factors that cause GIC. Traditional machine learning algorithms have limitations in incorporating this type of prior knowledge or constraints into their models. They may not be able to capture complex relationships between variables or account for physical laws and principles that govern the behavior of the system being modeled. This is where Physics-Informed Machine Learning (PIML) comes in. PIML is a paradigm that seeks to construct models that make use of both empirical data and prior physical knowledge to enhance performance on tasks that involve a physical mechanism. By incorporating physical prior knowledge into machine learning models, PIML can overcome the limitations of traditional machine learning algorithms and improve accuracy and efficiency in tasks such as predicting GIC.
+
+- Physics-informed machine learning (PIML) is a new approach that seeks to integrate empirical data and physical prior knowledge into machine learning models. 
+
+- The paper presents a survey of recent developments in PIML and discusses its potential applications. 
+
+Problem Formulation: 
+- PIML addresses fundamental problems in physics-informed machine learning. 
+
+- Representation methodology for physical knowledge, approach for integrating physical knowledge into machine learning models, and practical problems that PIML resolves are discussed. 
+
+- The paper proposes a theoretical framework for machine learning problems with physical constraints based on probabilistic graphical models using latent variables to represent the real state of a system that satisfies physical prior constraints. 
+
+- The paper also discusses the challenges associated with incorporating physical prior knowledge into machine learning models such as the need for domain expertise, availability of data, and computational complexity. 
+
+Possible Ways towards PIML: 
+- The incorporation of physical prior knowledge can be achieved through modifications to one or more components of the machine learning model. 
+
+- Training data, model architecture, loss functions, optimization algorithms, and inference can all be modified to incorporate physical prior knowledge. 
+
+- The paper discusses several approaches for incorporating physical prior knowledge into machine learning models such as hybrid modeling, probabilistic graphical models, and feature engineering. 
+
+- The paper also provides examples of how different types of physical prior knowledge can be incorporated into machine learning models such as conservation laws, symmetries, and constitutive relations. 
+
+Applications of PIML: 
+- PIML has been successfully applied in various fields such as fluid dynamics, materials science, and robotics. 
+
+- By incorporating physical prior knowledge into machine learning models, improved performance and better alignment with practical problems that adhere to the laws of physics can be achieved. 
+
+- The paper provides examples of successful applications of PIML such as predicting fluid flow behavior in complex geometries, designing new materials with desired properties, and controlling robotic systems. 
+
+Conclusion: 
+- PIML is a promising new paradigm for solving physical problems using machine learning. 
+
+- By integrating empirical data and physical prior knowledge into machine learning models, it is possible to overcome the limitations of traditional machine learning algorithms and achieve improved accuracy and efficiency. 
+
+- The paper concludes by discussing future directions for research in PIML such as developing more efficient algorithms for incorporating physical prior knowledge, exploring new types of physical prior knowledge
+
+
+## 5.2. a real-time GMD monitoring system
+A real-time GMD (Geomagnetic Disturbance) monitoring system is designed to track and assess geomagnetic events and their potential impact on power grids and electrical systems. Geomagnetic disturbances occur when the Earth's magnetic field is disrupted by solar flares or other space weather phenomena. These disturbances can induce currents in power grids, known as Geomagnetically Induced Currents (GICs), which can pose risks to the stability and reliability of electrical infrastructure.
+
+The purpose of a real-time GMD monitoring system is to provide continuous monitoring and assessment of geomagnetic activity, allowing operators to detect and respond to potential GIC-related issues promptly. Such a system typically involves the following components:
+
+Magnetic Field Sensors: The monitoring system incorporates a network of magnetometers or magnetic field sensors strategically placed in different locations. These sensors measure the strength and variation of the Earth's magnetic field in real-time.
+
+Data Acquisition: The sensors capture magnetic field data at regular intervals and transmit it to a central data acquisition system. This system collects and processes the data for analysis.
+
+Data Analysis and Processing: Real-time data analysis algorithms are employed to assess the geomagnetic conditions and identify any anomalies or disturbances. These algorithms analyze the data to detect rapid changes or abnormal variations in the magnetic field associated with geomagnetic disturbances.
+
+Alerting and Notification: When significant geomagnetic disturbances are detected, the monitoring system generates alerts and notifications to inform operators or system administrators. These alerts provide timely information about the potential risks and allow for proactive measures to mitigate any adverse effects on the power grid.
+
+Integration with Power Grid Systems: The real-time GMD monitoring system is often integrated with the control and monitoring infrastructure of the power grid. This integration allows operators to correlate the geomagnetic data with other operational parameters, such as current flows and system stability, to assess the potential impact of GICs on the grid components.
+
+The implementation of a real-time GMD monitoring system is essential for grid operators and utility companies to understand and manage the potential risks associated with geomagnetic disturbances. By continuously monitoring the Earth's magnetic field and promptly detecting changes, the system enables proactive responses, such as adjusting power grid operations, implementing protective measures, or isolating vulnerable components, to mitigate the impact of GICs on electrical systems.
+
+## 5.3. Dst index
+In the context of Geomagnetic Disturbances (GMDs), the Dst (disturbance storm time) index is a measure used to characterize the size and intensity of a geomagnetic storm. GMDs occur when the Earth's magnetic field experiences significant fluctuations due to solar activity, such as solar flares and coronal mass ejections.
+
+The Dst index provides an estimation of the globally averaged change in the horizontal component of the Earth's magnetic field at the magnetic equator. It is computed based on measurements from a network of magnetometer stations and is typically calculated once per hour. The index is reported in near-real-time and represents the magnitude of the geomagnetic storm.
+
+During a geomagnetic storm, the Dst index shows negative values, indicating a decrease in the strength of the Earth's magnetic field. The magnitude of the negative excursion in the Dst index corresponds to the severity of the storm. Larger negative values indicate more intense geomagnetic disturbances.
+
+The Dst index is widely used to monitor and track the progression of geomagnetic storms. It serves as a standard measurement for quantifying the strength and duration of these disturbances. By analyzing the Dst index, scientists and space weather forecasters can assess the impact of geomagnetic storms on various systems, including power grids, satellite communications, and navigation systems.
+
+Additionally, the Dst index is employed in studies related to field-aligned currents in the magnetosphere and their connection to intense currents in the auroral ionosphere. Field-aligned currents are currents that flow along the Earth's magnetic field lines in the magnetosphere, and their behavior is linked to the Dst index.
+
+Overall, the Dst index plays a crucial role in understanding, monitoring, and characterizing the effects of geomagnetic storms, including their association with field-aligned currents and their impact on various technological systems
+
+
+
+
+
+
+
+
