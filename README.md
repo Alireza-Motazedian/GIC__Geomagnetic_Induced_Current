@@ -38,13 +38,13 @@ GIC:.
     \---Papers
 ```   
 
-01. [Link](https://www.frontiersin.org/articles/10.3389/fspas.2020.550874/full) Replica _ team _ Keesee et al. 2022.pdf
-02. [Link](https://www.frontiersin.org/articles/10.3389/fspas.2022.869740/full) Team _ Pinto et al. 2022.pdf
-03. [Link](https://arxiv.org/abs/2211.08064) Team _ Physics-Informed Machine Learning A Survey.pdf
-04. [Link](https://ieeexplore.ieee.org/document/9750736) Team _ Analysis of Magnetometer Data from a Strong G3 Geomagnetic Disturbance.pdf
-05. [Link](https://ieeexplore.ieee.org/document/9320114) Team _ Real-Time Monitoring Applications for the Power Grid under Geomagnetic Disturbances.pdf
-06. [Link](https://www.mdpi.com/2076-3263/12/1/27) Team _ Sarker 2021.pdf
-07. [Link](https://www.mdpi.com/2076-3263/12/1/27) Team _ Siddique et al. 2022.pdf
+01. [Link](https://www.frontiersin.org/articles/10.3389/fspas.2020.550874/full) Keesee et al. 2022.pdf
+02. [Link](https://www.frontiersin.org/articles/10.3389/fspas.2022.869740/full) Pinto et al. 2022.pdf
+03. [Link](https://arxiv.org/abs/2211.08064) Physics-Informed Machine Learning A Survey.pdf
+04. [Link](https://ieeexplore.ieee.org/document/9750736) Analysis of Magnetometer Data from a Strong G3 Geomagnetic Disturbance.pdf
+05. [Link](https://ieeexplore.ieee.org/document/9320114) Real-Time Monitoring Applications for the Power Grid under Geomagnetic Disturbances.pdf
+06. [Link](https://www.mdpi.com/2076-3263/12/1/27) Sarker 2021.pdf
+07. [Link](https://www.mdpi.com/2076-3263/12/1/27) Siddique et al. 2022.pdf
 08. [Link](https://ieeexplore.ieee.org/abstract/document/6673069?casa_token=HDPm8ZLy3_YAAAAA:n97uiGps4ET-G6Jg8DVMRvVm8awpLxl_k-RxQAJSppDk7wfWWHIep8XdWtQclyBoJTvLEZhfYw) Modelling considerations for the Hydro One real-time GMD management system.pdf
 09. [Link](https://ieeexplore.ieee.org/abstract/document/8922626?casa_token=hxKIZkn98KoAAAAA:KDbYorTQm_kz0LkVBMn1ystWSqNKMm_BPJyRVptBC5tb8I5KZLejHWdwcfhmSFTfIv70lGcAzg) A Machine Learning Approach to Detection of Geomagnetically Induced Currents in Power Grids.pdf
 10. [Link](https://ieeexplore.ieee.org/abstract/document/9241698) A Review of Geomagnetically Induced Current Effects on Electrical Power System Principles and Theory.pdf   
