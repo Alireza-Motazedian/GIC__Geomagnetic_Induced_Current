@@ -26,14 +26,14 @@ Daily logs (Summer 2023)
         - 03-04: 
         - 04-05: 
     - 07-05-2023 Wednesday
-        - 09-10: 
-        - 10-11: 
-        - 11-12: 
-        - 12-01: 
-        - 01-02: 
-        - 02-03: 
-        - 03-04: 
-        - 04-05: 
+        - 09-10: Concepts: working on the concept of Solar wind features
+        - 10-11: Concepts: working on the concept of Solar wind features
+        - 11-12: Concepts: working on the concept of Solar wind features
+        - 12-01: Concepts: working on the concept of Solar wind features
+        - 01-02: Concepts: working on the concept of Solar wind features
+        - 02-03: Concepts: working on the concept of Solar wind features
+        - 03-04: Report
+        - 04-05: Report
     - 07-04-2023 Tuesday
         - 09-10: Code: Merge dataset
         - 10-11: Code: Merge dataset
