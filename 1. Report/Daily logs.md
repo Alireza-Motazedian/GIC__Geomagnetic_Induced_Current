@@ -17,14 +17,14 @@ Daily logs (Summer 2023)
         - 03-04: 
         - 04-05: 
     - 07-06-2023 Thursday
-        - 09-10: 
-        - 10-11: 
-        - 11-12: 
-        - 12-01: 
-        - 01-02: 
-        - 02-03: 
-        - 03-04: 
-        - 04-05: 
+        - 09-10: Report
+        - 10-11: Meeting
+        - 11-12: concepts
+        - 12-01: concepts
+        - 01-02: paper
+        - 02-03: paper
+        - 03-04: concepts
+        - 04-05: concepts
     - 07-05-2023 Wednesday
         - 09-10: Concepts: working on the concept of Solar wind features
         - 10-11: Concepts: working on the concept of Solar wind features
