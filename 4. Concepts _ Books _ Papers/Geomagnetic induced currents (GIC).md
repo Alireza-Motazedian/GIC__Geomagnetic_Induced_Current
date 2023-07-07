@@ -37,6 +37,7 @@ Geomagnetic Induced Currents (GIC)
 # 0. Jargon
 01. **PIML**: Physics-Informed Machine Learning 
 02. **PINN**: Physics-Informed Neutral Network
+03. **GIC**: Geomagnetic Induced Current
 03. **PDE**: Partial Differential Equation
 04. **ODE**: Ordinary Differential Equation
 05. **SDE**: Stochastic Differential Equation
@@ -45,7 +46,7 @@ Geomagnetic Induced Currents (GIC)
 08. **FVM**: Finite Volume Method
 09. **SGD**: Stochastic Gradient Descent
 10. **CNN**: Convolutional Neural Network
-11. **LSTM**: Long-Short Term Memory network 
+11. **NSF**: National Science Foundation
 12. **RNN**: Recurrent Neural Networks 
 13. **GRU**: Gated Recurrent Unit 
 14. **MLP**: Multi-Layer Perceptron
@@ -55,20 +56,21 @@ Geomagnetic Induced Currents (GIC)
 18. **VAE**: Variational Auto-Encoders
 19. **GMD**: Geomagnetic Disturbances
 20. **CME**: Coronal Mass Ejection
-21. **SWPC**: Space Weather Prediction Center 
-22. **NOAA**: National Oceanic and Atmospheric Administration 
-23. **DASI**: Distributed Arrays of Small Instruments
-24. **NSF**: National Science Foundation 
-25. **GDV**: Geographic Data View
-26. **PGMD**: Pseudo-Geographic Mosaic Display
-27. **POD**: Proper Orthogonal Decomposition
-28. **FNO**: Fourier Neural Operator 
-29. **FFT**: Fast Fourier Transformation
-30. **GEM**: Geospace Environment Modeling
+21. **GDV**: Geographic Data View
+22. **POD**: Proper Orthogonal Decomposition
+23. **FNO**: Fourier Neural Operator 
+24. **FFT**: Fast Fourier Transformation
+25. **GEM**: Geospace Environment Modeling
+26. **MSE**: Mean Square Error
+27. **SWPC**: Space Weather Prediction Center 
+28. **NOAA**: National Oceanic and Atmospheric Administration 
+29. **DASI**: Distributed Arrays of Small Instruments
+30. **PGMD**: Pseudo-Geographic Mosaic Display
 31. **RELU**: REctified Linear Unit
-32. **MSE**: Mean Square Error
 32. **RMSE**: Root Mean Square Error
-33. **ADAM**: Adaptive Moment Estimation
+33. **LSTM**: Long-Short Term Memory network 
+34. **ADAM**: Adaptive Moment Estimation
+35. **IAGA**: International Association of Geomagnetism and Aeronomy 
 
 # 1. Introduction
 
@@ -266,15 +268,39 @@ Geomagnetic storms are global disturbances in the Earth's magnetic field caused 
 ●	The SYM/H index is a useful tool for space weather forecasting.
 
 ## 3.2. SuperMAG (description)
-Here is a description for each column in "ُSuperMAG" dataset:
+Here is a description for each column in "SuperMAG" dataset:
 
-⮚ **Date_UTC**: This represents the timestamp of the observation in Coordinated Universal Time (UTC).
+⮚ **Date_UTC**:"Date_UTC" in the SuperMAG dataset represents each observation's timestamp, standardized to Coordinated Universal Time (UTC), an international time standard. Regardless of the geographical location or local time of data collection, using UTC ensures accurate comparison and correlation of global data.
+
+The timestamp typically includes year, month, day, hour, minute, and possibly second of the observation in a format like "YYYY-MM-DD HH:MM:SS". An example could be "2023-07-05 14:30:00", indicating a measurement made at 2:30 pm on July 5, 2023, in UTC time.
+
+The presence of a UTC timestamp is critical for time series analysis, tracking temporal changes, and correlating events across various datasets or locations.
 
 ⮚ **Extent**: This could potentially represent the extent of a particular magnetic event, but without specific documentation, it's hard to say exactly. It could also be a geographic or magnetic extent, such as the coverage of a magnetometer station.
 
-⮚ **IAGA**: This stands for International Association of Geomagnetism and Aeronomy. The IAGA code is a unique identifier given to each magnetometer station.
+⮚ **IAGA**: The International Association of Geomagnetism and Aeronomy (IAGA) promotes the study of geomagnetism and aeronomy, key fields for understanding Earth's magnetic field and its interactions with solar and cosmic radiation.
 
-⮚ **GEOLON (Geographic Longitude)**: This is the geographic longitude of the magnetometer station, measured in degrees from -180 to +180.
+In a SuperMAG dataset, an IAGA code is a unique identifier for each magnetometer station across the globe. These stations, equipped with magnetometers, measure the strength and direction of the magnetic field at specific locations.
+
+Each station's unique IAGA code (typically a three-letter code) helps identify its contributed data, pinpoint the station's location, and facilitate cross-referencing with other databases. This aids in understanding global geomagnetic phenomena, like geomagnetic storms, which can have varying impacts at different Earth locations.
+
+⮚ **GEOLON (Geographic Longitude)**: The Geographic Longitude, also known as GEOLON in data sets, represents the east-west position of a point on the Earth's surface. It's the angular distance east or west of the Prime Meridian, a line of longitude at 0 degrees that runs through Greenwich, London.
+
+Longitude is measured in degrees, ranging from -180 (180 degrees west) to +180 (180 degrees east). The Prime Meridian (0 degrees longitude) serves as the reference point for these measurements.
+
+In the context of the SuperMAG dataset, the GEOLON value would refer to the longitude of the location of each magnetometer station. This gives the east-west position of the station on the Earth's surface.
+
+For example, a magnetometer station in New York would have a GEOLON value around -74 (since New York is approximately 74 degrees west of the Prime Meridian), while a station in Tokyo would have a GEOLON value around +140 (since Tokyo is approximately 140 degrees east of the Prime Meridian).
+
+Knowing the longitude of the magnetometer station is crucial for a variety of geophysical analyses. It helps in correlating the geomagnetic data with its geographic location, which is essential when examining global phenomena like geomagnetic storms and their effects on different parts of the world.
+
+| Image | Text |
+|---|---|
+| ![Image](./images_GIC/GIC_13.png) | Longitude lines are drawn between the North Pole and the South Pole. (A) The prime meridian (0°) divides earth into two halves of 180°. (B) Longitude is measured in degrees from 0° to 180° east or west of the prime meridian. |
+
+| Image | Text |
+|---|---|
+| ![Image](./images_GIC/GIC_14.png) | (A) East and west longitude meeting at 180˚ meridian. (B) The 180˚ meridian is on the opposite side of the globe from the prime meridian.|
 
 ⮚ **GEOLAT (Geographic Latitude)**: This is the geographic latitude of the magnetometer station, measured in degrees from -90 (South Pole) to +90 (North Pole).
 
