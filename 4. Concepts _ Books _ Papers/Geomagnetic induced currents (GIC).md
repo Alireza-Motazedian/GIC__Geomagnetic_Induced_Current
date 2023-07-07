@@ -17,7 +17,7 @@ Geomagnetic Induced Currents (GIC)
     - [1.3. Concept of UT](#13-concept-of-ut)	
 - [2. Website](#2-website)	
     - [2.1. SuperMAG](#21-supermag)	
-        - [2.1.1 SuperMAG](#211-supermag)	
+        - [2.1.1 SuperMAG definition](#211-supermag-definition)	
         - [2.1.2. Subtract Baseline](#212-subtract-baseline)	
         - [2.1.3. High Fidelity and Low Fidelity](#213-high-fidelity-and-low-fidelity)	
     - [2.2. Solar wind](#22-solar-wind)	
@@ -35,40 +35,40 @@ Geomagnetic Induced Currents (GIC)
 
 
 # 0. Jargon
-1. PIML: Physics-Informed Machine Learning 
-2. PINN: Physics-Informed Neutral Network
-3. PDE: Partial Differential Equation
-4. ODE: Ordinary Differential Equation
-5. SDE: Stochastic Differential Equation
-6. GCN: Graph Convolutional Network
-7. FDM: Finite Difference Method 
-8. FVM: Finite Volume Method
-9. SGD: Stochastic Gradient Descent
-10. CNN: Convolutional Neural Network
-11. LSTM: Long-Short Term Memory network 
-12. RNN: Recurrent Neural Networks 
-13. GRU: Gated Recurrent Unit 
-14. MLP: Multi-Layer Perceptron
-15. NTK: Neural Tangeting Kernel 
-16. TFC: Theory of Functional Connections
-17. HNN: Hamiltonian Neural Networks
-18. VAE: Variational Auto-Encoders
-19. GMD: Geomagnetic Disturbances
-20. CME: Coronal Mass Ejection
-21. SWPC: Space Weather Prediction Center 
-22. NOAA: National Oceanic and Atmospheric Administration 
-23. DASI: Distributed Arrays of Small Instruments
-24. NSF: National Science Foundation 
-25. GDV: Geographic Data View
-26. PGMD: Pseudo-Geographic Mosaic Display
-27. POD: Proper Orthogonal Decomposition
-28. FNO: Fourier Neural Operator 
-29. FFT: Fast Fourier Transformation
-30. GEM: Geospace Environment Modeling
-31. RELU: REctified Linear Unit
-32. MSE: Mean Square Error
-32. RMSE: Root Mean Square Error
-33. ADAM: Adaptive Moment Estimation
+01. **PIML**: Physics-Informed Machine Learning 
+02. **PINN**: Physics-Informed Neutral Network
+03. **PDE**: Partial Differential Equation
+04. **ODE**: Ordinary Differential Equation
+05. **SDE**: Stochastic Differential Equation
+06. **GCN**: Graph Convolutional Network
+07. **FDM**: Finite Difference Method 
+08. **FVM**: Finite Volume Method
+09. **SGD**: Stochastic Gradient Descent
+10. **CNN**: Convolutional Neural Network
+11. **LSTM**: Long-Short Term Memory network 
+12. **RNN**: Recurrent Neural Networks 
+13. **GRU**: Gated Recurrent Unit 
+14. **MLP**: Multi-Layer Perceptron
+15. **NTK**: Neural Tangeting Kernel 
+16. **TFC**: Theory of Functional Connections
+17. **HNN**: Hamiltonian Neural Networks
+18. **VAE**: Variational Auto-Encoders
+19. **GMD**: Geomagnetic Disturbances
+20. **CME**: Coronal Mass Ejection
+21. **SWPC**: Space Weather Prediction Center 
+22. **NOAA**: National Oceanic and Atmospheric Administration 
+23. **DASI**: Distributed Arrays of Small Instruments
+24. **NSF**: National Science Foundation 
+25. **GDV**: Geographic Data View
+26. **PGMD**: Pseudo-Geographic Mosaic Display
+27. **POD**: Proper Orthogonal Decomposition
+28. **FNO**: Fourier Neural Operator 
+29. **FFT**: Fast Fourier Transformation
+30. **GEM**: Geospace Environment Modeling
+31. **RELU**: REctified Linear Unit
+32. **MSE**: Mean Square Error
+32. **RMSE**: Root Mean Square Error
+33. **ADAM**: Adaptive Moment Estimation
 
 # 1. Introduction
 
@@ -116,7 +116,7 @@ This means that local midnight in Ottawa occurs at 05:00 UT. The lag is importan
 
 ## 2.1. SuperMAG
 
-### 2.1.1 SuperMAG
+### 2.1.1 SuperMAG definition
 SuperMAG is a worldwide collaboration of organizations and agencies that provide ground-based magnetometer measurements. These instruments are used to monitor variations in Earth's magnetic field, providing valuable data for understanding various geomagnetic phenomena like auroras, solar storms, and the interaction between solar wind and Earth's magnetosphere.
 
 ### 2.1.2. Subtract Baseline
@@ -141,7 +141,7 @@ The 1-sec data and all derived products can be accessed by selecting the 'High F
 # 3. Data Variable Definitions 
 
 ## 3.1. Solar wind (description)
-Here is a description for each column in your "Solar wind Omniweb" dataset:
+Here is a description for each column in "Solar wind Omniweb" dataset:
 
 ⮚	**year**: The year in which the observation was made.
 
@@ -158,16 +158,14 @@ The Interplanetary Magnetic Field (IMF) is a crucial aspect of our solar system,
 Two main types of IMF exist:  
 ✔	**The Parker Spiral**: This type of IMF is named after solar astrophysicist Eugene Parker. It is a spiral-shaped magnetic field resulting from the rotation of the Sun. The Sun rotates faster at its equator than at its poles, causing the magnetic field lines to take on a spiral shape, much like the water from a spinning garden hose.
  
-![](./images_GIC/GIC_2.png)
-
+![](./images_GIC/GIC_2.png)........................
 ![](./images_GIC/GIC_3.png)
-
 ![](./images_GIC/GIC_4.png)
+
 
 ✔	**The Interplanetary Shock**: This is a rapid change in the IMF caused by a significant solar event like a coronal mass ejection (CME). A CME is a massive burst of solar wind and magnetic fields rising above the solar corona or being released into space. These shocks can travel through space and affect planets' magnetic fields, including Earth's.
 
-![](./images_GIC/GIC_5.png)
-Interplanetary shock wave S f developed in the solar wind as a result of a chromospheric flare or a coronal mass ejection on the Sun S, and force lines of the interplanetary magnetic field B sw. Spacecraft are schematically shown in the neighborhood of the Lagrange point L 1 and the Earth's bow shock S b and in the magnetosheath between S b and the magnetopause m which is the boundary of the magnetosphere M (shown in section with an image of the Earth's magnetic field); broken curve corresponds to the Earth's (E) orbit.  
+![](./images_GIC/GIC_5.png) Interplanetary shock wave S f developed in the solar wind as a result of a chromospheric flare or a coronal mass ejection on the Sun S, and force lines of the interplanetary magnetic field B sw. Spacecraft are schematically shown in the neighborhood of the Lagrange point L 1 and the Earth's bow shock S b and in the magnetosheath between S b and the magnetopause m which is the boundary of the magnetosphere M (shown in section with an image of the Earth's magnetic field); broken curve corresponds to the Earth's (E) orbit.  
 
 
 The "field magnitude average" metric is a measure of the IMF's average strength over a specific period. It incorporates the average of the IMF's three components: the north-south component, the east-west component, and the radial component (the component that points towards or away from the Sun). 
@@ -182,15 +180,15 @@ Here are some additional details about the field magnitude average metric:
 
 The term "heliosphere" is used to denote the vast bubble-like region surrounding the Sun, dominated by the solar wind and its associated IMF. This region acts as a protective shield for the planets within our solar system against cosmic radiation. When we refer to the IMF as the "Heliospheric Magnetic Field," we emphasize its role and reach throughout the heliosphere.
 
-![](./images_GIC/GIC_6.png)
+![](./images_GIC/GIC_6.png) ........................
 ![](./images_GIC/GIC_7.png)
 
 
 ⮚	**Bx**, **By**, **Bz**: These are components of the IMF in the Geocentric Solar Magnetospheric (GSM) coordinate system. 
 
 ![](./images_GIC/GIC_8.png)
-The geocentric coordinate system is not a planar coordinate system based on a map projection. It is a geographic coordinate system in which the earth is modeled as a sphere or spheroid in a right-handed XYZ (3D Cartesian) system measured from the center of the earth.
 
+The geocentric coordinate system is not a planar coordinate system based on a map projection. It is a geographic coordinate system in which the earth is modeled as a sphere or spheroid in a right-handed XYZ (3D Cartesian) system measured from the center of the earth.
 
 
 ●	**Bx**: This component represents the IMF along the Earth-Sun direction. It indicates the strength and direction of the magnetic field aligned with the line connecting the Earth and the Sun. It can be thought of as the "north-south" component of the IMF.
@@ -207,7 +205,6 @@ The geocentric coordinate system is not a planar coordinate system based on a ma
 ●	The speed of the solar wind can vary from about 300 km/s to about 800 km/s.  
 ●	The speed of the solar wind is influenced by the Sun's magnetic field, the solar activity, and the distance from the Sun.  
 ●	CMEs can cause the speed of the solar wind to increase significantly.
-
 
 ⮚	**Vx**, **Vy**, **Vz**: These are the components of the solar wind velocity in the GSM coordinate system.
 ●	**Vx**: This component represents the velocity of the solar wind in the direction from the Earth towards the Sun. This is along the X-axis of the GSM system. A negative Vx value would typically indicate solar wind moving from the Sun towards the Earth.
@@ -245,7 +242,7 @@ The solar wind's electric field is a critical parameter in understanding space w
 ●	The electric field is influenced by the solar wind speed and the IMF.  
 ●	CMEs can cause the electric field in the solar wind to increase significantly.
 
-![](./images_GIC/GIC_10.png)
+![](./images_GIC/GIC_10.png) ...................
 ![](./images_GIC/GIC_11.png)
 ![](./images_GIC/GIC_12.png)
 
@@ -269,6 +266,33 @@ Geomagnetic storms are global disturbances in the Earth's magnetic field caused 
 ●	The SYM/H index is a useful tool for space weather forecasting.
 
 ## 3.2. SuperMAG (description)
+Here is a description for each column in "ُSuperMAG" dataset:
+
+⮚ **Date_UTC**: This represents the timestamp of the observation in Coordinated Universal Time (UTC).
+
+⮚ **Extent**: This could potentially represent the extent of a particular magnetic event, but without specific documentation, it's hard to say exactly. It could also be a geographic or magnetic extent, such as the coverage of a magnetometer station.
+
+⮚ **IAGA**: This stands for International Association of Geomagnetism and Aeronomy. The IAGA code is a unique identifier given to each magnetometer station.
+
+⮚ **GEOLON (Geographic Longitude)**: This is the geographic longitude of the magnetometer station, measured in degrees from -180 to +180.
+
+⮚ **GEOLAT (Geographic Latitude)**: This is the geographic latitude of the magnetometer station, measured in degrees from -90 (South Pole) to +90 (North Pole).
+
+⮚ **MAGON (Magnetic Longitude)**: This is the longitude of the magnetometer station in geomagnetic coordinates.
+
+⮚ **MAGLAT (Magnetic Latitude)**: This is the latitude of the magnetometer station in geomagnetic coordinates.
+
+⮚ **MLT (Magnetic Local Time)**: This is a measure of solar time based on the location's magnetic longitude.
+
+⮚ **MCOLAT (Magnetic Co-latitude)**: This is 90 degrees minus the magnetic latitude, measuring the angle from the magnetic north pole.
+
+⮚ **IGRF_DECL (International Geomagnetic Reference Field Declination)**: This is the angle between magnetic north and true north at a particular location, according to the International Geomagnetic Reference Field model.
+
+⮚ **SZA (Solar Zenith Angle)**: This is the angle between the line perpendicular to the Earth's surface at a given location and the line from that location to the Sun. It can be used to infer the level of solar radiation reaching the location.
+
+⮚  **dbn_nez, dbe_nez, dbz_nez**: These represent the changes (delta, denoted by 'db') in the northward, eastward, and downward components of the magnetic field in NEZ (North, East, Down) coordinates.
+
+⮚ **dbn_geo, dbe_geo, dbz_geo**: These represent the changes (delta, denoted by 'db') in the northward, eastward, and downward components of the magnetic field in geographic coordinates.
 
 # 4. Machine Learning
 ## 4.1. Time Series Analysis
