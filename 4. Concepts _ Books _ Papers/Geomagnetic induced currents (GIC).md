@@ -33,7 +33,6 @@ Geomagnetic Induced Currents (GIC)
     - [5.2. a real-time GMD monitoring system](#52-a-real-time-gmd-monitoring-system)	
 
 
-
 # 0. Jargon
 01. **PIML**: Physics-Informed Machine Learning 
 02. **PINN**: Physics-Informed Neutral Network
@@ -276,8 +275,6 @@ The timestamp typically includes year, month, day, hour, minute, and possibly se
 
 The presence of a UTC timestamp is critical for time series analysis, tracking temporal changes, and correlating events across various datasets or locations.
 
-⮚ **Extent**: This could potentially represent the extent of a particular magnetic event, but without specific documentation, it's hard to say exactly. It could also be a geographic or magnetic extent, such as the coverage of a magnetometer station.
-
 ⮚ **IAGA**: The International Association of Geomagnetism and Aeronomy (IAGA) promotes the study of geomagnetism and aeronomy, key fields for understanding Earth's magnetic field and its interactions with solar and cosmic radiation.
 
 In a SuperMAG dataset, an IAGA code is a unique identifier for each magnetometer station across the globe. These stations, equipped with magnetometers, measure the strength and direction of the magnetic field at specific locations.
@@ -324,17 +321,77 @@ The magnetic north pole does not align perfectly with the geographic North Pole,
 
 ⮚ **MAGLAT (Magnetic Latitude)**: This is the latitude of the magnetometer station in geomagnetic coordinates.
 
-⮚ **MLT (Magnetic Local Time)**: This is a measure of solar time based on the location's magnetic longitude.
+Magnetic Latitude, often abbreviated as MAGLAT in datasets, is similar to geographic latitude, but it's based on the Earth's magnetic field rather than the Earth's surface geography.
 
-⮚ **MCOLAT (Magnetic Co-latitude)**: This is 90 degrees minus the magnetic latitude, measuring the angle from the magnetic north pole.
+Geographic latitude denotes the north-south position of a point on the Earth's surface, measured as an angle from the equator (0 degrees) to the North (+90 degrees) or South (-90 degrees) poles.
 
-⮚ **IGRF_DECL (International Geomagnetic Reference Field Declination)**: This is the angle between magnetic north and true north at a particular location, according to the International Geomagnetic Reference Field model.
+In contrast, Magnetic Latitude refers to the north-south position of a point relative to the Earth's magnetic field. In this coordinate system, 0 degrees refers to the magnetic equator (the line around the Earth halfway between the magnetic north and south poles), +90 degrees refers to the magnetic North Pole, and -90 degrees refers to the magnetic South Pole.
 
-⮚ **SZA (Solar Zenith Angle)**: This is the angle between the line perpendicular to the Earth's surface at a given location and the line from that location to the Sun. It can be used to infer the level of solar radiation reaching the location.
+The Earth's magnetic poles do not perfectly align with the geographic poles, and they even move over time due to changes in the Earth's core (a phenomenon known as geomagnetic secular variation). Therefore, a location's magnetic latitude can be different from its geographic latitude.
 
-⮚  **dbn_nez, dbe_nez, dbz_nez**: These represent the changes (delta, denoted by 'db') in the northward, eastward, and downward components of the magnetic field in NEZ (North, East, Down) coordinates.
+![](./images_GIC/GIC_18.png)
 
-⮚ **dbn_geo, dbe_geo, dbz_geo**: These represent the changes (delta, denoted by 'db') in the northward, eastward, and downward components of the magnetic field in geographic coordinates.
+⮚ **MLT (Magnetic Local Time)**: Magnetic Local Time (MLT) is a measure of time based on the position of a location with respect to the Sun, but with reference to the Earth's magnetic field rather than its geographical features. In essence, it's solar time, but tied to magnetic, not geographic, coordinates.
+
+Just like geographic local time, where noon is defined as when the Sun is at its highest point in the sky, in Magnetic Local Time, magnetic noon is when the Sun is in line with the magnetic meridian of the location. This is the line running from magnetic north to magnetic south through that point.
+
+Because the Earth's magnetic field is not perfectly aligned with its rotation axis, and because the magnetic poles wander over time, the MLT for a given location will not usually match the geographic local time. It's also worth noting that MLT varies as the Earth rotates, just like geographical local time.
+
+The concept of MLT is particularly important in the field of space weather and geomagnetism, because many phenomena related to the Earth's magnetic field and its interaction with the solar wind have a strong dependence on MLT. For example, the occurrence and strength of auroras and geomagnetic disturbances can vary significantly with MLT. In the context of the SuperMAG dataset, the MLT would be the local time at each magnetometer station, in terms of magnetic coordinates.
+
+⮚ **MCOLAT (Magnetic Co-latitude)**: Magnetic Co-latitude, often referred to as MCOLAT in various datasets, is a way of defining a location's position with respect to the Earth's magnetic field. More specifically, it is calculated as 90 degrees minus the magnetic latitude of a given point.
+
+While magnetic latitude measures the angle between the location and the magnetic equator (ranging from -90 degrees at the magnetic South Pole to +90 degrees at the magnetic North Pole), magnetic co-latitude is the complementary angle measuring from the magnetic North Pole.
+
+This means that the magnetic co-latitude of a point is the angle from that point to the magnetic North Pole along a line of longitude, with the magnetic North Pole itself being at 0 degrees, and the magnetic equator being at 90 degrees.
+
+This way of measuring location is particularly useful in spherical coordinates and certain areas of study related to the Earth's magnetic field, such as magnetospheric physics and space weather analysis. In the SuperMAG dataset, the MCOLAT for each magnetometer station would allow scientists to understand the station's position relative to the Earth's magnetic North Pole, which could be relevant when studying certain magnetospheric phenomena.
+
+⮚ **IGRF_DECL (International Geomagnetic Reference Field Declination)**: The International Geomagnetic Reference Field (IGRF) Declination, or IGRF_DECL, refers to the angle between the magnetic north and true (geographic) north at a specific location based on the IGRF model.
+
+Geographic north is a constant that refers to the North Pole, the point where Earth's axis of rotation intersects the surface in the northern hemisphere. On the other hand, magnetic north is the direction that a compass needle points, and it's determined by the Earth's magnetic field. Due to the tilted and dynamic nature of Earth's magnetic field, magnetic north doesn't align perfectly with geographic north, and this discrepancy is what we call magnetic declination.
+
+Magnetic declination varies both with location on the Earth's surface and over time, as the Earth's magnetic field changes. At some locations, the declination angle can be quite significant, and if not accounted for, can result in substantial navigation errors.
+
+The International Geomagnetic Reference Field (IGRF) is a mathematical model of Earth's magnetic field produced by an international collaboration of scientists. It's used for precise navigation, mineral exploration, and some types of scientific research. The IGRF model provides an accurate estimate of the Earth's magnetic field and its declination at any location. The declination according to the IGRF model is represented as IGRF_DECL in the SuperMAG dataset.
+
+⮚ **SZA (Solar Zenith Angle)**: The Solar Zenith Angle (SZA) is a measure of the Sun's position in the sky relative to a particular location on Earth. Specifically, it is the angle between the line that points straight up from that location (the line perpendicular to the Earth's surface, also known as the zenith) and the line from that location to the Sun.
+
+When the Sun is directly overhead at noon (the Sun is at the zenith), the SZA is 0 degrees. As the Sun moves across the sky towards the horizon, the SZA increases, reaching 90 degrees when the Sun is on the horizon. During twilight hours, the SZA is greater than 90 degrees.
+
+The SZA is critical for understanding and calculating the amount of solar radiation reaching a particular location on Earth's surface. The larger the SZA, the longer the path of the Sun's rays through the Earth's atmosphere, which results in more scattering and absorption of sunlight and less solar radiation reaching the Earth's surface.
+
+In the context of SuperMAG or other geophysical datasets, the SZA can be an important parameter for understanding variations in ionospheric and magnetospheric processes that are driven by solar radiation, including auroral activity and ionospheric conductivity.
+
+⮚  **dbn_nez, dbe_nez, dbz_nez**: The variables dbn_nez, dbe_nez, and dbz_nez in a dataset like SuperMAG represent changes in the components of the magnetic field in the North, East, and Down directions respectively.
+
+dbn_nez: This represents the change (delta, denoted by 'db') in the northward component of the magnetic field.
+
+dbe_nez: This represents the change in the eastward component of the magnetic field.
+
+dbz_nez: This represents the change in the downward (or vertical) component of the magnetic field.
+
+These changes are calculated over a specific time interval, such as from one observation time to the next.
+
+The North, East, Down (NED) or NEZ coordinate system is a geographical system often used in geodesy and navigation, among other fields. It's a frame of reference attached to the Earth's surface, with the 'North' axis pointing towards the geographic North Pole, the 'East' axis pointing towards the geographic East (perpendicular to North and in the same horizontal plane), and the 'Down' axis pointing vertically downward.
+
+In the context of a magnetometer station in the SuperMAG network, these measurements would reflect the variations in the local magnetic field due to various sources, such as the Earth's core, the ionosphere, and the magnetosphere, as well as the solar wind and the interplanetary magnetic field (IMF). Such measurements are key for studying the dynamics of Earth's magnetic field and space weather phenomena.
+
+![](./images_GIC/GIC_19.png)
+
+⮚ **dbn_geo, dbe_geo, dbz_geo**: The variables dbn_geo, dbe_geo, and dbz_geo represent the changes in the northward, eastward, and downward (or vertical) components of the Earth's magnetic field, as measured in geographic coordinates.
+
+Let's break down each term:
+
+dbn_geo: This represents the change in the northward component of the magnetic field in geographic coordinates. If you were standing at the location of the magnetometer and facing geographic north, this measurement would represent how much the magnetic field has changed in that direction.
+
+dbe_geo: This represents the change in the eastward component of the magnetic field in geographic coordinates. If you were standing at the location of the magnetometer and facing geographic east, this measurement would represent how much the magnetic field has changed in that direction.
+
+dbz_geo: This represents the change in the downward (vertical) component of the magnetic field in geographic coordinates. This would measure how much the magnetic field has changed in a direction going straight down into the Earth at the location of the magnetometer.
+
+The term "delta" (represented by 'db') in each of these variables represents a change. So these variables aren't giving you the strength of the magnetic field in each direction, but rather how much that strength has changed over a certain period of time, such as from one measurement to the next.
+
+The 'geo' part of these variables indicates that these measurements are made in the geographic coordinate system, which is based on the Earth's shape and orientation in space, rather than in a magnetic coordinate system, which would be based on the Earth's magnetic field.
 
 # 4. Machine Learning
 ## 4.1. Time Series Analysis
