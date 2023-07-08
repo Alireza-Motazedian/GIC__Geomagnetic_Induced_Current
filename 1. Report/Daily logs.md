@@ -8,14 +8,14 @@ Daily logs (Summer 2023)
 
 - Week 7 _ July 03 - 07
     - 07-07-2023 Friday
-        - 09-10: 
-        - 10-11: 
-        - 11-12: 
-        - 12-01: 
-        - 01-02: 
-        - 02-03: 
-        - 03-04: 
-        - 04-05: 
+        - 09-10: code
+        - 10-11: Concepts
+        - 11-12: Concepts
+        - 12-01: Concepts
+        - 01-02: Concepts
+        - 02-03: Paper
+        - 03-04: Paper
+        - 04-05: Paper
     - 07-06-2023 Thursday
         - 09-10: Report
         - 10-11: Meeting
