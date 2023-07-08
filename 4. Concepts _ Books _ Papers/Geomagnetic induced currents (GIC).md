@@ -296,15 +296,31 @@ Knowing the longitude of the magnetometer station is crucial for a variety of ge
 
 | Image | Text |
 |---|---|
-| ![Image](./images_GIC/GIC_13.png) | Longitude lines are drawn between the North Pole and the South Pole. (A) The prime meridian (0°) divides earth into two halves of 180°. (B) Longitude is measured in degrees from 0° to 180° east or west of the prime meridian. |
+| ![](./images_GIC/GIC_13.png) | Longitude lines are drawn between the North Pole and the South Pole. (A) The prime meridian (0°) divides earth into two halves of 180°. (B) Longitude is measured in degrees from 0° to 180° east or west of the prime meridian. | 
 
 | Image | Text |
 |---|---|
-| ![Image](./images_GIC/GIC_14.png) | (A) East and west longitude meeting at 180˚ meridian. (B) The 180˚ meridian is on the opposite side of the globe from the prime meridian.|
+| ![](./images_GIC/GIC_14.png) | (A) East and west longitude meeting at 180˚ meridian. (B) The 180˚ meridian is on the opposite side of the globe from the prime meridian.|
 
-⮚ **GEOLAT (Geographic Latitude)**: This is the geographic latitude of the magnetometer station, measured in degrees from -90 (South Pole) to +90 (North Pole).
+⮚ **GEOLAT (Geographic Latitude)**: Geographic Latitude, or GEOLAT in many datasets, represents the north-south position of a point on the Earth's surface. It's the angular distance from the equator to that point, north or south.
 
-⮚ **MAGON (Magnetic Longitude)**: This is the longitude of the magnetometer station in geomagnetic coordinates.
+Latitude is measured in degrees, with the equator representing 0 degrees, the North Pole +90 degrees, and the South Pole -90 degrees.
+
+In the context of the SuperMAG dataset, the GEOLAT value refers to the latitude of each magnetometer station's location. This provides the north-south position of the station on the Earth's surface.
+
+For instance, a magnetometer station in Sydney, Australia would have a GEOLAT value of approximately -34 (as Sydney is about 34 degrees south of the equator), while a station in Oslo, Norway would have a GEOLAT value of around +60 (as Oslo is about 60 degrees north of the equator).
+
+![](./images_GIC/GIC_15.png)
+
+![](./images_GIC/GIC_16.png)
+
+⮚ **MAGON (Magnetic Longitude)**: The magnetic longitude, also known as MAGLON in many datasets, is similar to geographic longitude, but it's based on the Earth's magnetic field rather than the surface geography. It refers to the east-west position of a point relative to the Earth's magnetic field.
+
+The geomagnetic coordinates are based on a geomagnetic model (like the International Geomagnetic Reference Field, IGRF) which represents the Earth's magnetic field. In this model, the "prime meridian" is not the geographic prime meridian that goes through Greenwich, but the meridian that goes through the magnetic north pole.
+
+The magnetic north pole does not align perfectly with the geographic North Pole, and it even moves over time (a phenomenon called secular variation). So, a magnetometer's magnetic longitude can be quite different from its geographic longitude.
+
+![](./images_GIC/GIC_17.png)
 
 ⮚ **MAGLAT (Magnetic Latitude)**: This is the latitude of the magnetometer station in geomagnetic coordinates.
 
