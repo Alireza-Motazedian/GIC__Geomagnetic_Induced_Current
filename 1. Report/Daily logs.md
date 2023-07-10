@@ -6,6 +6,54 @@ Daily logs (Summer 2023)
         - 45 minutes: Work   
         - 15 min: Break (Meditation, Drinking water, Walking, Nap, Workout)   
 
+- Week 8 _ July 10 - 14
+    - 07-14-2023 Friday
+        - 09-10: 
+        - 10-11: 
+        - 11-12: 
+        - 12-01: 
+        - 01-02: 
+        - 02-03: 
+        - 03-04: 
+        - 04-05: 
+    - 07-13-2023 Thursday
+        - 09-10: 
+        - 10-11: 
+        - 11-12: 
+        - 12-01: 
+        - 01-02: 
+        - 02-03: 
+        - 03-04: 
+        - 04-05: 
+    - 07-12-2023 Wednesday
+        - 09-10: 
+        - 10-11: 
+        - 11-12: 
+        - 12-01: 
+        - 01-02: 
+        - 02-03: 
+        - 03-04: 
+        - 04-05: 
+    - 07-11-2023 Tuesday
+        - 09-10: 
+        - 10-11: 
+        - 11-12: 
+        - 12-01: 
+        - 01-02: 
+        - 02-03: 
+        - 03-04: 
+        - 04-05: 
+    - 07-10-2023 Monday
+        - 09-10: Paper
+        - 10-11: paper 
+        - 11-12: Paper
+        - 12-01: Paper
+        - 01-02: 
+        - 02-03: 
+        - 03-04: 
+        - 04-05: 
+
+
 - Week 7 _ July 03 - 07
     - 07-07-2023 Friday
         - 09-10: code
@@ -52,6 +100,7 @@ Daily logs (Summer 2023)
         - 02-03: Code: Data exploration (dfe)
         - 03-04: Code: Data exploration (dfn)
         - 04-05: Code: Data exploration (Plots)
+
 - Week 6 _ June 26 - 30
     - 06-30-2023 Friday
         - 09-10: Paper/ Concepts
@@ -98,6 +147,7 @@ Daily logs (Summer 2023)
         - 02-03: paper
         - 03-04: paper
         - 04-05: paper
+
 - Week 5 _ June 19 - 23
     - 06-23-2023 Friday
         - Feature selection (SuperMAG)
@@ -128,7 +178,6 @@ Daily logs (Summer 2023)
         - Meeting with Talha to discuss how to download the dataset 
         - Year-by-year downloads of data
         - Preparing the way data is downloaded in Google Colab
-
     - 06-15-2023 Thursday
         - Files management
         - Google Docs: Resources
@@ -141,6 +190,7 @@ Daily logs (Summer 2023)
         - Data acquisition
     - 06-12-2023 Monday
         - Data acquisition
+
 - Week 3 _ June 5 - 9
     - 06-09-2023 Friday
         - Reading the paper to replicate it
@@ -158,6 +208,7 @@ Daily logs (Summer 2023)
         - Group discussion (Talha, Sabby, Alireza)
 Talha provided us with lots of information about GIC, ML, Magnemoter System, and Microcontroller, ...
         - Reading a couple of PIML’s pages
+
 - Week 2 _ May 29 - June 2
     - 06-02-2023 Friday
         - Reading 2 papers 
