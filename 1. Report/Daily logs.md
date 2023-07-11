@@ -47,11 +47,11 @@ Daily logs (Summer 2023)
         - 09-10: Paper
         - 10-11: paper 
         - 11-12: Paper
-        - 12-01: Paper
-        - 01-02: 
-        - 02-03: 
-        - 03-04: 
-        - 04-05: 
+        - 12-01: Code
+        - 01-02: Code
+        - 02-03: Code
+        - 03-04: Code
+        - 04-05: Dealing with missing value
 
 
 - Week 7 _ July 03 - 07
