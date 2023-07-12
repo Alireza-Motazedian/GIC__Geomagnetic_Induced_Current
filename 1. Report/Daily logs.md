@@ -26,23 +26,23 @@ Daily logs (Summer 2023)
         - 03-04: 
         - 04-05: 
     - 07-12-2023 Wednesday
-        - 09-10: 
-        - 10-11: 
-        - 11-12: 
-        - 12-01: 
+        - 09-10: Dealing with missing value
+        - 10-11: Dealing with missing value
+        - 11-12: Dealing with missing value
+        - 12-01: Dealing with missing value
         - 01-02: 
         - 02-03: 
         - 03-04: 
         - 04-05: 
     - 07-11-2023 Tuesday
-        - 09-10: 
-        - 10-11: 
-        - 11-12: 
-        - 12-01: 
-        - 01-02: 
-        - 02-03: 
-        - 03-04: 
-        - 04-05: 
+        - 09-10: Dealing with missing value
+        - 10-11: Dealing with missing value
+        - 11-12: Dealing with missing value
+        - 12-01: Dealing with missing value
+        - 01-02: Dealing with missing value
+        - 02-03: Dealing with missing value
+        - 03-04: Dealing with missing value
+        - 04-05: GitHub
     - 07-10-2023 Monday
         - 09-10: Paper
         - 10-11: paper 
