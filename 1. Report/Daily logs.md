@@ -30,10 +30,10 @@ Daily logs (Summer 2023)
         - 10-11: Dealing with missing value
         - 11-12: Dealing with missing value
         - 12-01: Dealing with missing value
-        - 01-02: 
-        - 02-03: 
-        - 03-04: 
-        - 04-05: 
+        - 01-02: Concepts
+        - 02-03: Concepts
+        - 03-04: Report
+        - 04-05: Report
     - 07-11-2023 Tuesday
         - 09-10: Dealing with missing value
         - 10-11: Dealing with missing value
