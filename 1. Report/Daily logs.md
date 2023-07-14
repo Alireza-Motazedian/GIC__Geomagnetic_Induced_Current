@@ -17,14 +17,14 @@ Daily logs (Summer 2023)
         - 03-04: 
         - 04-05: 
     - 07-13-2023 Thursday
-        - 09-10: 
-        - 10-11: 
-        - 11-12: 
-        - 12-01: 
-        - 01-02: 
-        - 02-03: 
-        - 03-04: 
-        - 04-05: 
+        - 09-10: Report
+        - 10-11: Meeting
+        - 11-12: Concepts
+        - 12-01: Concepts
+        - 01-02: Concepts
+        - 02-03: Concepts
+        - 03-04: Concepts
+        - 04-05: Concepts
     - 07-12-2023 Wednesday
         - 09-10: Dealing with missing value
         - 10-11: Dealing with missing value
