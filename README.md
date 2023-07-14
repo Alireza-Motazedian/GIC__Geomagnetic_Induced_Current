@@ -1,4 +1,5 @@
-# GIC
+# GIC 
+**G**emagnetic **I**nduced **C**urrent
 
 ```
 Folder PATH listing
