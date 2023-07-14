@@ -37,8 +37,8 @@ GIC:.
     |       01. Machine Learning Techniques for Space Weather.pdf
     |       
     \---Papers
-```   
-
+```
+   
 01. [Link](https://www.frontiersin.org/articles/10.3389/fspas.2020.550874/full) Keesee et al. 2022.pdf
 02. [Link](https://www.frontiersin.org/articles/10.3389/fspas.2022.869740/full) Pinto et al. 2022.pdf
 03. [Link](https://arxiv.org/abs/2211.08064) Physics-Informed Machine Learning A Survey.pdf
@@ -48,7 +48,7 @@ GIC:.
 07. [Link](https://www.mdpi.com/2076-3263/12/1/27) Siddique et al. 2022.pdf
 08. [Link](https://ieeexplore.ieee.org/abstract/document/6673069?casa_token=HDPm8ZLy3_YAAAAA:n97uiGps4ET-G6Jg8DVMRvVm8awpLxl_k-RxQAJSppDk7wfWWHIep8XdWtQclyBoJTvLEZhfYw) (IEEE) Modelling considerations for the Hydro One real-time GMD management system.pdf
 09. [Link](https://ieeexplore.ieee.org/abstract/document/8922626?casa_token=hxKIZkn98KoAAAAA:KDbYorTQm_kz0LkVBMn1ystWSqNKMm_BPJyRVptBC5tb8I5KZLejHWdwcfhmSFTfIv70lGcAzg) (IEEE) A Machine Learning Approach to Detection of Geomagnetically Induced Currents in Power Grids.pdf
-10. [Link](https://ieeexplore.ieee.org/abstract/document/9241698)(IEEE) A Review of Geomagnetically Induced Current Effects on Electrical Power System Principles and Theory.pdf   
+10. [Link](https://ieeexplore.ieee.org/abstract/document/9241698) (IEEE) A Review of Geomagnetically Induced Current Effects on Electrical Power System Principles and Theory.pdf   
 11. [Link](https://ieeexplore.ieee.org/abstract/document/8805349) (IEEE) Deep Learning-Based Channel Prediction for Edge Co.pdf   
 12. [Link](https://link.springer.com/article/10.1007/s41872-021-00179-8) Impact of geomagnetic disturbances on power transformers.pdf
 13. [Link](https://www.sciencedirect.com/science/article/pii/S0378779620307252?casa_token=Vtbz2fn5_E8AAAAA:IU8o4Wv9gX98aAT9z8-1R8SrYMk3ZYl-xt158Bhx1NRLwSZGIIUAMWpfPp8eDgep3FKNnz6ASw) Insight into impact of geomagnetically induced currents on power.pdf
