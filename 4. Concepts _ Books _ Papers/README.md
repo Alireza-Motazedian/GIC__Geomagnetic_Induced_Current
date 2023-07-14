@@ -21,7 +21,7 @@ Geomagnetic Induced Currents (GIC)
         - [2.1.2. Subtract Baseline](#212-subtract-baseline)	
         - [2.1.3. High Fidelity and Low Fidelity](#213-high-fidelity-and-low-fidelity)	
     - [2.2. Solar wind](#22-solar-wind)	
-- [3. Data Variable Definitions](#3-data-variable-definitions)	
+- [3. Datasets descriptions](#3-datasets-descriptions)	
     - [3.1. Solar wind (description)](#31-solar-wind-description)	
     - [3.2. SuperMAG (description)](#32-supermag-description)	
 - [4. Machine Learning](#4-machine-learning)	
@@ -139,7 +139,7 @@ The 1-sec data and all derived products can be accessed by selecting the 'High F
 
 ## 2.2. Solar wind
 
-# 3. Data Variable Definitions 
+# 3. Datasets descriptions 
 
 ## 3.1. Solar wind (description)
 Here is a description for each column in "Solar wind Omniweb" dataset:
