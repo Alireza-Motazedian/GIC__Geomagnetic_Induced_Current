@@ -28,6 +28,14 @@ Geomagnetic Induced Currents (GIC)
     - [4.1. Time Series Analysis](#41-time-series-analysis)	
     - [4.2. Kriging Techniques](#42-kriging-techniques)	
     - [4.3. ADAM](#43-adam)	
+    - [4.4. Filling missing values](#44-filling-missing-values)
+        - [4.4.1. Mean](#441-mean)    
+        - [4.4.2. Median](#442-median)  
+        - [4.4.3. Mode](#443-mode)  
+        - [4.4.4. Constant number or string](#444-constant-number-or-string)  
+        - [4.4.5. Miss Forest](#445-miss-forest)  
+        - [4.4.6. Mice Forest](#446-mice-forest)  
+        - [4.4.7. KNN Imputation](#447-knn-imputation)          
 - [5. Papers](#5-papers)	
     - [5.1. PILM: A Survey on Problems, Methods and Applications](#51-pilm-a-survey-on-problems-methods-and-applications)	
     - [5.2. a real-time GMD monitoring system](#52-a-real-time-gmd-monitoring-system)	
@@ -87,7 +95,7 @@ Solar wind is a stream of charged particles, mainly protons and electrons, flowi
 
 In summary, the solar wind, as a continuous flow of charged particles from the Sun, affects Earth's magnetic field, causes aurora formations, contributes to space weather phenomena, and presents radiation hazards for space activities. Understanding the behavior of the solar wind is essential for studying and mitigating its impacts on Earth and space-based systems.
 
-![](./images_GIC/GIC_1.png)
+![GIC_1](./images_GIC/GIC_1.png)
 
 ## 1.2. Geomagnetic Induced Currents (GIC)
 
@@ -159,14 +167,14 @@ The Interplanetary Magnetic Field (IMF) is a crucial aspect of our solar system,
 Two main types of IMF exist:  
 ✔	**The Parker Spiral**: This type of IMF is named after solar astrophysicist Eugene Parker. It is a spiral-shaped magnetic field resulting from the rotation of the Sun. The Sun rotates faster at its equator than at its poles, causing the magnetic field lines to take on a spiral shape, much like the water from a spinning garden hose.
  
-![](./images_GIC/GIC_2.png)........................
-![](./images_GIC/GIC_3.png)
-![](./images_GIC/GIC_4.png)
+![GIC_2](./images_GIC/GIC_2.png)........................
+![GIC_3](./images_GIC/GIC_3.png)
+![GIC_4](./images_GIC/GIC_4.png)
 
 
 ✔	**The Interplanetary Shock**: This is a rapid change in the IMF caused by a significant solar event like a coronal mass ejection (CME). A CME is a massive burst of solar wind and magnetic fields rising above the solar corona or being released into space. These shocks can travel through space and affect planets' magnetic fields, including Earth's.
 
-![](./images_GIC/GIC_5.png) Interplanetary shock wave S f developed in the solar wind as a result of a chromospheric flare or a coronal mass ejection on the Sun S, and force lines of the interplanetary magnetic field B sw. Spacecraft are schematically shown in the neighborhood of the Lagrange point L 1 and the Earth's bow shock S b and in the magnetosheath between S b and the magnetopause m which is the boundary of the magnetosphere M (shown in section with an image of the Earth's magnetic field); broken curve corresponds to the Earth's (E) orbit.  
+![GIC_5](./images_GIC/GIC_5.png) Interplanetary shock wave S f developed in the solar wind as a result of a chromospheric flare or a coronal mass ejection on the Sun S, and force lines of the interplanetary magnetic field B sw. Spacecraft are schematically shown in the neighborhood of the Lagrange point L 1 and the Earth's bow shock S b and in the magnetosheath between S b and the magnetopause m which is the boundary of the magnetosphere M (shown in section with an image of the Earth's magnetic field); broken curve corresponds to the Earth's (E) orbit.  
 
 
 The "field magnitude average" metric is a measure of the IMF's average strength over a specific period. It incorporates the average of the IMF's three components: the north-south component, the east-west component, and the radial component (the component that points towards or away from the Sun). 
@@ -181,13 +189,13 @@ Here are some additional details about the field magnitude average metric:
 
 The term "heliosphere" is used to denote the vast bubble-like region surrounding the Sun, dominated by the solar wind and its associated IMF. This region acts as a protective shield for the planets within our solar system against cosmic radiation. When we refer to the IMF as the "Heliospheric Magnetic Field," we emphasize its role and reach throughout the heliosphere.
 
-![](./images_GIC/GIC_6.png) ........................
-![](./images_GIC/GIC_7.png)
+![GIC_6](./images_GIC/GIC_6.png) ........................
+![GIC_7](./images_GIC/GIC_7.png)
 
 
 ⮚	**Bx**, **By**, **Bz**: These are components of the IMF in the Geocentric Solar Magnetospheric (GSM) coordinate system. 
 
-![](./images_GIC/GIC_8.png)
+![GIC_8](./images_GIC/GIC_8.png)
 
 The geocentric coordinate system is not a planar coordinate system based on a map projection. It is a geographic coordinate system in which the earth is modeled as a sphere or spheroid in a right-handed XYZ (3D Cartesian) system measured from the center of the earth.
 
@@ -198,7 +206,7 @@ The geocentric coordinate system is not a planar coordinate system based on a ma
 
 ●	**Bz**: This component represents the IMF perpendicular to the ecliptic plane. It indicates the strength and direction of the magnetic field pointing either northward or southward. A positive Bz value indicates a northward-directed magnetic field, while a negative Bz value indicates a southward-directed magnetic field.
 
-![](./images_GIC/GIC_9.png)
+![GIC_9](./images_GIC/GIC_9.png)
 
 ⮚	**Speed**: The speed of the solar wind, usually measured in kilometers per second.
 
@@ -243,9 +251,9 @@ The solar wind's electric field is a critical parameter in understanding space w
 ●	The electric field is influenced by the solar wind speed and the IMF.  
 ●	CMEs can cause the electric field in the solar wind to increase significantly.
 
-![](./images_GIC/GIC_10.png) ...................
-![](./images_GIC/GIC_11.png)
-![](./images_GIC/GIC_12.png)
+![GIC_10](./images_GIC/GIC_10.png) ...................
+![GIC_11](./images_GIC/GIC_11.png)
+![GIC_12](./images_GIC/GIC_12.png)
 
 ⮚	**SYM/H**:
 
@@ -293,11 +301,11 @@ Knowing the longitude of the magnetometer station is crucial for a variety of ge
 
 | Image | Text |
 |---|---|
-| ![](./images_GIC/GIC_13.png) | Longitude lines are drawn between the North Pole and the South Pole. (A) The prime meridian (0°) divides earth into two halves of 180°. (B) Longitude is measured in degrees from 0° to 180° east or west of the prime meridian. | 
+| ![GIC_13](./images_GIC/GIC_13.png) | Longitude lines are drawn between the North Pole and the South Pole. (A) The prime meridian (0°) divides earth into two halves of 180°. (B) Longitude is measured in degrees from 0° to 180° east or west of the prime meridian. | 
 
 | Image | Text |
 |---|---|
-| ![](./images_GIC/GIC_14.png) | (A) East and west longitude meeting at 180˚ meridian. (B) The 180˚ meridian is on the opposite side of the globe from the prime meridian.|
+| ![GIC_14](./images_GIC/GIC_14.png) | (A) East and west longitude meeting at 180˚ meridian. (B) The 180˚ meridian is on the opposite side of the globe from the prime meridian.|
 
 ⮚ **GEOLAT (Geographic Latitude)**: Geographic Latitude, or GEOLAT in many datasets, represents the north-south position of a point on the Earth's surface. It's the angular distance from the equator to that point, north or south.
 
@@ -307,9 +315,9 @@ In the context of the SuperMAG dataset, the GEOLAT value refers to the latitude 
 
 For instance, a magnetometer station in Sydney, Australia would have a GEOLAT value of approximately -34 (as Sydney is about 34 degrees south of the equator), while a station in Oslo, Norway would have a GEOLAT value of around +60 (as Oslo is about 60 degrees north of the equator).
 
-![](./images_GIC/GIC_15.png)
+![GIC_15](./images_GIC/GIC_15.png)
 
-![](./images_GIC/GIC_16.png)
+![GIC_16](./images_GIC/GIC_16.png)
 
 ⮚ **MAGON (Magnetic Longitude)**: The magnetic longitude, also known as MAGLON in many datasets, is similar to geographic longitude, but it's based on the Earth's magnetic field rather than the surface geography. It refers to the east-west position of a point relative to the Earth's magnetic field.
 
@@ -317,7 +325,7 @@ The geomagnetic coordinates are based on a geomagnetic model (like the Internati
 
 The magnetic north pole does not align perfectly with the geographic North Pole, and it even moves over time (a phenomenon called secular variation). So, a magnetometer's magnetic longitude can be quite different from its geographic longitude.
 
-![](./images_GIC/GIC_17.png)
+![GIC_17](./images_GIC/GIC_17.png)
 
 ⮚ **MAGLAT (Magnetic Latitude)**: This is the latitude of the magnetometer station in geomagnetic coordinates.
 
@@ -329,7 +337,7 @@ In contrast, Magnetic Latitude refers to the north-south position of a point rel
 
 The Earth's magnetic poles do not perfectly align with the geographic poles, and they even move over time due to changes in the Earth's core (a phenomenon known as geomagnetic secular variation). Therefore, a location's magnetic latitude can be different from its geographic latitude.
 
-![](./images_GIC/GIC_18.png)
+![GIC_18](./images_GIC/GIC_18.png)
 
 ⮚ **MLT (Magnetic Local Time)**: Magnetic Local Time (MLT) is a measure of time based on the position of a location with respect to the Sun, but with reference to the Earth's magnetic field rather than its geographical features. In essence, it's solar time, but tied to magnetic, not geographic, coordinates.
 
@@ -377,7 +385,7 @@ The North, East, Down (NED) or NEZ coordinate system is a geographical system of
 
 In the context of a magnetometer station in the SuperMAG network, these measurements would reflect the variations in the local magnetic field due to various sources, such as the Earth's core, the ionosphere, and the magnetosphere, as well as the solar wind and the interplanetary magnetic field (IMF). Such measurements are key for studying the dynamics of Earth's magnetic field and space weather phenomena.
 
-![](./images_GIC/GIC_19.png)
+![GIC_19](./images_GIC/GIC_19.png)
 
 ⮚ **dbn_geo, dbe_geo, dbz_geo**: The variables dbn_geo, dbe_geo, and dbz_geo represent the changes in the northward, eastward, and downward (or vertical) components of the Earth's magnetic field, as measured in geographic coordinates.
 
@@ -449,19 +457,87 @@ This technique is especially useful when the data distribution is skewed or cont
 Like mean imputation, median imputation is a univariate method, meaning it considers only the distribution of the variable being imputed and ignores potential correlations with other variables. Furthermore, it operates under the assumption that the data are Missing Completely at Random (MCAR). If this is not the case, median imputation could lead to biased estimates, just like mean imputation.  
 
 ### 4.4.3. Mode:
-Mode: The mode is the most frequent value in a column, and it is a less common method for filling missing values. The mode is a good choice if the data is categorical, but it is not a good choice if the data is continuous.
-Constant number or string: This method involves filling in the missing values with a constant number or string, such as 0 or "unknown". This method is simple to implement, but it can be inaccurate if the constant value does not represent the true value of the missing data.
+The mode is the most frequent value in a column, and it is a less common method for filling missing values. The mode is a good choice if the data is categorical, but it is not a good choice if the data is continuous.
 
-### 4.4.4. Miss Forest:
-Miss Forest: Miss Forest is a machine learning algorithm that is specifically designed for filling missing values. Miss Forest works by creating multiple copies of the dataset, with each copy containing a different imputation method. The algorithm then combines the results of the different imputation methods to create a final imputation.
+**Advantages**:  
+- Simple to implement  
+- Easy to understand
+- Does not require any assumptions about the distribution of the data
 
-### 4.4.5. MICE Forest:
-MICE Forest: MICE Forest is a variation of Miss Forest that uses a Bayesian approach to imputation. MICE Forest is more accurate than Miss Forest, but it is also more computationally expensive.
+**Disadvantages**:
+- Only works for categorical data (it is **not** a good choice if the data is continuous.)
+- Can introduce bias into the data if the mode is not representative of the entire data set
 
-### 4.4.6. KNN Imputation:
-KNN Imputation: KNN Imputation is a non-parametric method for filling missing values. KNN Imputation works by finding the k most similar observations to the observation with the missing value, and then using the values of the k most similar observations to impute the missing value.
+### 4.4.4. Constant number or string: 
+This method involves filling in the missing values with a constant number or string, such as 0 or "unknown". This method is simple to implement, but it can be inaccurate if the constant value does not represent the true value of the missing data.
 
+### 4.4.5. Miss Forest:
+MissForest is a non-parametric method that uses the Random Forest algorithm for missing data imputation. It can handle different types of variables, both continuous and categorical. The algorithm treats each feature with missing values as the dependent variable (target) and the others as independent variables (predictors), and then trains a Random Forest model to predict the missing values.
 
+The process involves:
+- 1. Replacing missing values initially with a simple imputation method like mean or mode.
+- 2. Iteratively applying the Random Forest model for each variable with missing data until the imputed values don't significantly change between iterations or a set stopping criterion is met.  
+
+While MissForest often outperforms other methods in imputing missing data, it may struggle with high-dimensional data or when there's a high percentage of missing data. Also, due to its iterative nature, it can be computationally intensive and time-consuming for large datasets. The suitability of MissForest depends on the nature of the data and the pattern of missing values. Always consider these factors and explore your data thoroughly before choosing an imputation strategy.
+
+### 4.4.6. Mice Forest:
+
+"Mice Forest" is a Python package that implements the Multiple Imputation by Chained Equations (MICE) algorithm in conjunction with Random Forests. This powerful combination leverages the flexibility of MICE and the predictive power of Random Forests to handle missing data in a variety of datasets, both categorical and numerical.
+
+The MICE algorithm imputes missing values iteratively. In each iteration, a regression model, in this case, a Random Forest, predicts the missing values for a particular variable, using the observed values of the other variables. The predicted values then replace the missing values in the dataset. This process is repeated several times, each time using a different model or set of predictor variables.
+
+"Mice Forest" enriches this process by creating multiple copies of the dataset, each filled with a different imputation method. Common methods include mean imputation, mode imputation, and Random Forest imputation. The results from each imputed dataset are then combined to form a final, imputed dataset.
+
+This multiple imputation approach can help to reduce bias that can occur with single imputation methods, creating a good approximation of the original distribution of the data.
+
+However, there are some important considerations to keep in mind:
+
+- 1. Computation: Mice Forest can be computationally intensive, especially for large datasets.
+
+- 2. Interpretability: As a machine learning model, Random Forest is often seen as a "black box" algorithm. It might be difficult to explain why certain imputations were made.
+
+- 3. Assumptions: The MICE algorithm assumes that the data are Missing At Random (MAR), meaning the probability a value is missing can be related to other observed data. If this is not the case, the imputed values may be biased.
+
+In summary, Mice Forest brings together the robustness of Multiple Imputations and the predictive strength of Random Forests. Despite its potential computational expense and the challenge of interpretability, it offers an effective solution for handling various types of missing data in diverse datasets. However, it's essential to carefully consider the nature of your missing data and understand the assumptions underlying this method to avoid bias in your analysis.
+
+### 4.4.7. KNN Imputation:
+KNN Imputation is a non-parametric method for filling missing values. KNN stands for "k-nearest neighbors," and it is a machine learning algorithm that is used to find similar observations in a data set.
+
+KNN Imputation works by first finding the k most similar observations to the observation with the missing value. The k most similar observations are the observations that have the smallest distances to the observation with the missing value. The distances between observations are usually calculated using a Euclidean distance metric.
+
+Once the k most similar observations have been found, the values of the k most similar observations are used to impute the missing value. The most common way to do this is to simply average the values of the k most similar observations.
+
+KNN Imputation is a non-parametric method, which means that it does not make any assumptions about the distribution of the data. This makes KNN Imputation a relatively robust method for filling missing values.
+
+However, KNN Imputation can be computationally expensive, especially for large data sets. Additionally, KNN Imputation can be sensitive to the choice of k. If k is too small, then the imputed values may be too noisy. If k is too large, then the imputed values may be too smooth.
+
+Overall, KNN Imputation is a powerful and robust method for filling missing values. However, it is important to be aware of the limitations of KNN Imputation before using it.
+
+**Advantages**  
+- It is a non-parametric method, which means that it does not make any assumptions about the distribution of the data.  
+- It is relatively robust to outliers and noise in the data.  
+- It can be used to impute missing values in both categorical and continuous data.
+
+**Disadvantages**  
+- It can be computationally expensive, especially for large data sets.
+- It can be sensitive to the choice of k.
+- It can introduce bias into the data if the missing values are not missing completely at random (MCAR).
+
+**Assumption**  
+KNN assumes that the dataset has a metric space structure, which may not be the case for all datasets.
+
+| GIC_20                             | Text                                 |
+|:---                                | :---                                 |
+| ![GIC_20](./images_GIC/GIC_20.png) | Euclidean (metric) distance **vs** Manhattan (taxi-cab) distance                                               |
+
+| GIC_21                             | Text                                 |
+|:---                                | :---                                 |
+| ![GIC_21](./images_GIC/GIC_21.png) | Classification: Majority vote (Mode) |   
+
+| GIC_20                             | Text                                 |
+|:---                                | :---                                 |
+| ![GIC_22](./images_GIC/GIC_22.png) | Regression: Mean                     |
+  
 # 5. Papers
 
 ## 5.1. PILM: A Survey on Problems, Methods and Applications
