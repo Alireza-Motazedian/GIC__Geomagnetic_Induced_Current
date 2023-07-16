@@ -431,6 +431,37 @@ ADAM works by maintaining a moving (exponentially decaying) average of past grad
 
 However, despite these benefits, it's worth noting that there are also cases where ADAM might not work as well as other methods, such as RMSProp, SGD with momentum, or others. The choice of optimizer often depends on the specific characteristics of the problem at hand.
 
+## 4.4. Filling missing values
+### 4.4.1. Mean: 
+Mean Imputation is a method for handling missing data where the missing values in a dataset are replaced with the mean (average) of the observed values. The mean is calculated by summing all the observed values and dividing by the count of these values.
+
+This technique is straightforward, fast, and easy to understand, making it a popular choice for initial imputations. However, it comes with certain limitations. It assumes that the data are Missing Completely at Random (MCAR), which means that the probability of a value being missing is independent of both observed and unobserved data. If this assumption does not hold true, mean imputation could lead to biased estimates.
+
+Moreover, while the mean provides a central value, it may not be a good representative of the data if the distribution is skewed or if there are significant outliers, as it does not adequately capture these aspects of data distribution.
+
+Lastly, mean imputation doesn't consider possible correlations between variables, meaning it ignores any potential relationships that could help provide a more accurate imputation of the missing values. This might oversimplify the imputed data and underestimate the variability in the data, reducing the efficiency of subsequent analyses.
+
+### 4.4.2. Median:
+Median Imputation is an approach for addressing missing data where the missing values are replaced with the median of the observed values. The median is the middle value in a sorted list of numbers, dividing the distribution into two equal halves. If the count of numbers is odd, the median is the middle number. If it's even, the median is the average of the two middle numbers.
+
+This technique is especially useful when the data distribution is skewed or contains outliers, as the median is less sensitive to such anomalies compared to the mean. It is a simple and robust method to estimate missing values.
+
+Like mean imputation, median imputation is a univariate method, meaning it considers only the distribution of the variable being imputed and ignores potential correlations with other variables. Furthermore, it operates under the assumption that the data are Missing Completely at Random (MCAR). If this is not the case, median imputation could lead to biased estimates, just like mean imputation.  
+
+### 4.4.3. Mode:
+Mode: The mode is the most frequent value in a column, and it is a less common method for filling missing values. The mode is a good choice if the data is categorical, but it is not a good choice if the data is continuous.
+Constant number or string: This method involves filling in the missing values with a constant number or string, such as 0 or "unknown". This method is simple to implement, but it can be inaccurate if the constant value does not represent the true value of the missing data.
+
+### 4.4.4. Miss Forest:
+Miss Forest: Miss Forest is a machine learning algorithm that is specifically designed for filling missing values. Miss Forest works by creating multiple copies of the dataset, with each copy containing a different imputation method. The algorithm then combines the results of the different imputation methods to create a final imputation.
+
+### 4.4.5. MICE Forest:
+MICE Forest: MICE Forest is a variation of Miss Forest that uses a Bayesian approach to imputation. MICE Forest is more accurate than Miss Forest, but it is also more computationally expensive.
+
+### 4.4.6. KNN Imputation:
+KNN Imputation: KNN Imputation is a non-parametric method for filling missing values. KNN Imputation works by finding the k most similar observations to the observation with the missing value, and then using the values of the k most similar observations to impute the missing value.
+
+
 # 5. Papers
 
 ## 5.1. PILM: A Survey on Problems, Methods and Applications
