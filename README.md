@@ -17,24 +17,57 @@ GIC:.
 |       
 +---1. Report
 |       Daily logs.md
-|       Report _ Slides.pptx
+|       Report Slides.pptx
 |       
 +---2. Code
 |       Data provided by Talha.ipynb
 |       GIC Data Exploration.ipynb
 |       
 +---3. Data
-|       merged_1995-2011_2015.parq.gzip
-|       README_SuperMAG_Year-by-year.txt
-|       solar_wind_1995-2022.parq.gzip
-|       SuperMAG_1978-2021.parq.gzip
-|       SuperMAG_1995.csv
-|       
+|   |   filled_merged_1995-2011_2015.parq.gzip
+|   |   merged_1995-2011_2015.parq.gzip
+|   |   README.md
+|   |   solar_wind_1995-2022.parq.gzip
+|   |   SuperMAG_1978-2021.parq.gzip
+|   |   
+|   +---images_GIC_data_download
+|           1.png
+|           2.png
+|           3.png
+|           4.png
+|           5.png
+|           6.png
+|           7.png
+|                  
 \---4. Concepts _ Books _ Papers
-    |   Concepts.docx
+    |   README.md
     |   
     +---Books
     |       01. Machine Learning Techniques for Space Weather.pdf
+    |     
+    +---images_GIC
+    |       GIC_1.png
+    |       GIC_2.png
+    |       GIC_3.png
+    |       GIC_4.png
+    |       GIC_5.png
+    |       GIC_6.png
+    |       GIC_7.png
+    |       GIC_8.png
+    |       GIC_9.png
+    |       GIC_10.png
+    |       GIC_11.png
+    |       GIC_12.png
+    |       GIC_13.png
+    |       GIC_14.png
+    |       GIC_15.png
+    |       GIC_16.png
+    |       GIC_17.png
+    |       GIC_18.png
+    |       GIC_19.png
+    |       GIC_20.png
+    |       GIC_21.png
+    |       GIC_22.png  
     |       
     \---Papers
 ```
