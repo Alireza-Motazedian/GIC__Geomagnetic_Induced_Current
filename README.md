@@ -1,6 +1,8 @@
-# GIC 
-**G**emagnetic **I**nduced **C**urrent
+# GIC (**G**emagnetic **I**nduced **C**urrent)
+Geomagnetic Induced Currents (GICs) are created as a result of the interaction between the Earth's magnetic field and varying external magnetic fields caused by geomagnetic disturbances, particularly during geomagnetic storms.  
 
+**Goal of the project**:   
+To develop a deep learning model to predict solar storms 40 minutes in advance.
 ```
 Folder PATH listing
 GIC:.
