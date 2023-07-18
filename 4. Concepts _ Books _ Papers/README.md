@@ -95,7 +95,8 @@ Solar wind is a stream of charged particles, mainly protons and electrons, flowi
 
 In summary, the solar wind, as a continuous flow of charged particles from the Sun, affects Earth's magnetic field, causes aurora formations, contributes to space weather phenomena, and presents radiation hazards for space activities. Understanding the behavior of the solar wind is essential for studying and mitigating its impacts on Earth and space-based systems.
 
-![GIC_1](./images_GIC/GIC_1.png)
+![Figure_01](./images_GIC/Figure_01.png)  
+*ّFigure_01*  
 
 ## 1.2. Geomagnetic Induced Currents (GIC)
 
@@ -161,21 +162,24 @@ Here is a description for each column in "Solar wind Omniweb" dataset:
 ⮚	**minute**: The minute of the hour when the observation was made.
 
 ⮚	**Field magnitude average**: This is the average magnitude of the Interplanetary Magnetic Field (IMF) over the given period. 
-
 The Interplanetary Magnetic Field (IMF) is a crucial aspect of our solar system, extending from the Sun into interplanetary space. It's carried out into space by the solar wind, a stream of charged particles emitted from the Sun's upper atmosphere. The IMF varies and has complex structures based on the Sun's rotation and solar activities like solar flares and sunspots.
 
 Two main types of IMF exist:  
-✔	**The Parker Spiral**: This type of IMF is named after solar astrophysicist Eugene Parker. It is a spiral-shaped magnetic field resulting from the rotation of the Sun. The Sun rotates faster at its equator than at its poles, causing the magnetic field lines to take on a spiral shape, much like the water from a spinning garden hose.
- 
-![GIC_2](./images_GIC/GIC_2.png)........................
-![GIC_3](./images_GIC/GIC_3.png)
-![GIC_4](./images_GIC/GIC_4.png)
+✔	**The Parker Spiral**: This type of IMF is named after solar astrophysicist Eugene Parker. It is a spiral-shaped magnetic field resulting from the rotation of the Sun. The Sun rotates faster at its equator than at its poles, causing the magnetic field lines to take on a spiral shape, much like the water from a spinning garden hose.  
 
+![Figure_02](./images_GIC/Figure_02.png)  
+*Figure_02*  
+
+![Figure_03](./images_GIC/Figure_03.png)  
+*Figure_03*  
+
+![Figure_04](./images_GIC/Figure_04.png)   
+*Figure_04* 
 
 ✔	**The Interplanetary Shock**: This is a rapid change in the IMF caused by a significant solar event like a coronal mass ejection (CME). A CME is a massive burst of solar wind and magnetic fields rising above the solar corona or being released into space. These shocks can travel through space and affect planets' magnetic fields, including Earth's.
 
-![GIC_5](./images_GIC/GIC_5.png) Interplanetary shock wave S f developed in the solar wind as a result of a chromospheric flare or a coronal mass ejection on the Sun S, and force lines of the interplanetary magnetic field B sw. Spacecraft are schematically shown in the neighborhood of the Lagrange point L 1 and the Earth's bow shock S b and in the magnetosheath between S b and the magnetopause m which is the boundary of the magnetosphere M (shown in section with an image of the Earth's magnetic field); broken curve corresponds to the Earth's (E) orbit.  
-
+![Figure_05](./images_GIC/Figure_05.png)  
+*Figure_05: Interplanetary shock wave S f developed in the solar wind as a result of a chromospheric flare or a coronal mass ejection on the Sun S, and force lines of the interplanetary magnetic field B sw. Spacecraft are schematically shown in the neighborhood of the Lagrange point L 1 and the Earth's bow shock S b and in the magnetosheath between S b and the magnetopause m which is the boundary of the magnetosphere M (shown in section with an image of the Earth's magnetic field); broken curve corresponds to the Earth's (E) orbit.*
 
 The "field magnitude average" metric is a measure of the IMF's average strength over a specific period. It incorporates the average of the IMF's three components: the north-south component, the east-west component, and the radial component (the component that points towards or away from the Sun). 
 
@@ -189,13 +193,16 @@ Here are some additional details about the field magnitude average metric:
 
 The term "heliosphere" is used to denote the vast bubble-like region surrounding the Sun, dominated by the solar wind and its associated IMF. This region acts as a protective shield for the planets within our solar system against cosmic radiation. When we refer to the IMF as the "Heliospheric Magnetic Field," we emphasize its role and reach throughout the heliosphere.
 
-![GIC_6](./images_GIC/GIC_6.png) ........................
-![GIC_7](./images_GIC/GIC_7.png)
+![Figure_06](./images_GIC/Figure_06.png)  
+*Figure_06*  
 
+![Figure_07](./images_GIC/Figure_07.png)  
+*Figure_07*  
 
 ⮚	**Bx**, **By**, **Bz**: These are components of the IMF in the Geocentric Solar Magnetospheric (GSM) coordinate system. 
 
-![GIC_8](./images_GIC/GIC_8.png)
+![Figure_08](./images_GIC/Figure_08.png)  
+*Figure_08*
 
 The geocentric coordinate system is not a planar coordinate system based on a map projection. It is a geographic coordinate system in which the earth is modeled as a sphere or spheroid in a right-handed XYZ (3D Cartesian) system measured from the center of the earth.
 
@@ -206,7 +213,8 @@ The geocentric coordinate system is not a planar coordinate system based on a ma
 
 ●	**Bz**: This component represents the IMF perpendicular to the ecliptic plane. It indicates the strength and direction of the magnetic field pointing either northward or southward. A positive Bz value indicates a northward-directed magnetic field, while a negative Bz value indicates a southward-directed magnetic field.
 
-![GIC_9](./images_GIC/GIC_9.png)
+![Figure_09](./images_GIC/Figure_09.png)  
+*Figure_09*
 
 ⮚	**Speed**: The speed of the solar wind, usually measured in kilometers per second.
 
@@ -251,9 +259,15 @@ The solar wind's electric field is a critical parameter in understanding space w
 ●	The electric field is influenced by the solar wind speed and the IMF.  
 ●	CMEs can cause the electric field in the solar wind to increase significantly.
 
-![GIC_10](./images_GIC/GIC_10.png) ...................
-![GIC_11](./images_GIC/GIC_11.png)
-![GIC_12](./images_GIC/GIC_12.png)
+![Figure_10](./images_GIC/Figure_10.png)  
+*Figure_10*  
+
+![Figure_11](./images_GIC/Figure_11.png)  
+*Figure_11*  
+
+![Figure_12](./images_GIC/Figure_12.png)  
+*Figure_12*  
+
 
 ⮚	**SYM/H**:
 
@@ -299,13 +313,11 @@ For example, a magnetometer station in New York would have a GEOLON value around
 
 Knowing the longitude of the magnetometer station is crucial for a variety of geophysical analyses. It helps in correlating the geomagnetic data with its geographic location, which is essential when examining global phenomena like geomagnetic storms and their effects on different parts of the world.
 
-| Image | Text |
-|---|---|
-| ![GIC_13](./images_GIC/GIC_13.png) | Longitude lines are drawn between the North Pole and the South Pole. (A) The prime meridian (0°) divides earth into two halves of 180°. (B) Longitude is measured in degrees from 0° to 180° east or west of the prime meridian. | 
+![Figure_13](./images_GIC/Figure_13.png)  
+*Figure_13*: Longitude lines are drawn between the North Pole and the South Pole. (A) The prime meridian (0°) divides earth into two halves of 180°. (B) Longitude is measured in degrees from 0° to 180° east or west of the prime meridian. | 
 
-| Image | Text |
-|---|---|
-| ![GIC_14](./images_GIC/GIC_14.png) | (A) East and west longitude meeting at 180˚ meridian. (B) The 180˚ meridian is on the opposite side of the globe from the prime meridian.|
+![Figure_14](./images_GIC/Figure_14.png)  
+*Figure_14*: (A) East and west longitude meeting at 180˚ meridian. (B) The 180˚ meridian is on the opposite side of the globe from the prime meridian.
 
 ⮚ **GEOLAT (Geographic Latitude)**: Geographic Latitude, or GEOLAT in many datasets, represents the north-south position of a point on the Earth's surface. It's the angular distance from the equator to that point, north or south.
 
@@ -315,9 +327,11 @@ In the context of the SuperMAG dataset, the GEOLAT value refers to the latitude 
 
 For instance, a magnetometer station in Sydney, Australia would have a GEOLAT value of approximately -34 (as Sydney is about 34 degrees south of the equator), while a station in Oslo, Norway would have a GEOLAT value of around +60 (as Oslo is about 60 degrees north of the equator).
 
-![GIC_15](./images_GIC/GIC_15.png)
+![Figure_15](./images_GIC/Figure_15.png)  
+*Figure_15*
 
-![GIC_16](./images_GIC/GIC_16.png)
+![Figure_16](./images_GIC/Figure_16.png)  
+*Figure_16*
 
 ⮚ **MAGON (Magnetic Longitude)**: The magnetic longitude, also known as MAGLON in many datasets, is similar to geographic longitude, but it's based on the Earth's magnetic field rather than the surface geography. It refers to the east-west position of a point relative to the Earth's magnetic field.
 
@@ -325,7 +339,8 @@ The geomagnetic coordinates are based on a geomagnetic model (like the Internati
 
 The magnetic north pole does not align perfectly with the geographic North Pole, and it even moves over time (a phenomenon called secular variation). So, a magnetometer's magnetic longitude can be quite different from its geographic longitude.
 
-![GIC_17](./images_GIC/GIC_17.png)
+![Figure_17](./images_GIC/Figure_17.png)  
+*Figure_17*
 
 ⮚ **MAGLAT (Magnetic Latitude)**: This is the latitude of the magnetometer station in geomagnetic coordinates.
 
@@ -337,7 +352,8 @@ In contrast, Magnetic Latitude refers to the north-south position of a point rel
 
 The Earth's magnetic poles do not perfectly align with the geographic poles, and they even move over time due to changes in the Earth's core (a phenomenon known as geomagnetic secular variation). Therefore, a location's magnetic latitude can be different from its geographic latitude.
 
-![GIC_18](./images_GIC/GIC_18.png)
+![Figure_18](./images_GIC/Figure_18.png)  
+*Figure_18*  
 
 ⮚ **MLT (Magnetic Local Time)**: Magnetic Local Time (MLT) is a measure of time based on the position of a location with respect to the Sun, but with reference to the Earth's magnetic field rather than its geographical features. In essence, it's solar time, but tied to magnetic, not geographic, coordinates.
 
@@ -385,7 +401,8 @@ The North, East, Down (NED) or NEZ coordinate system is a geographical system of
 
 In the context of a magnetometer station in the SuperMAG network, these measurements would reflect the variations in the local magnetic field due to various sources, such as the Earth's core, the ionosphere, and the magnetosphere, as well as the solar wind and the interplanetary magnetic field (IMF). Such measurements are key for studying the dynamics of Earth's magnetic field and space weather phenomena.
 
-![GIC_19](./images_GIC/GIC_19.png)
+![Figure_19](./images_GIC/Figure_19.png)  
+*Figure_19*
 
 ⮚ **dbn_geo, dbe_geo, dbz_geo**: The variables dbn_geo, dbe_geo, and dbz_geo represent the changes in the northward, eastward, and downward (or vertical) components of the Earth's magnetic field, as measured in geographic coordinates.
 
@@ -526,17 +543,14 @@ Overall, KNN Imputation is a powerful and robust method for filling missing valu
 **Assumption**  
 KNN assumes that the dataset has a metric space structure, which may not be the case for all datasets.
 
-| GIC_20                             | Text                                 |
-|:---                                | :---                                 |
-| ![GIC_20](./images_GIC/GIC_20.png) | Euclidean (metric) distance **vs** Manhattan (taxi-cab) distance                                               |
+![Figure_20](./images_GIC/Figure_20.png)   
+*Figure_20: Euclidean (metric) distance **vs** Manhattan (taxi-cab) distance*
 
-| GIC_21                             | Text                                 |
-|:---                                | :---                                 |
-| ![GIC_21](./images_GIC/GIC_21.png) | Classification: Majority vote (Mode) |   
+![Figure_21](./images_GIC/Figure_21.png)  
+*Figure_21: Classification: Majority vote (Mode)*  
 
-| GIC_20                             | Text                                 |
-|:---                                | :---                                 |
-| ![GIC_22](./images_GIC/GIC_22.png) | Regression: Mean                     |
+![Figure_22](./images_GIC/Figure_22.png)    
+*Figure_22: Regression: Mean*  
   
 # 5. Papers
 
