@@ -163,6 +163,7 @@ Here is a description for each column in "Solar wind Omniweb" dataset:
 
 ⮚	**Field magnitude average**: This is the average magnitude of the Interplanetary Magnetic Field (IMF) over the given period. 
 The Interplanetary Magnetic Field (IMF) is a crucial aspect of our solar system, extending from the Sun into interplanetary space. It's carried out into space by the solar wind, a stream of charged particles emitted from the Sun's upper atmosphere. The IMF varies and has complex structures based on the Sun's rotation and solar activities like solar flares and sunspots.
+According to the University of Maryland's Space Weather Prediction Center, the IMF value typically ranges from about 1 to 20 nanoTesla (nT). 
 
 Two main types of IMF exist:  
 ✔	**The Parker Spiral**: This type of IMF is named after solar astrophysicist Eugene Parker. It is a spiral-shaped magnetic field resulting from the rotation of the Sun. The Sun rotates faster at its equator than at its poles, causing the magnetic field lines to take on a spiral shape, much like the water from a spinning garden hose.  
@@ -200,7 +201,7 @@ The term "heliosphere" is used to denote the vast bubble-like region surrounding
 *Figure_07*  
 
 ⮚	**Bx**, **By**, **Bz**: These are components of the IMF in the Geocentric Solar Magnetospheric (GSM) coordinate system. 
-
+These components of the IMF typically vary between about -10 and +10 nT. This information is based on the GSM coordinate system used in space weather studies. 
 ![Figure_08](./images_GIC/Figure_08.png)  
 *Figure_08*
 
@@ -219,9 +220,9 @@ The geocentric coordinate system is not a planar coordinate system based on a ma
 ⮚	**Speed**: The speed of the solar wind, usually measured in kilometers per second.
 
 ●	The speed of the solar wind is usually measured in kilometers per second (km/s).  
-●	The speed of the solar wind can vary from about 300 km/s to about 800 km/s.  
-●	The speed of the solar wind is influenced by the Sun's magnetic field, the solar activity, and the distance from the Sun.  
+●	The speed of the solar wind is influenced by the Sun's magnetic field, the solar activity, and the distance from the Sun.      
 ●	CMEs can cause the speed of the solar wind to increase significantly.
+●	According to NASA, solar wind speeds typically range between 250 and 800 kilometers per second (km/s), but can occasionally exceed 1000 km/s during strong solar storms.
 
 ⮚	**Vx**, **Vy**, **Vz**: These are the components of the solar wind velocity in the GSM coordinate system.
 ●	**Vx**: This component represents the velocity of the solar wind in the direction from the Earth towards the Sun. This is along the X-axis of the GSM system. A negative Vx value would typically indicate solar wind moving from the Sun towards the Earth.
@@ -232,32 +233,33 @@ The geocentric coordinate system is not a planar coordinate system based on a ma
 
 ⮚	**Proton density**: The density of protons in the solar wind.
 
-●	The proton density of the solar wind is usually measured in protons per cubic centimeter (p/cc).  
-●	The proton density of the solar wind can vary from about 1 p/cc to about 100 p/cc.  
+●	The proton density of the solar wind is usually measured in protons per cubic centimeter (p/cc).    
 ●	The proton density is influenced by the Sun's magnetic field, the solar activity, and the distance from the Sun.  
-●	CMEs can cause the proton density of the solar wind to increase significantly.
+●	CMEs can cause the proton density of the solar wind to increase significantly.  
+●	The proton density in the solar wind typically falls between 1 and 10 protons per cubic centimeter. This information is referenced from the University of Maryland's Space Weather Prediction Center.
 
 ⮚	**Proton temperature**: The temperature of the solar wind protons.
 
-●	The proton temperature of the solar wind is usually measured in Kelvin (K).  
-●	The proton temperature of the solar wind can vary from about 1 million K to about 10 million K.  
+●	The proton temperature of the solar wind is usually measured in Kelvin (K).   
 ●	The proton temperature is influenced by the Sun's magnetic field, the solar activity, and the distance from the Sun.  
-●	CMEs can cause the proton temperature of the solar wind to increase significantly.
+●	CMEs can cause the proton temperature of the solar wind to increase significantly.  
+●	The temperature of solar wind protons can vary quite a bit, but it's typically between 10,000 and 2,000,000 degrees Kelvin according to NASA's studies on solar wind. 
 
 ⮚	**Flow pressure**: The dynamic pressure of the solar wind.
 
 ●	The flow pressure of the solar wind is usually measured in nanopascals (nPa).  
-●	The flow pressure of the solar wind can vary from about 1 nPa to about 100 nPa.  
 ●	The flow pressure is influenced by the density and speed of the solar wind.  
-●	CMEs can cause the flow pressure of the solar wind to increase significantly.
+●	CMEs can cause the flow pressure of the solar wind to increase significantly.  
+●	The dynamic pressure of the solar wind can be in the range of 1 to 10 nPa. This can be referenced from a paper by Richardson and Cane in the Journal of Geophysical Research.  
+
 
 ⮚	**Electric field**: 
 The solar wind's electric field is a critical parameter in understanding space weather and geomagnetic activities. It arises due to the motion of the charged particles in the solar wind across the Interplanetary Magnetic Field (IMF). This motion of charged particles creates an electric field, which is perpendicular to both the solar wind velocity and the IMF direction. Visualize the solar wind velocity vector (V) and the IMF vector (B) within this 3D space. The electric field vector (E) will be perpendicular to both V and B. In reality, these vectors may not align perfectly with the axes of the GSM system, but it's important to understand that E, V, and B are mutually perpendicular in the frame of the solar wind.
 
-●	The electric field in the solar wind is usually measured in volts per meter (V/m).  
-●	The electric field in the solar wind can vary from about 0.1 V/m to about 1000 V/m.  
+●	The electric field in the solar wind is usually measured in volts per meter (V/m).      
 ●	The electric field is influenced by the solar wind speed and the IMF.  
-●	CMEs can cause the electric field in the solar wind to increase significantly.
+●	CMEs can cause the electric field in the solar wind to increase significantly.  
+●	This could range quite broadly depending on solar wind speed and IMF, typically between 0 and 10 mV/m according to space weather prediction models.
 
 ![Figure_10](./images_GIC/Figure_10.png)  
 *Figure_10*  
@@ -286,7 +288,8 @@ Geomagnetic storms are global disturbances in the Earth's magnetic field caused 
 ●	The SYM/H index is a measure of the symmetric part of the disturbance magnetic field in the horizontal plane at the Earth's surface.  
 ●	The disturbance magnetic field is the magnetic field that is caused by the interaction of the solar wind with the Earth's magnetic field.  
 ●	Geomagnetic storms are caused by large solar storms, such as coronal mass ejections (CMEs).  
-●	The SYM/H index is a useful tool for space weather forecasting.
+●	The SYM/H index is a useful tool for space weather forecasting.  
+●	This index can range from around -500 to +500 nanoTesla during strong geomagnetic storms as per NOAA's space weather scale for geomagnetic storms
 
 ## 3.2. SuperMAG (description)
 Here is a description for each column in "SuperMAG" dataset:
@@ -337,7 +340,8 @@ For instance, a magnetometer station in Sydney, Australia would have a GEOLAT va
 
 The geomagnetic coordinates are based on a geomagnetic model (like the International Geomagnetic Reference Field, IGRF) which represents the Earth's magnetic field. In this model, the "prime meridian" is not the geographic prime meridian that goes through Greenwich, but the meridian that goes through the magnetic north pole.
 
-The magnetic north pole does not align perfectly with the geographic North Pole, and it even moves over time (a phenomenon called secular variation). So, a magnetometer's magnetic longitude can be quite different from its geographic longitude.
+The magnetic north pole does not align perfectly with the geographic North Pole, and it even moves over time (a phenomenon called secular variation). So, a magnetometer's magnetic longitude can be quite different from its geographic longitude.  
+Magnetic longitude ranges from 0 to 360 degrees. The same reference can be used.
 
 ![Figure_17](./images_GIC/Figure_17.png)  
 *Figure_17*
@@ -350,7 +354,8 @@ Geographic latitude denotes the north-south position of a point on the Earth's s
 
 In contrast, Magnetic Latitude refers to the north-south position of a point relative to the Earth's magnetic field. In this coordinate system, 0 degrees refers to the magnetic equator (the line around the Earth halfway between the magnetic north and south poles), +90 degrees refers to the magnetic North Pole, and -90 degrees refers to the magnetic South Pole.
 
-The Earth's magnetic poles do not perfectly align with the geographic poles, and they even move over time due to changes in the Earth's core (a phenomenon known as geomagnetic secular variation). Therefore, a location's magnetic latitude can be different from its geographic latitude.
+The Earth's magnetic poles do not perfectly align with the geographic poles, and they even move over time due to changes in the Earth's core (a phenomenon known as geomagnetic secular variation). Therefore, a location's magnetic latitude can be different from its geographic latitude.  
+Magnetic latitude also ranges from -90 degrees at the magnetic south pole to +90 degrees at the magnetic north pole. The same reference can be used. 
 
 ![Figure_18](./images_GIC/Figure_18.png)  
 *Figure_18*  
@@ -361,7 +366,8 @@ Just like geographic local time, where noon is defined as when the Sun is at its
 
 Because the Earth's magnetic field is not perfectly aligned with its rotation axis, and because the magnetic poles wander over time, the MLT for a given location will not usually match the geographic local time. It's also worth noting that MLT varies as the Earth rotates, just like geographical local time.
 
-The concept of MLT is particularly important in the field of space weather and geomagnetism, because many phenomena related to the Earth's magnetic field and its interaction with the solar wind have a strong dependence on MLT. For example, the occurrence and strength of auroras and geomagnetic disturbances can vary significantly with MLT. In the context of the SuperMAG dataset, the MLT would be the local time at each magnetometer station, in terms of magnetic coordinates.
+The concept of MLT is particularly important in the field of space weather and geomagnetism, because many phenomena related to the Earth's magnetic field and its interaction with the solar wind have a strong dependence on MLT. For example, the occurrence and strength of auroras and geomagnetic disturbances can vary significantly with MLT. In the context of the SuperMAG dataset, the MLT would be the local time at each magnetometer station, in terms of magnetic coordinates.  
+Magnetic Local Time ranges from 0 to 24 hours, like conventional time.
 
 ⮚ **MCOLAT (Magnetic Co-latitude)**: Magnetic Co-latitude, often referred to as MCOLAT in various datasets, is a way of defining a location's position with respect to the Earth's magnetic field. More specifically, it is calculated as 90 degrees minus the magnetic latitude of a given point.
 
@@ -369,7 +375,8 @@ While magnetic latitude measures the angle between the location and the magnetic
 
 This means that the magnetic co-latitude of a point is the angle from that point to the magnetic North Pole along a line of longitude, with the magnetic North Pole itself being at 0 degrees, and the magnetic equator being at 90 degrees.
 
-This way of measuring location is particularly useful in spherical coordinates and certain areas of study related to the Earth's magnetic field, such as magnetospheric physics and space weather analysis. In the SuperMAG dataset, the MCOLAT for each magnetometer station would allow scientists to understand the station's position relative to the Earth's magnetic North Pole, which could be relevant when studying certain magnetospheric phenomena.
+This way of measuring location is particularly useful in spherical coordinates and certain areas of study related to the Earth's magnetic field, such as magnetospheric physics and space weather analysis. In the SuperMAG dataset, the MCOLAT for each magnetometer station would allow scientists to understand the station's position relative to the Earth's magnetic North Pole, which could be relevant when studying certain magnetospheric phenomena.  
+The magnetic co-latitude ranges from 0 to 180 degrees, with 0 degrees at the magnetic north pole and 180 degrees at the magnetic south pole.
 
 ⮚ **IGRF_DECL (International Geomagnetic Reference Field Declination)**: The International Geomagnetic Reference Field (IGRF) Declination, or IGRF_DECL, refers to the angle between the magnetic north and true (geographic) north at a specific location based on the IGRF model.
 
@@ -388,12 +395,13 @@ The SZA is critical for understanding and calculating the amount of solar radiat
 In the context of SuperMAG or other geophysical datasets, the SZA can be an important parameter for understanding variations in ionospheric and magnetospheric processes that are driven by solar radiation, including auroral activity and ionospheric conductivity.
 
 ⮚  **dbn_nez, dbe_nez, dbz_nez**: The variables dbn_nez, dbe_nez, and dbz_nez in a dataset like SuperMAG represent changes in the components of the magnetic field in the North, East, and Down directions respectively.
+They typically ranges from -100 to +100 nanoTesla (nT) during quiet conditions, but can exceed these values during geomagnetic storms.  
 
-dbn_nez: This represents the change (delta, denoted by 'db') in the northward component of the magnetic field.
+- **dbn_nez**: This represents the change (delta, denoted by 'db') in the northward component of the magnetic field.
 
-dbe_nez: This represents the change in the eastward component of the magnetic field.
+- **dbe_nez**: This represents the change in the eastward component of the magnetic field.
 
-dbz_nez: This represents the change in the downward (or vertical) component of the magnetic field.
+- **dbz_nez**: This represents the change in the downward (or vertical) component of the magnetic field.
 
 These changes are calculated over a specific time interval, such as from one observation time to the next.
 
@@ -405,18 +413,21 @@ In the context of a magnetometer station in the SuperMAG network, these measurem
 *Figure_19*
 
 ⮚ **dbn_geo, dbe_geo, dbz_geo**: The variables dbn_geo, dbe_geo, and dbz_geo represent the changes in the northward, eastward, and downward (or vertical) components of the Earth's magnetic field, as measured in geographic coordinates.
+They typically ranges from -100 to +100 nanoTesla (nT) during quiet conditions, but can exceed these values during geomagnetic storms.  
 
 Let's break down each term:
 
-dbn_geo: This represents the change in the northward component of the magnetic field in geographic coordinates. If you were standing at the location of the magnetometer and facing geographic north, this measurement would represent how much the magnetic field has changed in that direction.
+- **dbn_geo**: This represents the change in the northward component of the magnetic field in geographic coordinates. If you were standing at the location of the magnetometer and facing geographic north, this measurement would represent how much the magnetic field has changed in that direction.
 
-dbe_geo: This represents the change in the eastward component of the magnetic field in geographic coordinates. If you were standing at the location of the magnetometer and facing geographic east, this measurement would represent how much the magnetic field has changed in that direction.
+- **dbe_geo**: This represents the change in the eastward component of the magnetic field in geographic coordinates. If you were standing at the location of the magnetometer and facing geographic east, this measurement would represent how much the magnetic field has changed in that direction.
 
-dbz_geo: This represents the change in the downward (vertical) component of the magnetic field in geographic coordinates. This would measure how much the magnetic field has changed in a direction going straight down into the Earth at the location of the magnetometer.
+- **dbz_geo**: This represents the change in the downward (vertical) component of the magnetic field in geographic coordinates. This would measure how much the magnetic field has changed in a direction going straight down into the Earth at the location of the magnetometer.
 
 The term "delta" (represented by 'db') in each of these variables represents a change. So these variables aren't giving you the strength of the magnetic field in each direction, but rather how much that strength has changed over a certain period of time, such as from one measurement to the next.
 
-The 'geo' part of these variables indicates that these measurements are made in the geographic coordinate system, which is based on the Earth's shape and orientation in space, rather than in a magnetic coordinate system, which would be based on the Earth's magnetic field.
+The 'geo' part of these variables indicates that these measurements are made in the geographic coordinate system, which is based on the Earth's shape and orientation in space, rather than in a magnetic coordinate system, which would be based on the Earth's magnetic field.  
+
+⮚ **decl**: The magnetic declination varies greatly across the globe, but it's typically between -30 and +30 degrees
 
 # 4. Machine Learning
 ## 4.1. Time Series Analysis
