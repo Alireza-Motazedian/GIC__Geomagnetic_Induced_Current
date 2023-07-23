@@ -35,7 +35,8 @@ Geomagnetic Induced Currents (GIC)
         - [4.4.4. Constant number or string](#444-constant-number-or-string)  
         - [4.4.5. Miss Forest](#445-miss-forest)  
         - [4.4.6. Mice Forest](#446-mice-forest)  
-        - [4.4.7. KNN Imputation](#447-knn-imputation)          
+        - [4.4.7. KNN Imputation](#447-knn-imputation)     
+    - [4.5. Principal component analysis (PCA)](#45-principal-component-analysis-pca)                 
 - [5. Papers](#5-papers)	
     - [5.1. PILM: A Survey on Problems, Methods and Applications](#51-pilm-a-survey-on-problems-methods-and-applications)	
     - [5.2. a real-time GMD monitoring system](#52-a-real-time-gmd-monitoring-system)	
@@ -45,39 +46,50 @@ Geomagnetic Induced Currents (GIC)
 01. **PIML**: Physics-Informed Machine Learning 
 02. **PINN**: Physics-Informed Neutral Network
 03. **GIC**: Geomagnetic Induced Current
-03. **PDE**: Partial Differential Equation
-04. **ODE**: Ordinary Differential Equation
-05. **SDE**: Stochastic Differential Equation
-06. **GCN**: Graph Convolutional Network
-07. **FDM**: Finite Difference Method 
-08. **FVM**: Finite Volume Method
-09. **SGD**: Stochastic Gradient Descent
-10. **CNN**: Convolutional Neural Network
-11. **NSF**: National Science Foundation
-12. **RNN**: Recurrent Neural Networks 
-13. **GRU**: Gated Recurrent Unit 
-14. **MLP**: Multi-Layer Perceptron
-15. **NTK**: Neural Tangeting Kernel 
-16. **TFC**: Theory of Functional Connections
-17. **HNN**: Hamiltonian Neural Networks
-18. **VAE**: Variational Auto-Encoders
-19. **GMD**: Geomagnetic Disturbances
-20. **CME**: Coronal Mass Ejection
-21. **GDV**: Geographic Data View
-22. **POD**: Proper Orthogonal Decomposition
-23. **FNO**: Fourier Neural Operator 
-24. **FFT**: Fast Fourier Transformation
-25. **GEM**: Geospace Environment Modeling
-26. **MSE**: Mean Square Error
-27. **SWPC**: Space Weather Prediction Center 
-28. **NOAA**: National Oceanic and Atmospheric Administration 
-29. **DASI**: Distributed Arrays of Small Instruments
-30. **PGMD**: Pseudo-Geographic Mosaic Display
-31. **RELU**: REctified Linear Unit
-32. **RMSE**: Root Mean Square Error
-33. **LSTM**: Long-Short Term Memory network 
-34. **ADAM**: Adaptive Moment Estimation
-35. **IAGA**: International Association of Geomagnetism and Aeronomy 
+04. **ACE**: The Advanced Composition Explorer (ACE) satellite
+05. **DSCOVR**: Deep Space Climate Observatory (DSCOVR) spacecraft
+06. **MAG**: Magnetometer
+07. **IMF**: Interplanetary Magnetic Field
+08. **PDE**: Partial Differential Equation
+09. **ODE**: Ordinary Differential Equation
+10. **SDE**: Stochastic Differential Equation
+11. **GCN**: Graph Convolutional Network
+12. **FDM**: Finite Difference Method 
+13. **FVM**: Finite Volume Method
+14. **SGD**: Stochastic Gradient Descent
+15. **CNN**: Convolutional Neural Network
+16. **NSF**: National Science Foundation
+17. **RNN**: Recurrent Neural Networks 
+18. **GRU**: Gated Recurrent Unit 
+19. **MLP**: Multi-Layer Perceptron
+20. **NTK**: Neural Tangeting Kernel 
+21. **TFC**: Theory of Functional Connections
+22. **HNN**: Hamiltonian Neural Networks
+23. **VAE**: Variational Auto-Encoders
+24. **GMD**: Geomagnetic Disturbances
+25. **CME**: Coronal Mass Ejection
+26. **GDV**: Geographic Data View
+27. **POD**: Proper Orthogonal Decomposition
+28. **FNO**: Fourier Neural Operator 
+29. **FFT**: Fast Fourier Transformation
+30. **GEM**: Geospace Environment Modeling
+31. **MSE**: Mean Square Error
+33. **PCA**: Principal component analysis 
+33. **RCN**: Research Coordination Network
+34. **SVM**: support vector machines 
+35. **ACF**: autocorrelation function 
+36. **SWPC**: Space Weather Prediction Center 
+37. **NOAA**: National Oceanic and Atmospheric Administration 
+38. **DASI**: Distributed Arrays of Small Instruments
+39. **PGMD**: Pseudo-Geographic Mosaic Display
+40. **RELU**: REctified Linear Unit
+41. **RMSE**: Root Mean Square Error
+42. **LSTM**: Long-Short Term Memory network 
+43. **ADAM**: Adaptive Moment Estimation
+44. **IAGA**: International Association of Geomagnetism and Aeronomy
+45. **RTSW**: Real-Time Solar Wind
+46. **SWEPAM**: Solar Wind Electron Proton Alpha Monitor 
+
 
 # 1. Introduction
 
@@ -563,6 +575,36 @@ KNN assumes that the dataset has a metric space structure, which may not be the 
 ![Figure_22](./images_GIC/Figure_22.png)    
 *Figure_22: Regression: Mean*  
   
+## 4.5. Principal component analysis (PCA)
+Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of correlated variables into a set of uncorrelated variables called principal components. The principal components are ordered in terms of their variance, with the first principal component having the highest variance and the last principal component having the lowest variance.
+
+PCA is a widely used technique for dimensionality reduction, which is the process of reducing the number of variables in a dataset while preserving as much information as possible. PCA can be used to reduce the dimensionality of a dataset for a variety of purposes, such as:
+
+- **Improving the interpretability of the data**. When a dataset has a large number of variables, it can be difficult to understand the relationships between the variables. PCA can be used to reduce the dimensionality of the dataset, making it easier to visualize and understand the relationships between the variables.
+- **Improving the performance of machine learning algorithms**. Many machine learning algorithms are more efficient when they are trained on datasets with a smaller number of variables. PCA can be used to reduce the dimensionality of a dataset, making it easier for machine learning algorithms to learn the relationships between the variables.  
+
+The idea behind PCA is to find a new set of variables that capture the most variation in the original dataset. This is done by finding a set of orthogonal vectors, called principal components, that are aligned with the directions of maximum variance in the dataset. The principal components are then used to create a new dataset, called the principal component space, that is a lower-dimensional representation of the original dataset.
+
+The number of principal components that are used to create the principal component space is determined by the user. The user can choose to use as many or as few principal components as they want, depending on the desired level of dimensionality reduction.
+
+PCA is a powerful tool for dimensionality reduction and data analysis. It is a widely used technique in a variety of fields, including machine learning, statistics, and data mining.
+
+- **Here is an example of how PCA can be used**.
+
+    - **Original dataset**: This is a dataset of 1000 points in 2D space. The points are correlated, meaning that they tend to cluster together.  
+![Figure_23](./images_GIC/Figure_23.png)    
+*Figure_23*
+
+    - **Principal components**: PCA finds two principal components that capture the most variation in the original dataset. The first principal component is shown in blue, and the second principal component is shown in red.  
+![Figure_24](./images_GIC/Figure_24.png)    
+*Figure_24*
+
+    - **Principal component space**: The principal component space is a new representation of the original dataset in 2D space. The points in the principal component space are uncorrelated, meaning that they do not cluster together.  
+![Figure_25](./images_GIC/Figure_25.png)    
+*Figure_25*
+
+As you can see, PCA has transformed the original dataset of 1000 points in 2D space into a new dataset of 2 points in 2D space. The new dataset is a lower-dimensional representation of the original dataset, but it still captures most of the information in the original dataset.
+
 # 5. Papers
 
 ## 5.1. PILM: A Survey on Problems, Methods and Applications
