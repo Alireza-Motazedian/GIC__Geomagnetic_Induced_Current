@@ -41,7 +41,10 @@ Geomagnetic Induced Currents (GIC)
 - [5. Papers](#5-papers)	
     - [5.1. PILM: A Survey on Problems, Methods and Applications](#51-pilm-a-survey-on-problems-methods-and-applications)	
     - [5.2. a real-time GMD monitoring system](#52-a-real-time-gmd-monitoring-system)  
-- [6. Questions](#6-questions)  
+- [6. Questions](#6-questions) 
+    - [6.1.1. Question 1](#61-question-1)  
+    - [6.1.2. Question 2](#62-question-2)  
+
 
 
 
@@ -696,7 +699,7 @@ The implementation of a real-time GMD monitoring system is essential for grid op
 
 # 6. Questions  
 
-## 6.1. Q1:  
+## 6.1. Question 1:  
 **How do various solar wind conditions (e.g., IMF components, speed, density, level of turbulence) and different large-scale drivers control the coupling efficiency and the energy/mass transfer from the solar wind to the magnetosphere?**   
 
 The Sun's continuous emission of charged particles, known as the solar wind, interacts with Earth's magnetosphere, the region around our planet dominated by its magnetic field. This interaction is an intricate process, dependent on various properties of the solar wind and controlled by different large-scale drivers.  
@@ -736,3 +739,18 @@ The Sun's continuous emission of charged particles, known as the solar wind, int
 *Figure_34: The main magnetospheric features of the substorm growth phase.*  
 
 These factors combine to control the efficiency of the energy and mass transfer from the solar wind to the magnetosphere. The more efficient this transfer, the more likely it is to cause geomagnetic disturbances, such as substorms and geomagnetic storms, that can impact our technology-dependent society. Predicting these disturbances and understanding the factors that affect them are major goals of space weather research.
+
+## 6.2. Question 2:   
+**How do solar wind conditions control the occurrence frequency and location of different magnetospheric plasma waves?**  
+
+The occurrence frequency and location of magnetospheric plasma waves are significantly influenced by solar wind conditions. The solar wind, a stream of charged particles flowing out from the Sun, interacts with the Earth's magnetosphere, creating different types of plasma waves.
+
+- Solar Wind Speed and Density: Higher solar wind speeds and densities increase the energy and dynamic pressure exerted on the Earth's magnetosphere. This can enhance the excitation of magnetospheric plasma waves, including Ultra Low Frequency (ULF) waves, Very Low Frequency (VLF) waves, and others. The location of these waves depends on how the pressure distorts the magnetosphere, which can affect the plasma's distribution and motion within it.
+
+- Interplanetary Magnetic Field (IMF): The orientation of the IMF plays a crucial role in determining where and when magnetospheric plasma waves occur. A southward-directed IMF can open magnetic reconnection sites on the day-side magnetopause, allowing solar wind particles to enter the magnetosphere and alter plasma conditions. This can stimulate the production of waves, such as magnetosonic waves or whistler waves, at specific locations in the magnetosphere where conditions are ripe. Conversely, a northward IMF orientation generally lessens wave activity.
+
+- Solar Wind Turbulence: The level of turbulence or fluctuation in the solar wind can create instabilities that generate magnetospheric plasma waves. These can occur at various locations in the magnetosphere, particularly at boundaries where plasma conditions change rapidly, such as the magnetopause and the plasmapause.
+
+- Large-Scale Solar Events: Events such as Coronal Mass Ejections (CMEs) and solar flares can dramatically change solar wind conditions. These sudden increases in solar wind energy input can create strong disturbances in the magnetosphere, exciting various plasma waves and causing them to propagate to different regions. This includes phenomena like magnetospheric chorus waves, which are enhanced during geomagnetic storms driven by solar events.
+
+The interaction between solar wind and the Earth's magnetosphere is a complex process involving many factors. The occurrence of different types of magnetospheric plasma waves depends on a combination of these factors, and research is ongoing to better understand these interactions. 
