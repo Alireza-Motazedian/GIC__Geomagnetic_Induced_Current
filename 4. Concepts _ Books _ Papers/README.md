@@ -40,7 +40,9 @@ Geomagnetic Induced Currents (GIC)
     - [4.5. Principal component analysis (PCA)](#45-principal-component-analysis-pca)                 
 - [5. Papers](#5-papers)	
     - [5.1. PILM: A Survey on Problems, Methods and Applications](#51-pilm-a-survey-on-problems-methods-and-applications)	
-    - [5.2. a real-time GMD monitoring system](#52-a-real-time-gmd-monitoring-system)	
+    - [5.2. a real-time GMD monitoring system](#52-a-real-time-gmd-monitoring-system)  
+- [6. Questions](#6-questions)  
+
 
 
 # 0. Jargon
@@ -690,4 +692,47 @@ Alerting and Notification: When significant geomagnetic disturbances are detecte
 
 Integration with Power Grid Systems: The real-time GMD monitoring system is often integrated with the control and monitoring infrastructure of the power grid. This integration allows operators to correlate the geomagnetic data with other operational parameters, such as current flows and system stability, to assess the potential impact of GICs on the grid components.
 
-The implementation of a real-time GMD monitoring system is essential for grid operators and utility companies to understand and manage the potential risks associated with geomagnetic disturbances. By continuously monitoring the Earth's magnetic field and promptly detecting changes, the system enables proactive responses, such as adjusting power grid operations, implementing protective measures, or isolating vulnerable components, to mitigate the impact of GICs on electrical systems.
+The implementation of a real-time GMD monitoring system is essential for grid operators and utility companies to understand and manage the potential risks associated with geomagnetic disturbances. By continuously monitoring the Earth's magnetic field and promptly detecting changes, the system enables proactive responses, such as adjusting power grid operations, implementing protective measures, or isolating vulnerable components, to mitigate the impact of GICs on electrical systems.  
+
+# 6. Questions  
+
+## 6.1. Q1:  
+**How do various solar wind conditions (e.g., IMF components, speed, density, level of turbulence) and different large-scale drivers control the coupling efficiency and the energy/mass transfer from the solar wind to the magnetosphere?**   
+
+The Sun's continuous emission of charged particles, known as the solar wind, interacts with Earth's magnetosphere, the region around our planet dominated by its magnetic field. This interaction is an intricate process, dependent on various properties of the solar wind and controlled by different large-scale drivers.  
+
+- **Interplanetary Magnetic Field (IMF) Components**: The direction and strength of the IMF, particularly the southward component (Bz), strongly influence the level of energy transfer from the solar wind to the magnetosphere. When Bz is southward, it opposes Earth's magnetic field, which allows for reconnection at the dayside magnetopause (the boundary separating the magnetosphere and the solar wind). This reconnection opens the magnetosphere to the solar wind, allowing energy, momentum, and mass to enter. 
+    
+![Figure_29](./images_GIC/Figure_29.png)   
+*Figure_29: A magnetosphere for northward IMF with 3 reconnection sites. Solid lines indicate the magnetic field and the arrowheads indicate the direction of the flow. Reconnection sites are indicated by X.*
+
+- **Solar Wind Speed**: The faster the solar wind, the greater the dynamic pressure on the magnetosphere, compressing it on the dayside and extending the tail on the nightside. High-speed streams can cause geomagnetic storms and enhance energy input into the magnetosphere. 
+
+![Figure_30](./images_GIC/Figure_30.png)   
+*Figure_30: Flow of plasma energy around Earth's magnetosphere. Solar energy absorbed through the magnetopause circulates in the magnetosphere and becomes energy that generates the radiation belt and auroras.*
+
+- **Solar Wind Density**: The solar wind density also affects solar wind-magnetosphere coupling. A denser solar wind increases the dynamic pressure on the magnetosphere than a less dense solar wind. This is because a denser solar wind will have more particles, which can interact with the magnetosphere and transfer energy and momentum. 
+
+![Figure_31](./images_GIC/Figure_31.png)   
+*Figure_31: Solar wind entry regions in the high-latitude terrestrial magnetosphere as detected by Cluster.* 
+
+- **Solar Wind Turbulence**: Turbulence in the solar wind can also affect solar wind-magnetosphere coupling. Turbulence can increase the rate of magnetic reconnection, which is the process by which the magnetic field lines of the solar wind and the magnetosphere are reconnected. This can allow more energy and momentum to be transferred from the solar wind to the magnetosphere.  
+
+![Figure_32](./images_GIC/Figure_32.png)   
+*Figure_32: Sketch of turbulent wave packages in Jupiter's magnetosphere. The interaction of counter-propagating Alfvén wave packages generates a turbulent cascade. Waves packages are reflected at the ionosphere of Jupiter or other density gradients in the magnetosphere.*
+
+- **Large-Scale Drivers**: Solar events like Coronal Mass Ejections (CMEs) or co-rotating interaction regions (CIRs) carry enhanced solar wind parameters (higher speed, density, and stronger magnetic fields). These can lead to intense geomagnetic storms by dramatically increasing the energy input to the magnetosphere.    
+
+⮚ **Coronal mass ejections (CMEs)**: CMEs are large clouds of plasma and magnetic field that are ejected from the Sun. CMEs can have a significant impact on the magnetosphere, causing large geomagnetic storms.  
+
+![Figure_33](./images_GIC/Figure_33.png)   
+*Figure_33*  
+
+⮚ **Geomagnetic storms**: Geomagnetic storms are large disturbances in the Earth's magnetosphere that are caused by CMEs. Geomagnetic storms can cause power outages, disrupt communications, and damage satellites.  
+
+⮚ **Substorms**: Substorms are smaller disturbances in the Earth's magnetosphere that occur on a regular basis. Substorms can cause auroras and can also disrupt communications and satellites.  
+
+![Figure_34](./images_GIC/Figure_34.png)   
+*Figure_34: The main magnetospheric features of the substorm growth phase.*  
+
+These factors combine to control the efficiency of the energy and mass transfer from the solar wind to the magnetosphere. The more efficient this transfer, the more likely it is to cause geomagnetic disturbances, such as substorms and geomagnetic storms, that can impact our technology-dependent society. Predicting these disturbances and understanding the factors that affect them are major goals of space weather research.
