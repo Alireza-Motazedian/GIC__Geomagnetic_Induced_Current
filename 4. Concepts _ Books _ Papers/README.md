@@ -14,7 +14,8 @@ Geomagnetic Induced Currents (GIC)
 - [1. Introduction](#1-introduction)  
     - [1.1. Solar wind: What is it and how does it affect Earth?](#11-solar-wind-what-is-it-and-how-does-it-affect-earth)	
     - [1.2. Geomagnetic Induced Currents (GIC)](#12-geomagnetic-induced-currents-gic)	
-    - [1.3. Concept of UT](#13-concept-of-ut)	
+    - [1.3. Concept of UT](#13-concept-of-ut)  
+    - [1.4. Dst index ](#14-dst-index)  	
 - [2. Website](#2-website)	
     - [2.1. SuperMAG](#21-supermag)	
         - [2.1.1 SuperMAG definition](#211-supermag-definition)	
@@ -132,7 +133,31 @@ Monitoring and predicting geomagnetic disturbances are essential for assessing t
 
 ## 1.3. Concept of UT
 The magnetometer operates on Coordinated Universal Time (UT) and has a lag of 5 hours. 
-This means that local midnight in Ottawa occurs at 05:00 UT. The lag is important because it helps align the magnetometer readings with specific time references and allows for consistent analysis and comparison of the data.
+This means that local midnight in Ottawa occurs at 05:00 UT. The lag is important because it helps align the magnetometer readings with specific time references and allows for consistent analysis and comparison of the data.  
+
+## 1.4. Dst index  
+In the context of Geomagnetic Disturbances (GMDs), the Dst (disturbance storm time) index is a measure used to characterize the size and intensity of a geomagnetic storm. GMDs occur when the Earth's magnetic field experiences significant fluctuations due to solar activity, such as solar flares and coronal mass ejections.
+
+The Dst index provides an estimation of the globally averaged change in the horizontal component of the Earth's magnetic field at the magnetic equator. It is computed based on measurements from a network of magnetometer stations and is typically calculated once per hour. The index is reported in near-real-time and represents the magnitude of the geomagnetic storm.
+
+During a geomagnetic storm, the Dst index shows negative values, indicating a decrease in the strength of the Earth's magnetic field. The magnitude of the negative excursion in the Dst index corresponds to the severity of the storm. Larger negative values indicate more intense geomagnetic disturbances.
+
+The Dst index is widely used to monitor and track the progression of geomagnetic storms. It serves as a standard measurement for quantifying the strength and duration of these disturbances. By analyzing the Dst index, scientists and space weather forecasters can assess the impact of geomagnetic storms on various systems, including power grids, satellite communications, and navigation systems.
+
+Additionally, the Dst index is employed in studies related to field-aligned currents in the magnetosphere and their connection to intense currents in the auroral ionosphere. Field-aligned currents are currents that flow along the Earth's magnetic field lines in the magnetosphere, and their behavior is linked to the Dst index.  
+
+Here are some images that illustrate the Dst index:  
+
+![Figure_26](./images_GIC/Figure_26.png)  
+*Figure_26: This image shows the Earth's magnetic field in the absence of a geomagnetic storm. The field is strongest at the poles and weakest at the equator.*     
+
+![Figure_27](./images_GIC/Figure_27.png)  
+*Figure_27: This image shows the Earth's magnetic field during a geomagnetic storm. The ring current is shown as a red doughnut-shaped current. The ring current causes the Earth's magnetic field to be weaker at the equator.*     
+
+![Figure_28](./images_GIC/Figure_28.png)  
+*Figure_28: This image shows the Dst index over time. The Dst index is negative during the geomagnetic storm and then returns to normal after the storm.*     
+
+Overall, the Dst index plays a crucial role in understanding, monitoring, and characterizing the effects of geomagnetic storms, including their association with field-aligned currents and their impact on various technological systems
 
 # 2. Website 
 
@@ -156,7 +181,7 @@ Low Fidelity data, on the other hand, is generally less detailed and may be less
 
 SuperMAG service includes data with two different temporal resolutions, 1-min, and 1-sec. The latter is a subset of the former as not all stations provide 1-sec data. 
 The 1-min data and all derived products can be accessed by selecting the 'Low Fidelity' option under Indices, Data, Polar Plots, Movies, and Products. 
-The 1-sec data and all derived products can be accessed by selecting the 'High Fidelity' option under Data and Polar Plots.
+The 1-sec data and all derived products can be accessed by selecting the 'High Fidelity' option under Data and Polar Plots.  
 
 ## 2.2. Solar wind
 
@@ -441,7 +466,8 @@ The 'geo' part of these variables indicates that these measurements are made in 
 
 ⮚ **decl**: The magnetic declination varies greatly across the globe, but it's typically between -30 and +30 degrees
 
-# 4. Machine Learning
+# 4. Machine Learning  
+
 ## 4.1. Time Series Analysis
 
 ## 4.2. Kriging Techniques
@@ -665,24 +691,3 @@ Alerting and Notification: When significant geomagnetic disturbances are detecte
 Integration with Power Grid Systems: The real-time GMD monitoring system is often integrated with the control and monitoring infrastructure of the power grid. This integration allows operators to correlate the geomagnetic data with other operational parameters, such as current flows and system stability, to assess the potential impact of GICs on the grid components.
 
 The implementation of a real-time GMD monitoring system is essential for grid operators and utility companies to understand and manage the potential risks associated with geomagnetic disturbances. By continuously monitoring the Earth's magnetic field and promptly detecting changes, the system enables proactive responses, such as adjusting power grid operations, implementing protective measures, or isolating vulnerable components, to mitigate the impact of GICs on electrical systems.
-
-## 5.3. Dst index
-In the context of Geomagnetic Disturbances (GMDs), the Dst (disturbance storm time) index is a measure used to characterize the size and intensity of a geomagnetic storm. GMDs occur when the Earth's magnetic field experiences significant fluctuations due to solar activity, such as solar flares and coronal mass ejections.
-
-The Dst index provides an estimation of the globally averaged change in the horizontal component of the Earth's magnetic field at the magnetic equator. It is computed based on measurements from a network of magnetometer stations and is typically calculated once per hour. The index is reported in near-real-time and represents the magnitude of the geomagnetic storm.
-
-During a geomagnetic storm, the Dst index shows negative values, indicating a decrease in the strength of the Earth's magnetic field. The magnitude of the negative excursion in the Dst index corresponds to the severity of the storm. Larger negative values indicate more intense geomagnetic disturbances.
-
-The Dst index is widely used to monitor and track the progression of geomagnetic storms. It serves as a standard measurement for quantifying the strength and duration of these disturbances. By analyzing the Dst index, scientists and space weather forecasters can assess the impact of geomagnetic storms on various systems, including power grids, satellite communications, and navigation systems.
-
-Additionally, the Dst index is employed in studies related to field-aligned currents in the magnetosphere and their connection to intense currents in the auroral ionosphere. Field-aligned currents are currents that flow along the Earth's magnetic field lines in the magnetosphere, and their behavior is linked to the Dst index.
-
-Overall, the Dst index plays a crucial role in understanding, monitoring, and characterizing the effects of geomagnetic storms, including their association with field-aligned currents and their impact on various technological systems
-
-
-
-
-
-
-
-
