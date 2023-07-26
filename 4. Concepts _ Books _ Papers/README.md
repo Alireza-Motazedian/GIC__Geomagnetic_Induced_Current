@@ -43,9 +43,10 @@ Geomagnetic Induced Currents (GIC)
     - [5.2. a real-time GMD monitoring system](#52-a-real-time-gmd-monitoring-system)  
 - [6. Questions](#6-questions) 
     - [6.1.1. Question 1](#61-question-1)  
-    - [6.1.2. Question 2](#62-question-2)  
-
-
+    - [6.1.2. Question 2](#62-question-2) 
+- [7. Code optimization ](#7-code-optimization) 
+    - [7.1. Pure Python to Scientific Python](#71-pure-python-to-scientific-phyton)  
+    
 
 
 # 0. Jargon
@@ -754,3 +755,29 @@ The occurrence frequency and location of magnetospheric plasma waves are signifi
 - Large-Scale Solar Events: Events such as Coronal Mass Ejections (CMEs) and solar flares can dramatically change solar wind conditions. These sudden increases in solar wind energy input can create strong disturbances in the magnetosphere, exciting various plasma waves and causing them to propagate to different regions. This includes phenomena like magnetospheric chorus waves, which are enhanced during geomagnetic storms driven by solar events.
 
 The interaction between solar wind and the Earth's magnetosphere is a complex process involving many factors. The occurrence of different types of magnetospheric plasma waves depends on a combination of these factors, and research is ongoing to better understand these interactions. 
+
+# 7. Code optimization  
+
+## 7.1. Pure Python to Scientific Phyton  
+Python is a powerful language that's easy to learn and use, but it can be slow when dealing with large datasets or complex mathematical operations. This is where scientific Python packages like NumPy, SciPy, and pandas can help.
+
+- **Vectorization with NumPy**: Pure Python loops can be slow. NumPy, a fundamental package for scientific computing in Python, provides support for arrays. These arrays can be multi-dimensional and can do element-wise operations, which is much faster than looping over elements.  
+For example, instead of using a for loop to iterate over a list of numbers and add them together, you can use the numpy.sum() function to vectorize the operation and add all of the numbers together in a single step. 
+
+![Figure_35](./images_GIC/Figure_35.png)   
+*Figure_35: Use vectorized operations instead of loops.*
+
+- **Data Manipulation with pandas**: pandas provides high-performance, easy-to-use data structures like DataFrames and operations for manipulating numerical tables and time-series data.  
+
+![Figure_36](./images_GIC/Figure_36.png)   
+*Figure_36: Use DataFrames instead of loops.*
+
+- **Scientific Computing with SciPy**: SciPy is built on NumPy and provides more utilities for optimization, linear algebra, integration, interpolation, special functions, FFT, signal and image processing, ODE solvers, and more.
+
+- **Parallel Computing with joblib or Dask**: These libraries allow for easy parallelization of tasks, which can significantly speed up processing times.
+
+- **Just-In-Time Compilation with Numba**: Numba is a just-in-time compiler for Python that's best suited for mathematical functions, like those used in machine learning and data analysis. With a few annotations, array-oriented and math-heavy Python code can be just-in-time optimized to achieve performance similar to C, C++ and Fortran, without having to switch languages or Python interpreters.
+
+- **Efficient Array Computing with JAX**: JAX is like NumPy, but with powerful transformations like automatic differentiation, vectorization, parallelization, and just-in-time compilation to GPU/TPU.
+
+- **Profiling**: The other answer suggests using a profiler to find bottlenecks in the code. A profiler can help you to identify the parts of your code that are taking the most time to execute. Once you have identified the bottlenecks, you can focus your optimization efforts on those areas.  
