@@ -16,12 +16,15 @@ Geomagnetic Induced Currents (GIC)
     - [1.2. Geomagnetic Induced Currents (GIC)](#12-geomagnetic-induced-currents-gic)	
     - [1.3. Concept of UT](#13-concept-of-ut)  
     - [1.4. Dst index ](#14-dst-index)  	
-- [2. Website](#2-website)	
-    - [2.1. SuperMAG](#21-supermag)	
-        - [2.1.1 SuperMAG definition](#211-supermag-definition)	
-        - [2.1.2. Subtract Baseline](#212-subtract-baseline)	
-        - [2.1.3. High Fidelity and Low Fidelity](#213-high-fidelity-and-low-fidelity)	
-    - [2.2. Solar wind](#22-solar-wind)	
+- [2. Website](#2-website)
+    - [2.1. Measure instruments](#21-measure-instruments)  
+        - [2.1.1. Magnetometer](#211-magnetometer)  
+        - [2.1.2. Solar Wind Electron Proton Alpha Monitor](#212-solar-wind-electron-proton-alpha-monitor)  
+    - [2.2. SuperMAG](#22-supermag)	
+        - [2.2.1 SuperMAG definition](#221-supermag-definition)	
+        - [2.2.2. Subtract Baseline](#222-subtract-baseline)	
+        - [2.2.3. High Fidelity and Low Fidelity](#223-high-fidelity-and-low-fidelity)	
+    - [2.3. Solar wind](#23-solar-wind)	
 - [3. Datasets descriptions](#3-datasets-descriptions)	
     - [3.1. Solar wind (description)](#31-solar-wind-description)	
     - [3.2. SuperMAG (description)](#32-supermag-description)
@@ -167,20 +170,44 @@ Here are some images that illustrate the Dst index:
 
 Overall, the Dst index plays a crucial role in understanding, monitoring, and characterizing the effects of geomagnetic storms, including their association with field-aligned currents and their impact on various technological systems
 
-# 2. Website 
+# 2. Website  
 
-## 2.1. SuperMAG
+## 2.1. Measure instruments:  
+ 
+### 2.1.1. Magnetometer  
+MAG is an abbreviation often used for a Magnetometer, an instrument that measures the strength and, in some cases, the direction of the magnetic field. Magnetometers can be used in various applications ranging from geology to space studies.
 
-### 2.1.1 SuperMAG definition
+In the context of space and solar physics, a MAG (Magnetometer) on a spacecraft is used to measure the interplanetary magnetic field (IMF) and the magnetic field surrounding the spacecraft. For instance, magnetometers have been instrumental components of many space missions, like Voyager, Mars Global Surveyor, and Advanced Composition Explorer (ACE), among others. They provide data critical for understanding space weather and the Sun-Earth connection.
+
+In the solar wind, the MAG can measure the intensity and direction of the IMF carried by the solar wind from the Sun. Changes in this magnetic field can significantly affect Earth's magnetosphere, leading to phenomena like geomagnetic storms. The MAG data, combined with other instrument measurements (like solar wind plasma parameters), offer a comprehensive understanding of the space environment and help in forecasting space weather.
+
+In a broader context, magnetometers are also used on Earth for various purposes, such as detecting underground minerals, archaeological studies, and even smartphone applications (like digital compasses).
+
+Please note that the specifics of what the MAG measures can vary depending on the exact mission and instrument specifications.  
+
+### 2.1.2. Solar Wind Electron Proton Alpha Monitor    
+The Solar Wind Electron Proton Alpha Monitor (SWEPAM) is an instrument that was aboard the Advanced Composition Explorer (ACE) spacecraft, which was launched in 1997. SWEPAM was designed to provide continuous, accurate measurements of solar wind plasma characteristics, including the speed, density, and temperature of electrons, protons, and alpha particles.
+
+SWEPAM consists of two separate sensors: SWEPAM-I for ions (protons and alpha particles) and SWEPAM-E for electrons.
+
+SWEPAM-I (Ion sensor): This sensor measures the solar wind ion velocity distribution function from which properties like speed, density, and temperature of protons and alpha particles are derived. It operates in the energy range of 260eV to 36keV.
+
+SWEPAM-E (Electron sensor): This sensor measures the solar wind electron distribution function from which properties like speed, density, and temperature of electrons are derived. It operates in the energy range of 1 to 1240eV.
+
+The data collected by SWEPAM is critical for understanding the behavior of the solar wind, which plays a key role in space weather. Understanding the solar wind's characteristics can help in predicting space weather phenomena and its potential effects on Earth's magnetosphere, satellites, power grids, and other technologies.  
+
+## 2.2. SuperMAG
+
+### 2.2.1 SuperMAG definition
 SuperMAG is a worldwide collaboration of organizations and agencies that provide ground-based magnetometer measurements. These instruments are used to monitor variations in Earth's magnetic field, providing valuable data for understanding various geomagnetic phenomena like auroras, solar storms, and the interaction between solar wind and Earth's magnetosphere.
 
-### 2.1.2. Subtract Baseline
+### 2.2.2. Subtract Baseline
 In the context of SuperMAG data, "Subtract Baseline" could refer to the process of removing the baseline or background magnetic field level from the observed data. This helps to isolate the variations or fluctuations in the magnetic field that are of interest.
 
 In other words, the 'baseline' represents the average or normal state of the magnetic field, and by subtracting this from the actual measurements, scientists can better see and analyze the deviations or anomalies in the field. This could be particularly important for identifying and studying events like magnetic storms or substorms.
 In short, "Subtract Baseline" is a data preprocessing step that helps isolate the signal of interest (in this case, magnetic variations) from the overall data.
 
-### 2.1.3. High Fidelity and Low Fidelity
+### 2.2.3. High Fidelity and Low Fidelity
 The terms "High Fidelity" and "Low Fidelity" in the context of data typically refer to the level of detail, accuracy, and quality of the data.
 
 High Fidelity data is generally more accurate and has more detailed information. It often comes from higher quality or more precise instruments and measurements. It has a higher resolution, meaning it has more data points over a given interval, which can give a more detailed picture of changes over time.
@@ -191,7 +218,7 @@ SuperMAG service includes data with two different temporal resolutions, 1-min, a
 The 1-min data and all derived products can be accessed by selecting the 'Low Fidelity' option under Indices, Data, Polar Plots, Movies, and Products. 
 The 1-sec data and all derived products can be accessed by selecting the 'High Fidelity' option under Data and Polar Plots.  
 
-## 2.2. Solar wind
+## 2.3. Solar wind
 
 # 3. Datasets descriptions 
 
@@ -787,6 +814,44 @@ The occurrence frequency and location of magnetospheric plasma waves are signifi
 
 The interaction between solar wind and the Earth's magnetosphere is a complex process involving many factors. The occurrence of different types of magnetospheric plasma waves depends on a combination of these factors, and research is ongoing to better understand these interactions. 
 
+## 6.3. Question 3:
+**What is the differences between Gaussian distributions and lognormal laws?**  
+
+The Gaussian (also known as Normal) distribution and the Lognormal distribution are both important statistical distributions, but they differ significantly in their properties and applications. Here are some of the key differences:
+
+1. Shape and Symmetry:
+
+Gaussian Distribution: This distribution is symmetric and its graph forms a bell curve, with the mean, median, and mode all equal and located at the center of the distribution.
+
+Lognormal Distribution: This distribution is not symmetric; it is skewed to the right (positive skewness), with a longer tail towards the right side. The mean, median, and mode are not equal and the mode is less than the median, which in turn is less than the mean.  
+
+![Figure_37](./images_GIC/Figure_37.png)   
+*Figure_37: Normal distribution: The mean, median, and mode are all equal in the normal distribution and other symmetric distributions. *
+
+![Figure_38](./images_GIC/Figure_38.png)   
+*Figure_38: Lognormal (Right skewed): The mean is greater than the median. The mean overestimates the most common values in a positively skewed distribution.*
+
+![Figure_39](./images_GIC/Figure_39.png)   
+*Figure_39: Lognormal (Left skewed): The mean is less than the median. The mean underestimates the most common values in a negatively skewed distribution.*
+
+2. Domain:
+
+Gaussian Distribution: The Gaussian distribution is defined over the entire real line, i.e., from negative infinity to positive infinity.
+
+Lognormal Distribution: The Lognormal distribution is only defined for positive values, i.e., from zero to positive infinity. It cannot take negative values.
+
+3. Underlying Assumptions:
+
+Gaussian Distribution: This distribution assumes that the data being modeled has been generated by a process that has additive effects and the overall effect is due to the sum of individual effects.
+
+Lognormal Distribution: This distribution assumes that the data being modeled has been generated by a multiplicative process, and the overall effect is due to the product of individual effects.
+
+4. Applications:
+
+Gaussian Distribution: It is used extensively in statistics and natural sciences, and is the foundation of many statistical procedures. It's often used to model phenomena such as IQ scores, heartbeats, etc.
+
+Lognormal Distribution: It is often used to model data that cannot go below zero but can become very large, such as populations, prices of goods, and information in bits.  
+
 # 7. Code optimization  
 
 ## 7.1. Pure Python to Scientific Phyton  
@@ -812,3 +877,6 @@ For example, instead of using a for loop to iterate over a list of numbers and a
 - **Efficient Array Computing with JAX**: JAX is like NumPy, but with powerful transformations like automatic differentiation, vectorization, parallelization, and just-in-time compilation to GPU/TPU.
 
 - **Profiling**: The other answer suggests using a profiler to find bottlenecks in the code. A profiler can help you to identify the parts of your code that are taking the most time to execute. Once you have identified the bottlenecks, you can focus your optimization efforts on those areas.  
+
+
+
