@@ -24,7 +24,9 @@ Geomagnetic Induced Currents (GIC)
     - [2.2. Solar wind](#22-solar-wind)	
 - [3. Datasets descriptions](#3-datasets-descriptions)	
     - [3.1. Solar wind (description)](#31-solar-wind-description)	
-    - [3.2. SuperMAG (description)](#32-supermag-description)	
+    - [3.2. SuperMAG (description)](#32-supermag-description)
+    - [3.3. The magnitude of variables](#33-the-magnitude-of-variables)
+    - [3.4. Feature scaling vs. normalization](#34-feature-scaling-vs-normalization)    	
 - [4. Machine Learning](#4-machine-learning)	
     - [4.1. Time Series Analysis](#41-time-series-analysis)	
     - [4.2. Kriging Techniques](#42-kriging-techniques)	
@@ -470,7 +472,36 @@ The term "delta" (represented by 'db') in each of these variables represents a c
 
 The 'geo' part of these variables indicates that these measurements are made in the geographic coordinate system, which is based on the Earth's shape and orientation in space, rather than in a magnetic coordinate system, which would be based on the Earth's magnetic field.  
 
-⮚ **decl**: The magnetic declination varies greatly across the globe, but it's typically between -30 and +30 degrees
+⮚ **decl**: The magnetic declination varies greatly across the globe, but it's typically between -30 and +30 degrees.  
+
+## 3.3. The magnitude of variables
+**It is important to know the magnitude of variables in datasets like solar wind and supermag. What's the reason?**    
+- **Feature Scaling**: Feature scaling is a method used to normalize the range of independent variables or features of data. In other words, it brings all the variables to the same range. Machine learning algorithms perform computations on input data, and if the range of values is not standardized, it could negatively affect the learning process, causing the algorithm to take longer to train or leading to less accurate models. For example, in the case of the gradient descent algorithm (used in linear regression, logistic regression, neural networks), feature scaling can speed up the algorithm's convergence.
+
+- **Understanding Data**: Recognizing the magnitudes of your variables can provide profound insights into your dataset. This understanding encompasses both statistical and data-analytic aspects, necessitating comprehension of the magnitudes, distributions, and relationships of the variables. For instance, knowing that the solar wind speed typically lies between 250-800 km/s can guide the process of data analysis in multiple ways. It can help identify what constitutes normal conditions versus extreme space weather events, acting as a useful reference for detecting outliers. This knowledge can also aid in the selection of appropriate statistical methods or data transformations, enhancing the interpretability of results.
+
+- **Outlier Detection**: An outlier is a data point that differs significantly from other observations. They might be due to variability in the data or may indicate experimental errors. Knowing the typical magnitude and distribution of your data can help identify these outliers. For example, a single measurement of solar wind speed that is significantly higher than the typical range might be an error or an unusually extreme event.
+
+- **Normalization**: When dealing with variables of different units and scales (like solar wind speed in km/s and density in particles/cm^3), high-magnitude variables might dominate the model's behavior. Normalization helps ensure that each variable contributes approximately proportionately to the final prediction. For some algorithms, not scaling the data can lead to suboptimal results or longer training times.
+
+- **Improving Accuracy**: Variables with large magnitudes can dominate or skew machine learning models because they have a larger absolute effect on the model's predictions. This might not reflect their true importance in the real-world system being modeled. By scaling features to a similar range, you can prevent any single feature from dominating the model just because of its scale, thereby improving model accuracy.  
+
+- **To understand the physical processes involved**: It is about interpreting the data in the context of underlying real-world phenomena. The magnitudes of the variables aren't just numbers - they represent physical quantities tied to real-world processes. In the supermag data example, understanding the magnitudes is a key part of understanding the interactions of magnetic field lines. It's about connecting the data to the physical world and using it to infer the dynamics of the system we are studying.  
+
+## 3.4. Feature scaling vs. normalization
+They are two related concepts used in machine learning and data analysis for preparing the data, but they are not exactly the same thing.
+
+- **Feature Scaling** is a general term that refers to the process of transforming your data so that it fits within a specific scale, like 0-100 or 0-1. You use feature scaling when you're dealing with data that has varying scales and you want to bring all features to the same level of magnitudes. This prevents a feature with a large scale from dominating other features when you apply machine learning algorithms. There are several ways to perform feature scaling, including Min-Max scaling, Standardization (Z-score normalization), and Robust scaling.
+
+    - **Min-Max Scaling**: It rescales the feature to a fixed range, usually 0 to 1. It uses the minimum and maximum values of the feature.
+
+    - **Standardization (Z-score Normalization)**: It standardizes features by subtracting the mean (centering the data around 0) and scaling to unit variance. Each value is subtracted from the mean of the feature and then divided by the standard deviation of the feature. This method is widely used for normalization in many machine learning algorithms (e.g., support vector machines, logistic regression, and neural networks).
+
+    - **Robust Scaling**: This method removes the median from the data and scales the data according to the Interquartile Range (IQR). It is robust to outliers.
+
+**Normalization** is a specific type of feature scaling that changes the values of numeric columns in the dataset to use a common scale, without distorting differences in the ranges of values or losing information. Normalization typically means rescales the values into a range of [0,1].
+
+It's important to note that whether to use feature scaling and/or normalization depends on your specific use case and the machine learning algorithm you're using. Some algorithms (like linear regression, logistic regression, and neural networks) can benefit from normalization or feature scaling, while others (like decision trees and random forests) don't require it.  
 
 # 4. Machine Learning  
 
