@@ -28,7 +28,7 @@ Daily logs (Summer 2023)
     - 07-26-2023 Wednesday
         - 09-10: Paper
         - 10-11: Paper 
-        - 11-12: Paper
+        - 11-12: Conceots
         - 12-01: Conceots
         - 01-02: Concepts
         - 02-03: Concepts
