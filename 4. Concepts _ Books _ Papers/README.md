@@ -10,47 +10,48 @@ Geomagnetic Induced Currents (GIC)
 
 ## Table of contents
 
-- [0. Jargon](#0-jargon)  
-- [1. Introduction](#1-introduction)  
-    - [1.1. Solar wind: What is it and how does it affect Earth?](#11-solar-wind-what-is-it-and-how-does-it-affect-earth)	
-    - [1.2. Geomagnetic Induced Currents (GIC)](#12-geomagnetic-induced-currents-gic)	
-    - [1.3. Concept of UT](#13-concept-of-ut)  
-    - [1.4. Dst index ](#14-dst-index)  	
-- [2. Website](#2-website)
-    - [2.1. Measure instruments](#21-measure-instruments)  
-        - [2.1.1. Magnetometer](#211-magnetometer)  
-        - [2.1.2. Solar Wind Electron Proton Alpha Monitor](#212-solar-wind-electron-proton-alpha-monitor)  
-    - [2.2. SuperMAG](#22-supermag)	
-        - [2.2.1 SuperMAG definition](#221-supermag-definition)	
-        - [2.2.2. Subtract Baseline](#222-subtract-baseline)	
-        - [2.2.3. High Fidelity and Low Fidelity](#223-high-fidelity-and-low-fidelity)	
-    - [2.3. Solar wind](#23-solar-wind)	
-- [3. Datasets descriptions](#3-datasets-descriptions)	
-    - [3.1. Solar wind (description)](#31-solar-wind-description)	
-    - [3.2. SuperMAG (description)](#32-supermag-description)
-    - [3.3. The magnitude of variables](#33-the-magnitude-of-variables)
-    - [3.4. Feature scaling vs. normalization](#34-feature-scaling-vs-normalization)    	
-- [4. Machine Learning](#4-machine-learning)	
-    - [4.1. Time Series Analysis](#41-time-series-analysis)	
-    - [4.2. Kriging Techniques](#42-kriging-techniques)	
-    - [4.3. ADAM](#43-adam)	
-    - [4.4. Filling missing values](#44-filling-missing-values)
-        - [4.4.1. Mean](#441-mean)    
-        - [4.4.2. Median](#442-median)  
-        - [4.4.3. Mode](#443-mode)  
-        - [4.4.4. Constant number or string](#444-constant-number-or-string)  
-        - [4.4.5. Miss Forest](#445-miss-forest)  
-        - [4.4.6. Mice Forest](#446-mice-forest)  
-        - [4.4.7. KNN Imputation](#447-knn-imputation)     
-    - [4.5. Principal component analysis (PCA)](#45-principal-component-analysis-pca)                 
-- [5. Papers](#5-papers)	
-    - [5.1. PILM: A Survey on Problems, Methods and Applications](#51-pilm-a-survey-on-problems-methods-and-applications)	
-    - [5.2. a real-time GMD monitoring system](#52-a-real-time-gmd-monitoring-system)  
-- [6. Questions](#6-questions) 
-    - [6.1.1. Question 1](#61-question-1)  
-    - [6.1.2. Question 2](#62-question-2) 
-- [7. Code optimization ](#7-code-optimization) 
-    - [7.1. Pure Python to Scientific Python](#71-pure-python-to-scientific-phyton)  
+- [0. Jargon](#0-jargon) 
+- [1. Data problem-solving strategies](#1-data-problem-solving-strategies)   
+- [2. Introduction](#2-introduction)  
+    - [2.1. Solar wind: What is it and how does it affect Earth?](#21-solar-wind-what-is-it-and-how-does-it-affect-earth)	
+    - [2.2. Geomagnetic Induced Currents (GIC)](#22-geomagnetic-induced-currents-gic)	
+    - [2.3. Concept of UT](#23-concept-of-ut)  
+    - [2.4. Dst index ](#24-dst-index)  	
+- [3. Website](#3-website)
+    - [3.1. Measure instruments](#31-measure-instruments)  
+        - [3.1.1. Magnetometer](#311-magnetometer)  
+        - [3.1.2. Solar Wind Electron Proton Alpha Monitor](#312-solar-wind-electron-proton-alpha-monitor)  
+    - [3.2. SuperMAG](#32-supermag)	
+        - [3.2.1 SuperMAG definition](#321-supermag-definition)	
+        - [3.2.2. Subtract Baseline](#322-subtract-baseline)	
+        - [3.2.3. High Fidelity and Low Fidelity](#323-high-fidelity-and-low-fidelity)	
+    - [3.3. Solar wind](#33-solar-wind)	
+- [4. Datasets descriptions](#4-datasets-descriptions)	
+    - [4.1. Solar wind (description)](#41-solar-wind-description)	
+    - [4.2. SuperMAG (description)](#42-supermag-description)
+    - [4.3. The magnitude of variables](#43-the-magnitude-of-variables)
+    - [4.4. Feature scaling vs. normalization](#44-feature-scaling-vs-normalization)    	
+- [5. Machine Learning](#5-machine-learning)	
+    - [5.1. Time Series Analysis](#51-time-series-analysis)	
+    - [5.2. Kriging Techniques](#52-kriging-techniques)	
+    - [5.3. ADAM](#53-adam)	
+    - [5.4. Filling missing values](#54-filling-missing-values)
+        - [5.4.1. Mean](#541-mean)    
+        - [5.4.2. Median](#542-median)  
+        - [5.4.3. Mode](#543-mode)  
+        - [5.4.4. Constant number or string](#544-constant-number-or-string)  
+        - [5.4.5. Miss Forest](#545-miss-forest)  
+        - [5.4.6. Mice Forest](#546-mice-forest)  
+        - [5.4.7. KNN Imputation](#547-knn-imputation)     
+    - [5.5. Principal component analysis (PCA)](#55-principal-component-analysis-pca)                 
+- [6. Papers](#6-papers)	
+    - [6.1. PILM: A Survey on Problems, Methods and Applications](#61-pilm-a-survey-on-problems-methods-and-applications)	
+    - [6.2. a real-time GMD monitoring system](#62-a-real-time-gmd-monitoring-system)  
+- [7. Questions](#7-questions) 
+    - [7.1.1. Question 1](#71-question-1)  
+    - [7.1.2. Question 2](#72-question-2) 
+- [8. Code optimization ](#8-code-optimization) 
+    - [8.1. Pure Python to Scientific Python](#81-pure-python-to-scientific-phyton)  
     
 
 
@@ -103,9 +104,16 @@ Geomagnetic Induced Currents (GIC)
 46. **SWEPAM**: Solar Wind Electron Proton Alpha Monitor 
 
 
-# 1. Introduction
+# 1. Data problem-solving strategies  
+ 
+![Figure_0](./images_GIC/Figure_0.png)  
+*Figure_0*
+ 
 
-## 1.1. Solar wind: What is it and how does it affect Earth?
+
+# 2. Introduction
+
+## 2.1. Solar wind: What is it and how does it affect Earth?
  
 Solar wind is a stream of charged particles, mainly protons and electrons, flowing from the Sun into space. It is a continuous flow of high-speed particles that carries the Sun's magnetic field throughout the solar system. The solar wind is created by the Sun's hot outer atmosphere, known as the corona, which has temperatures reaching millions of degrees Celsius. The solar wind affects Earth in several ways:
 
@@ -120,9 +128,9 @@ Solar wind is a stream of charged particles, mainly protons and electrons, flowi
 In summary, the solar wind, as a continuous flow of charged particles from the Sun, affects Earth's magnetic field, causes aurora formations, contributes to space weather phenomena, and presents radiation hazards for space activities. Understanding the behavior of the solar wind is essential for studying and mitigating its impacts on Earth and space-based systems.
 
 ![Figure_01](./images_GIC/Figure_01.png)  
-*ّFigure_01*  
+*Figure_01*  
 
-## 1.2. Geomagnetic Induced Currents (GIC)
+## 2.2. Geomagnetic Induced Currents (GIC)
 
 Geomagnetic Induced Currents (GICs) are created as a result of the interaction between the Earth's magnetic field and varying external magnetic fields caused by geomagnetic disturbances, particularly during geomagnetic storms. The process by which GICs are created can be explained as follows:
 
@@ -142,11 +150,11 @@ The magnitude of GICs depends on various factors, including the intensity and du
 
 Monitoring and predicting geomagnetic disturbances are essential for assessing the potential risk of GICs and implementing measures to mitigate their effects on critical infrastructure.
 
-## 1.3. Concept of UT
+## 2.3. Concept of UT
 The magnetometer operates on Coordinated Universal Time (UT) and has a lag of 5 hours. 
 This means that local midnight in Ottawa occurs at 05:00 UT. The lag is important because it helps align the magnetometer readings with specific time references and allows for consistent analysis and comparison of the data.  
 
-## 1.4. Dst index  
+## 2.4. Dst index  
 In the context of Geomagnetic Disturbances (GMDs), the Dst (disturbance storm time) index is a measure used to characterize the size and intensity of a geomagnetic storm. GMDs occur when the Earth's magnetic field experiences significant fluctuations due to solar activity, such as solar flares and coronal mass ejections.
 
 The Dst index provides an estimation of the globally averaged change in the horizontal component of the Earth's magnetic field at the magnetic equator. It is computed based on measurements from a network of magnetometer stations and is typically calculated once per hour. The index is reported in near-real-time and represents the magnitude of the geomagnetic storm.
@@ -170,11 +178,11 @@ Here are some images that illustrate the Dst index:
 
 Overall, the Dst index plays a crucial role in understanding, monitoring, and characterizing the effects of geomagnetic storms, including their association with field-aligned currents and their impact on various technological systems
 
-# 2. Website  
+# 3. Website  
 
-## 2.1. Measure instruments:  
+## 3.1. Measure instruments:  
  
-### 2.1.1. Magnetometer  
+### 3.1.1. Magnetometer  
 MAG is an abbreviation often used for a Magnetometer, an instrument that measures the strength and, in some cases, the direction of the magnetic field. Magnetometers can be used in various applications ranging from geology to space studies.
 
 In the context of space and solar physics, a MAG (Magnetometer) on a spacecraft is used to measure the interplanetary magnetic field (IMF) and the magnetic field surrounding the spacecraft. For instance, magnetometers have been instrumental components of many space missions, like Voyager, Mars Global Surveyor, and Advanced Composition Explorer (ACE), among others. They provide data critical for understanding space weather and the Sun-Earth connection.
@@ -185,7 +193,7 @@ In a broader context, magnetometers are also used on Earth for various purposes,
 
 Please note that the specifics of what the MAG measures can vary depending on the exact mission and instrument specifications.  
 
-### 2.1.2. Solar Wind Electron Proton Alpha Monitor    
+### 3.1.2. Solar Wind Electron Proton Alpha Monitor    
 The Solar Wind Electron Proton Alpha Monitor (SWEPAM) is an instrument that was aboard the Advanced Composition Explorer (ACE) spacecraft, which was launched in 1997. SWEPAM was designed to provide continuous, accurate measurements of solar wind plasma characteristics, including the speed, density, and temperature of electrons, protons, and alpha particles.
 
 SWEPAM consists of two separate sensors: SWEPAM-I for ions (protons and alpha particles) and SWEPAM-E for electrons.
@@ -196,18 +204,18 @@ SWEPAM-E (Electron sensor): This sensor measures the solar wind electron distrib
 
 The data collected by SWEPAM is critical for understanding the behavior of the solar wind, which plays a key role in space weather. Understanding the solar wind's characteristics can help in predicting space weather phenomena and its potential effects on Earth's magnetosphere, satellites, power grids, and other technologies.  
 
-## 2.2. SuperMAG
+## 3.2. SuperMAG
 
-### 2.2.1 SuperMAG definition
+### 3.2.1 SuperMAG definition
 SuperMAG is a worldwide collaboration of organizations and agencies that provide ground-based magnetometer measurements. These instruments are used to monitor variations in Earth's magnetic field, providing valuable data for understanding various geomagnetic phenomena like auroras, solar storms, and the interaction between solar wind and Earth's magnetosphere.
 
-### 2.2.2. Subtract Baseline
+### 3.2.2. Subtract Baseline
 In the context of SuperMAG data, "Subtract Baseline" could refer to the process of removing the baseline or background magnetic field level from the observed data. This helps to isolate the variations or fluctuations in the magnetic field that are of interest.
 
 In other words, the 'baseline' represents the average or normal state of the magnetic field, and by subtracting this from the actual measurements, scientists can better see and analyze the deviations or anomalies in the field. This could be particularly important for identifying and studying events like magnetic storms or substorms.
 In short, "Subtract Baseline" is a data preprocessing step that helps isolate the signal of interest (in this case, magnetic variations) from the overall data.
 
-### 2.2.3. High Fidelity and Low Fidelity
+### 3.2.3. High Fidelity and Low Fidelity
 The terms "High Fidelity" and "Low Fidelity" in the context of data typically refer to the level of detail, accuracy, and quality of the data.
 
 High Fidelity data is generally more accurate and has more detailed information. It often comes from higher quality or more precise instruments and measurements. It has a higher resolution, meaning it has more data points over a given interval, which can give a more detailed picture of changes over time.
@@ -218,11 +226,11 @@ SuperMAG service includes data with two different temporal resolutions, 1-min, a
 The 1-min data and all derived products can be accessed by selecting the 'Low Fidelity' option under Indices, Data, Polar Plots, Movies, and Products. 
 The 1-sec data and all derived products can be accessed by selecting the 'High Fidelity' option under Data and Polar Plots.  
 
-## 2.3. Solar wind
+## 3.3. Solar wind
 
-# 3. Datasets descriptions 
+# 4. Datasets descriptions 
 
-## 3.1. Solar wind (description)
+## 4.1. Solar wind (description)
 Here is a description for each column in "Solar wind Omniweb" dataset:
 
 ⮚	**year**: The year in which the observation was made.
@@ -342,9 +350,7 @@ The solar wind's electric field is a critical parameter in understanding space w
 ![Figure_12](./images_GIC/Figure_12.png)  
 *Figure_12*  
 
-
 ⮚	**SYM/H**:
-
 The SYM/H index is a very important tool in the study of geomagnetism and space weather, specifically for monitoring and studying geomagnetic storms. This index is derived from magnetic field measurements taken at several locations around the Earth, and it provides a measure of the changes in the Earth's magnetic field in response to solar activity.
 
 Here's how it works:
@@ -363,7 +369,7 @@ Geomagnetic storms are global disturbances in the Earth's magnetic field caused 
 ●	The SYM/H index is a useful tool for space weather forecasting.  
 ●	This index can range from around -500 to +500 nanoTesla during strong geomagnetic storms as per NOAA's space weather scale for geomagnetic storms
 
-## 3.2. SuperMAG (description)
+## 4.2. SuperMAG (description)
 Here is a description for each column in "SuperMAG" dataset:
 
 ⮚ **Date_UTC**:"Date_UTC" in the SuperMAG dataset represents each observation's timestamp, standardized to Coordinated Universal Time (UTC), an international time standard. Regardless of the geographical location or local time of data collection, using UTC ensures accurate comparison and correlation of global data.
@@ -501,7 +507,7 @@ The 'geo' part of these variables indicates that these measurements are made in 
 
 ⮚ **decl**: The magnetic declination varies greatly across the globe, but it's typically between -30 and +30 degrees.  
 
-## 3.3. The magnitude of variables
+## 4.3. The magnitude of variables
 **It is important to know the magnitude of variables in datasets like solar wind and supermag. What's the reason?**    
 - **Feature Scaling**: Feature scaling is a method used to normalize the range of independent variables or features of data. In other words, it brings all the variables to the same range. Machine learning algorithms perform computations on input data, and if the range of values is not standardized, it could negatively affect the learning process, causing the algorithm to take longer to train or leading to less accurate models. For example, in the case of the gradient descent algorithm (used in linear regression, logistic regression, neural networks), feature scaling can speed up the algorithm's convergence.
 
@@ -515,7 +521,7 @@ The 'geo' part of these variables indicates that these measurements are made in 
 
 - **To understand the physical processes involved**: It is about interpreting the data in the context of underlying real-world phenomena. The magnitudes of the variables aren't just numbers - they represent physical quantities tied to real-world processes. In the supermag data example, understanding the magnitudes is a key part of understanding the interactions of magnetic field lines. It's about connecting the data to the physical world and using it to infer the dynamics of the system we are studying.  
 
-## 3.4. Feature scaling vs. normalization
+## 4.4. Feature scaling vs. normalization
 They are two related concepts used in machine learning and data analysis for preparing the data, but they are not exactly the same thing.
 
 - **Feature Scaling** is a general term that refers to the process of transforming your data so that it fits within a specific scale, like 0-100 or 0-1. You use feature scaling when you're dealing with data that has varying scales and you want to bring all features to the same level of magnitudes. This prevents a feature with a large scale from dominating other features when you apply machine learning algorithms. There are several ways to perform feature scaling, including Min-Max scaling, Standardization (Z-score normalization), and Robust scaling.
@@ -530,11 +536,11 @@ They are two related concepts used in machine learning and data analysis for pre
 
 It's important to note that whether to use feature scaling and/or normalization depends on your specific use case and the machine learning algorithm you're using. Some algorithms (like linear regression, logistic regression, and neural networks) can benefit from normalization or feature scaling, while others (like decision trees and random forests) don't require it.  
 
-# 4. Machine Learning  
+# 5. Machine Learning  
 
-## 4.1. Time Series Analysis
+## 5.1. Time Series Analysis
 
-## 4.2. Kriging Techniques
+## 5.2. Kriging Techniques
 Kriging, also known as Gaussian process regression, is a statistical method used for interpolation and spatial prediction in various fields, including geostatistics, soil science, geology, and public health. It is named after the South African mining engineer Danie Krige, who played a key role in its development. 
 
 Kriging involves a multistep process that includes exploratory statistical analysis of the data, variogram modeling, creating the surface, and optionally exploring a variance surface. The method is particularly appropriate when there is a spatially correlated distance or directional bias in the data. 
@@ -547,7 +553,7 @@ Kriging provides several advantages, including the ability to incorporate spatia
 
 Overall, kriging is a powerful geostatistical technique that enables spatial interpolation and prediction by incorporating spatial autocorrelation and providing estimates with uncertainty measures. It has wide-ranging applications in fields that require spatial data analysis and prediction.
 
-## 4.3. ADAM
+## 5.3. ADAM
 ADAM, short for Adaptive Moment Estimation, is a popular optimization algorithm used in machine learning and deep learning for training models. It's an extension to stochastic gradient descent, which is a commonly used optimization method for training neural networks.
 ADAM offers several advantages over basic stochastic gradient descent:
 
@@ -569,8 +575,8 @@ ADAM works by maintaining a moving (exponentially decaying) average of past grad
 
 However, despite these benefits, it's worth noting that there are also cases where ADAM might not work as well as other methods, such as RMSProp, SGD with momentum, or others. The choice of optimizer often depends on the specific characteristics of the problem at hand.
 
-## 4.4. Filling missing values
-### 4.4.1. Mean: 
+## 5.4. Filling missing values
+### 5.4.1. Mean: 
 Mean Imputation is a method for handling missing data where the missing values in a dataset are replaced with the mean (average) of the observed values. The mean is calculated by summing all the observed values and dividing by the count of these values.
 
 This technique is straightforward, fast, and easy to understand, making it a popular choice for initial imputations. However, it comes with certain limitations. It assumes that the data are Missing Completely at Random (MCAR), which means that the probability of a value being missing is independent of both observed and unobserved data. If this assumption does not hold true, mean imputation could lead to biased estimates.
@@ -579,14 +585,14 @@ Moreover, while the mean provides a central value, it may not be a good represen
 
 Lastly, mean imputation doesn't consider possible correlations between variables, meaning it ignores any potential relationships that could help provide a more accurate imputation of the missing values. This might oversimplify the imputed data and underestimate the variability in the data, reducing the efficiency of subsequent analyses.
 
-### 4.4.2. Median:
+### 5.4.2. Median:
 Median Imputation is an approach for addressing missing data where the missing values are replaced with the median of the observed values. The median is the middle value in a sorted list of numbers, dividing the distribution into two equal halves. If the count of numbers is odd, the median is the middle number. If it's even, the median is the average of the two middle numbers.
 
 This technique is especially useful when the data distribution is skewed or contains outliers, as the median is less sensitive to such anomalies compared to the mean. It is a simple and robust method to estimate missing values.
 
 Like mean imputation, median imputation is a univariate method, meaning it considers only the distribution of the variable being imputed and ignores potential correlations with other variables. Furthermore, it operates under the assumption that the data are Missing Completely at Random (MCAR). If this is not the case, median imputation could lead to biased estimates, just like mean imputation.  
 
-### 4.4.3. Mode:
+### 5.4.3. Mode:
 The mode is the most frequent value in a column, and it is a less common method for filling missing values. The mode is a good choice if the data is categorical, but it is not a good choice if the data is continuous.
 
 **Advantages**:  
@@ -598,10 +604,10 @@ The mode is the most frequent value in a column, and it is a less common method 
 - Only works for categorical data (it is **not** a good choice if the data is continuous.)
 - Can introduce bias into the data if the mode is not representative of the entire data set
 
-### 4.4.4. Constant number or string: 
+### 5.4.4. Constant number or string: 
 This method involves filling in the missing values with a constant number or string, such as 0 or "unknown". This method is simple to implement, but it can be inaccurate if the constant value does not represent the true value of the missing data.
 
-### 4.4.5. Miss Forest:
+### 5.4.5. Miss Forest:
 MissForest is a non-parametric method that uses the Random Forest algorithm for missing data imputation. It can handle different types of variables, both continuous and categorical. The algorithm treats each feature with missing values as the dependent variable (target) and the others as independent variables (predictors), and then trains a Random Forest model to predict the missing values.
 
 The process involves:
@@ -610,7 +616,7 @@ The process involves:
 
 While MissForest often outperforms other methods in imputing missing data, it may struggle with high-dimensional data or when there's a high percentage of missing data. Also, due to its iterative nature, it can be computationally intensive and time-consuming for large datasets. The suitability of MissForest depends on the nature of the data and the pattern of missing values. Always consider these factors and explore your data thoroughly before choosing an imputation strategy.
 
-### 4.4.6. Mice Forest:
+### 5.4.6. Mice Forest:
 
 "Mice Forest" is a Python package that implements the Multiple Imputation by Chained Equations (MICE) algorithm in conjunction with Random Forests. This powerful combination leverages the flexibility of MICE and the predictive power of Random Forests to handle missing data in a variety of datasets, both categorical and numerical.
 
@@ -630,7 +636,7 @@ However, there are some important considerations to keep in mind:
 
 In summary, Mice Forest brings together the robustness of Multiple Imputations and the predictive strength of Random Forests. Despite its potential computational expense and the challenge of interpretability, it offers an effective solution for handling various types of missing data in diverse datasets. However, it's essential to carefully consider the nature of your missing data and understand the assumptions underlying this method to avoid bias in your analysis.
 
-### 4.4.7. KNN Imputation:
+### 5.4.7. KNN Imputation:
 KNN Imputation is a non-parametric method for filling missing values. KNN stands for "k-nearest neighbors," and it is a machine learning algorithm that is used to find similar observations in a data set.
 
 KNN Imputation works by first finding the k most similar observations to the observation with the missing value. The k most similar observations are the observations that have the smallest distances to the observation with the missing value. The distances between observations are usually calculated using a Euclidean distance metric.
@@ -665,7 +671,7 @@ KNN assumes that the dataset has a metric space structure, which may not be the 
 ![Figure_22](./images_GIC/Figure_22.png)    
 *Figure_22: Regression: Mean*  
   
-## 4.5. Principal component analysis (PCA)
+## 5.5. Principal component analysis (PCA)
 Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of correlated variables into a set of uncorrelated variables called principal components. The principal components are ordered in terms of their variance, with the first principal component having the highest variance and the last principal component having the lowest variance.
 
 PCA is a widely used technique for dimensionality reduction, which is the process of reducing the number of variables in a dataset while preserving as much information as possible. PCA can be used to reduce the dimensionality of a dataset for a variety of purposes, such as:
@@ -695,9 +701,9 @@ PCA is a powerful tool for dimensionality reduction and data analysis. It is a w
 
 As you can see, PCA has transformed the original dataset of 1000 points in 2D space into a new dataset of 2 points in 2D space. The new dataset is a lower-dimensional representation of the original dataset, but it still captures most of the information in the original dataset.
 
-# 5. Papers
+# 6. Papers
 
-## 5.1. PILM: A Survey on Problems, Methods and Applications
+## 6.1. PILM: A Survey on Problems, Methods and Applications
  Introduction
 - Traditional machine learning algorithms have limitations in incorporating prior knowledge or constraints about physical systems. 
 Traditional machine learning algorithms are designed to learn patterns and relationships from data without any prior knowledge or constraints about the physical system being modeled. These algorithms are often based on statistical methods that aim to optimize a specific objective function, such as minimizing prediction error or maximizing accuracy. However, in many real-world applications, there is often prior knowledge or constraints about the physical system that can be leveraged to improve the accuracy and efficiency of machine learning models. For example, in predicting GIC, there is prior knowledge about the Earth's magnetic field and its interactions with solar wind and other factors that cause GIC. Traditional machine learning algorithms have limitations in incorporating this type of prior knowledge or constraints into their models. They may not be able to capture complex relationships between variables or account for physical laws and principles that govern the behavior of the system being modeled. This is where Physics-Informed Machine Learning (PIML) comes in. PIML is a paradigm that seeks to construct models that make use of both empirical data and prior physical knowledge to enhance performance on tasks that involve a physical mechanism. By incorporating physical prior knowledge into machine learning models, PIML can overcome the limitations of traditional machine learning algorithms and improve accuracy and efficiency in tasks such as predicting GIC.
@@ -739,7 +745,7 @@ Conclusion:
 - The paper concludes by discussing future directions for research in PIML such as developing more efficient algorithms for incorporating physical prior knowledge, exploring new types of physical prior knowledge
 
 
-## 5.2. a real-time GMD monitoring system
+## 6.2. a real-time GMD monitoring system
 A real-time GMD (Geomagnetic Disturbance) monitoring system is designed to track and assess geomagnetic events and their potential impact on power grids and electrical systems. Geomagnetic disturbances occur when the Earth's magnetic field is disrupted by solar flares or other space weather phenomena. These disturbances can induce currents in power grids, known as Geomagnetically Induced Currents (GICs), which can pose risks to the stability and reliability of electrical infrastructure.
 
 The purpose of a real-time GMD monitoring system is to provide continuous monitoring and assessment of geomagnetic activity, allowing operators to detect and respond to potential GIC-related issues promptly. Such a system typically involves the following components:
@@ -756,9 +762,9 @@ Integration with Power Grid Systems: The real-time GMD monitoring system is ofte
 
 The implementation of a real-time GMD monitoring system is essential for grid operators and utility companies to understand and manage the potential risks associated with geomagnetic disturbances. By continuously monitoring the Earth's magnetic field and promptly detecting changes, the system enables proactive responses, such as adjusting power grid operations, implementing protective measures, or isolating vulnerable components, to mitigate the impact of GICs on electrical systems.  
 
-# 6. Questions  
+# 7. Questions  
 
-## 6.1. Question 1:  
+## 7.1. Question 1:  
 **How do various solar wind conditions (e.g., IMF components, speed, density, level of turbulence) and different large-scale drivers control the coupling efficiency and the energy/mass transfer from the solar wind to the magnetosphere?**   
 
 The Sun's continuous emission of charged particles, known as the solar wind, interacts with Earth's magnetosphere, the region around our planet dominated by its magnetic field. This interaction is an intricate process, dependent on various properties of the solar wind and controlled by different large-scale drivers.  
@@ -799,7 +805,7 @@ The Sun's continuous emission of charged particles, known as the solar wind, int
 
 These factors combine to control the efficiency of the energy and mass transfer from the solar wind to the magnetosphere. The more efficient this transfer, the more likely it is to cause geomagnetic disturbances, such as substorms and geomagnetic storms, that can impact our technology-dependent society. Predicting these disturbances and understanding the factors that affect them are major goals of space weather research.
 
-## 6.2. Question 2:   
+## 7.2. Question 2:   
 **How do solar wind conditions control the occurrence frequency and location of different magnetospheric plasma waves?**  
 
 The occurrence frequency and location of magnetospheric plasma waves are significantly influenced by solar wind conditions. The solar wind, a stream of charged particles flowing out from the Sun, interacts with the Earth's magnetosphere, creating different types of plasma waves.
@@ -814,7 +820,7 @@ The occurrence frequency and location of magnetospheric plasma waves are signifi
 
 The interaction between solar wind and the Earth's magnetosphere is a complex process involving many factors. The occurrence of different types of magnetospheric plasma waves depends on a combination of these factors, and research is ongoing to better understand these interactions. 
 
-## 6.3. Question 3:
+## 7.3. Question 3:
 **What is the differences between Gaussian distributions and lognormal laws?**  
 
 The Gaussian (also known as Normal) distribution and the Lognormal distribution are both important statistical distributions, but they differ significantly in their properties and applications. Here are some of the key differences:
@@ -852,9 +858,9 @@ Gaussian Distribution: It is used extensively in statistics and natural sciences
 
 Lognormal Distribution: It is often used to model data that cannot go below zero but can become very large, such as populations, prices of goods, and information in bits.  
 
-# 7. Code optimization  
+# 8. Code optimization  
 
-## 7.1. Pure Python to Scientific Phyton  
+## 8.1. Pure Python to Scientific Phyton  
 Python is a powerful language that's easy to learn and use, but it can be slow when dealing with large datasets or complex mathematical operations. This is where scientific Python packages like NumPy, SciPy, and pandas can help.
 
 - **Vectorization with NumPy**: Pure Python loops can be slow. NumPy, a fundamental package for scientific computing in Python, provides support for arrays. These arrays can be multi-dimensional and can do element-wise operations, which is much faster than looping over elements.  
