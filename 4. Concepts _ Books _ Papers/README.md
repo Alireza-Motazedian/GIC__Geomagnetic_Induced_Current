@@ -109,7 +109,17 @@ Geomagnetic Induced Currents (GIC)
 ![Figure_0](./images_GIC/Figure_0.png)  
 *Figure_0*
  
+- **Understanding the Problem**: This is the most important step, as it determines the success of the entire project. **Problem**: predicting solar wind peaks to prepare for and mitigate the impact of solar storms. It would be important to further understand what constitutes a 'peak' in this context (e.g., is it a certain threshold value? Or a relative increase?). It would also be useful to understand the prediction horizon (how far in advance do we need to predict these peaks?). Are there any specific performance metrics that matter most (e.g., sensitivity to false negatives vs false positives)?
 
+- **Data Gathering**: Since you already have the dataset, this step is less of a concern. However, it's worth ensuring you have all the relevant data fields necessary for making the prediction. If additional data could improve the prediction (e.g., other space weather parameters, historical solar storm records), it might be worth gathering that.
+
+- **Data Cleaning**: This step is crucial in your case since you've mentioned that about 20% of the data is missing. Since you've filled the missing data with the median, it's important to check if this approach is not introducing any bias in the data. You might want to consider other imputation methods (like using a model to predict missing values based on other variables) if the median imputation isn't working well. Additionally, dealing with noise in the response variable will also fall under this step. Techniques such as smoothing might be useful in this case.
+
+- **Feature Engineering**: Given the time-series nature of your problem, feature engineering could play a big role. This could involve creating lagged versions of your variables (i.e., the value of the variable at previous time steps), rolling statistics (like rolling mean or rolling standard deviation), and time-based features like hour of the day, day of the week, etc. If your dataset spans multiple solar cycles, cycle-based features could also be useful.
+
+- **Machine Learning/Deep Learning**: In this case, since the goal is to predict peaks in a time series, you might want to look into models designed for time series forecasting (like ARIMA, state space models, LSTM for deep learning) or change point detection models. If the 'peaks' can be well-defined, this could also potentially be treated as a classification problem (predicting whether a time point is a 'peak' or not), in which case classification algorithms would be useful.
+
+- **Maintenance**: Maintenance is important for models that are deployed and used over a long time. In this particular case, since we're still at the problem-solving stage, we don't need to worry about maintenance yet. However, if you plan to use this model for ongoing solar storm prediction, you'll need to think about how to maintain it - this might involve regular retraining with new data, monitoring its predictions over time, and adjusting the model as necessary.
 
 # 2. Introduction
 
