@@ -43,7 +43,11 @@ Geomagnetic Induced Currents (GIC)
         - [5.4.5. Miss Forest](#545-miss-forest)  
         - [5.4.6. Mice Forest](#546-mice-forest)  
         - [5.4.7. KNN Imputation](#547-knn-imputation)     
-    - [5.5. Principal component analysis (PCA)](#55-principal-component-analysis-pca)                 
+    - [5.5. Principal component analysis (PCA)](#55-principal-component-analysis-pca)
+    - [5.6. LSTM](#56-lstm)
+    - [5.7. CNN](#57-cnn)
+    - [5.8. SVM](#58-svm)
+    - [5.9. RF](#59-rf)                                   
 - [6. Papers](#6-papers)	
     - [6.1. PILM: A Survey on Problems, Methods and Applications](#61-pilm-a-survey-on-problems-methods-and-applications)	
     - [6.2. a real-time GMD monitoring system](#62-a-real-time-gmd-monitoring-system)  
@@ -710,6 +714,14 @@ PCA is a powerful tool for dimensionality reduction and data analysis. It is a w
 *Figure_25*
 
 As you can see, PCA has transformed the original dataset of 1000 points in 2D space into a new dataset of 2 points in 2D space. The new dataset is a lower-dimensional representation of the original dataset, but it still captures most of the information in the original dataset.
+## 5.6. LSTM   
+
+## 5.7. CNN  
+
+## 5.8. SVM  
+
+## 5.9. RF  
+
 
 # 6. Papers
 
