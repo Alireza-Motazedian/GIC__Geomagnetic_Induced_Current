@@ -49,6 +49,7 @@ Folder PATH listing
     |       01. Machine Learning Techniques for Space Weather.pdf
     |     
     +---images_GIC
+    |       Figure_0.png
     |       Figure_01.png
     |       Figure_02.png
     |       Figure_03.png
@@ -74,6 +75,20 @@ Folder PATH listing
     |       Figure_23.png
     |       Figure_24.png
     |       Figure_25.png
+    |       Figure_26.png
+    |       Figure_27.png
+    |       Figure_28.png
+    |       Figure_29.png
+    |       Figure_30.png
+    |       Figure_31.png
+    |       Figure_32.png
+    |       Figure_33.png
+    |       Figure_34.png
+    |       Figure_35.png
+    |       Figure_36.png
+    |       Figure_37.png
+    |       Figure_38.png
+    |       Figure_39.png
     |       
     \---Papers
 ```
@@ -96,4 +111,5 @@ Folder PATH listing
 16. [Link](https://link.springer.com/article/10.1007/s10712-019-09579-z) The Role of GlobalRegional Earth Conductivity Models in Natural Geomagnetic Hazard Mitigation.pdf
 17. [Link](https://link.springer.com/article/10.1007/s11207-023-02119-4) Analysis of Geoeffective Impulsive Events on the Sun During the First Half of Solar Cycle 24.pdf
 18. [Link](https://earth-planets-space.springeropen.com/articles/10.1186/s40623-021-01422-3) Measurement of geomagnetically induced current (GIC) around Tokyo, Japan.pdf
-19. [Link](https://www.frontiersin.org/articles/10.3389/fspas.2022.980759/full) Towards an AI-based understanding of the solar wind A critical data analysis of ACE data.pdf
+19. [Link](https://www.frontiersin.org/articles/10.3389/fspas.2022.980759/full) Towards an AI-based understanding of the solar wind A critical data analysis of ACE data.pdf  
+20. [Link](https://assets.researchsquare.com/files/rs-1729251/v1/c0916dae-5765-4433-acab-bff8ae5146ad.pdf?c=1663140007) A Novel Algorithm for Imputing the Missing Values in Incomplete Datasets.pdf  
