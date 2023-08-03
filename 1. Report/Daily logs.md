@@ -26,14 +26,14 @@ Daily logs (Summer 2023)
         - 03-04: 
         - 04-05: 
     - 08-02-2023 Wednesday
-        - 09-10: 
-        - 10-11:  
-        - 11-12: 
-        - 12-01: 
-        - 01-02: 
-        - 02-03: 
-        - 03-04: 
-        - 04-05: 
+        - 09-10: Paper
+        - 10-11: paper 
+        - 11-12: hyperparameters Optimization
+        - 12-01: hyperparameters Optimization
+        - 01-02: hyperparameters Optimization
+        - 02-03: hyperparameters Optimization
+        - 03-04: hyperparameters Optimization
+        - 04-05: report
     - 08-01-2023 Tuesday
         - 09-10: Paper
         - 10-11: Paper 
