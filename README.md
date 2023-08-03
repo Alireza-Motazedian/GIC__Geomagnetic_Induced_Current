@@ -112,4 +112,5 @@ Folder PATH listing
 17. [Link](https://link.springer.com/article/10.1007/s11207-023-02119-4) Analysis of Geoeffective Impulsive Events on the Sun During the First Half of Solar Cycle 24.pdf
 18. [Link](https://earth-planets-space.springeropen.com/articles/10.1186/s40623-021-01422-3) Measurement of geomagnetically induced current (GIC) around Tokyo, Japan.pdf
 19. [Link](https://www.frontiersin.org/articles/10.3389/fspas.2022.980759/full) Towards an AI-based understanding of the solar wind A critical data analysis of ACE data.pdf  
-20. [Link](https://assets.researchsquare.com/files/rs-1729251/v1/c0916dae-5765-4433-acab-bff8ae5146ad.pdf?c=1663140007) A Novel Algorithm for Imputing the Missing Values in Incomplete Datasets.pdf  
+20. [Link](https://assets.researchsquare.com/files/rs-1729251/v1/c0916dae-5765-4433-acab-bff8ae5146ad.pdf?c=1663140007) A Novel Algorithm for Imputing the Missing Values in Incomplete Datasets.pdf
+21. [Link](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2010GL044138) Gap filling of solar wind data by singular spectrum analysis  
