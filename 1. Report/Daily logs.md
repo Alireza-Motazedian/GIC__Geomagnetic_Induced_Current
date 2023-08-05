@@ -8,15 +8,15 @@ Daily logs (Summer 2023)
 
 - Week 11 _ July 31 - 04
     - 08-04-2023 Friday
-        - 09-10: 
-        - 10-11: 
-        - 11-12: 
-        - 12-01: 
-        - 01-02: 
-        - 02-03: 
-        - 03-04: 
-        - 04-05: 
-    - 08-03-2023 Thursday
+        - 09-10: Paper
+        - 10-11: concepts 
+        - 11-12: concepts
+        - 12-01: hyperparameters Optimization
+        - 01-02: hyperparameters Optimization
+        - 02-03: hyperparameters Optimization
+        - 03-04: hyperparameters Optimization
+        - 04-05: concepts
+     - 08-03-2023 Thursday
         - 09-10: 
         - 10-11: 
         - 11-12: 
