@@ -42,7 +42,11 @@ Geomagnetic Induced Currents (GIC)
         - [5.4.4. Constant number or string](#544-constant-number-or-string)  
         - [5.4.5. Miss Forest](#545-miss-forest)  
         - [5.4.6. Mice Forest](#546-mice-forest)  
-        - [5.4.7. KNN Imputation](#547-knn-imputation)     
+        - [5.4.7. KNN Imputation](#547-knn-imputation)  
+        - [5.4.8. Bayesian imputation](#548-bayesian-imputation) 
+        - [5.4.9. Multiple imputation](#549-multiple-imputation)
+        - [5.4.10. Expectation-maximization](#5410-expectation-maximization)
+        - [5.4.11. stochastic regression imputation](#5411-stochastic-regression-imputation) 
     - [5.5. Principal component analysis (PCA)](#55-principal-component-analysis-pca)
     - [5.6. LSTM](#56-lstm)
     - [5.7. CNN](#57-cnn)
@@ -685,6 +689,14 @@ KNN assumes that the dataset has a metric space structure, which may not be the 
 ![Figure_22](./images_GIC/Figure_22.png)    
 *Figure_22: Regression: Mean*  
   
+### 5.4.8. Bayesian imputation 
+
+### 5.4.9. Multiple imputation  
+
+### 5.4.10. Expectation-maximization  
+
+### 5.4.11. stochastic regression imputation  
+
 ## 5.5. Principal component analysis (PCA)
 Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of correlated variables into a set of uncorrelated variables called principal components. The principal components are ordered in terms of their variance, with the first principal component having the highest variance and the last principal component having the lowest variance.
 
