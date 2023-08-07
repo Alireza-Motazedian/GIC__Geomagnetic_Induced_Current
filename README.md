@@ -114,3 +114,6 @@ Folder PATH listing
 19. [Link](https://www.frontiersin.org/articles/10.3389/fspas.2022.980759/full) Towards an AI-based understanding of the solar wind A critical data analysis of ACE data.pdf  
 20. [Link](https://assets.researchsquare.com/files/rs-1729251/v1/c0916dae-5765-4433-acab-bff8ae5146ad.pdf?c=1663140007) A Novel Algorithm for Imputing the Missing Values in Incomplete Datasets.pdf
 21. [Link](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2010GL044138) Gap filling of solar wind data by singular spectrum analysis  
+22. [Link](https://ieeexplore.ieee.org/abstract/document/7858189?casa_token=UoZJHdQ__dAAAAAA:BKaIh0SSqvRGeHZhOPEKmnWPIDT2la5Nh5kpAEFj-o09eC26i8SxJyrmtSvW8QEdf__7pKQm7A) A Review of Missing Values Handling Methods
+on Time-Series Data
+23. []()
