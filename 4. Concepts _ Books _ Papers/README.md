@@ -16,7 +16,8 @@ Geomagnetic Induced Currents (GIC)
     - [2.1. Solar wind: What is it and how does it affect Earth?](#21-solar-wind-what-is-it-and-how-does-it-affect-earth)	
     - [2.2. Geomagnetic Induced Currents (GIC)](#22-geomagnetic-induced-currents-gic)	
     - [2.3. Concept of UT](#23-concept-of-ut)  
-    - [2.4. Dst index ](#24-dst-index)  	
+    - [2.4. Dst index ](#24-dst-index) 
+    - [2.5. Normalization](#25-normalization) 	
 - [3. Website](#3-website)
     - [3.1. Measure instruments](#31-measure-instruments)  
         - [3.1.1. Magnetometer](#311-magnetometer)  
@@ -194,7 +195,21 @@ Here are some images that illustrate the Dst index:
 ![Figure_28](./images_GIC/Figure_28.png)  
 *Figure_28: This image shows the Dst index over time. The Dst index is negative during the geomagnetic storm and then returns to normal after the storm.*     
 
-Overall, the Dst index plays a crucial role in understanding, monitoring, and characterizing the effects of geomagnetic storms, including their association with field-aligned currents and their impact on various technological systems
+Overall, the Dst index plays a crucial role in understanding, monitoring, and characterizing the effects of geomagnetic storms, including their association with field-aligned currents and their impact on various technological systems.  
+
+## 2.5. Normalization  
+Normalization typically means to scale a variable to have a values between 0 and 1, while retaining the original distribution of the values.
+
+The formula for normalization is:
+
+normalized = (value − min) / (max − min)
+
+Where:
+value is the original value
+min is the minimum value of the feature
+max is the maximum value of the feature
+
+All in all, Normalization is a technique to bring different features to a similar scale, which can be very useful in various data processing tasks, especially in machine learning where certain algorithms are sensitive to the magnitude of features. It's easy to perform normalization in pandas with just a few lines of code.
 
 # 3. Website  
 
