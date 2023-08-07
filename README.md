@@ -115,5 +115,6 @@ Folder PATH listing
 20. [Link](https://assets.researchsquare.com/files/rs-1729251/v1/c0916dae-5765-4433-acab-bff8ae5146ad.pdf?c=1663140007) A Novel Algorithm for Imputing the Missing Values in Incomplete Datasets.pdf
 21. [Link](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2010GL044138) Gap filling of solar wind data by singular spectrum analysis  
 22. [Link](https://ieeexplore.ieee.org/abstract/document/7858189?casa_token=UoZJHdQ__dAAAAAA:BKaIh0SSqvRGeHZhOPEKmnWPIDT2la5Nh5kpAEFj-o09eC26i8SxJyrmtSvW8QEdf__7pKQm7A) A Review of Missing Values Handling Methods
-on Time-Series Data
-23. []()
+on Time-Series Data  
+23. [Link](http://www.jtle.net/uploadfile/2016/1108/20161108041850649.pdf) Logistic Regression with Missing Data: A Comparison of Handling Methods, and Effects of Percent Missing Values  
+24. [Link](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=2d5845af5ca4706995081c58c8451fbd733e8750) Evaluation of three Simple Imputation Methods for Enhancing Preprocessing of Data with Missing Values  
