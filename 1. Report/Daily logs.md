@@ -4,7 +4,54 @@ Daily logs (Summer 2023)
 - 8 h/day   
     - Every hour:    
         - 45 minutes: Work   
-        - 15 min: Break (Meditation, Drinking water, Walking, Nap, Workout)   
+        - 15 min: Break (Meditation, Drinking water, Walking, Nap, Workout) 
+          
+- Week 12 _ August 07 - 11
+    - 08-11-2023 Friday
+        - 09-10: 
+        - 10-11:  
+        - 11-12: 
+        - 12-01: 
+        - 01-02: 
+        - 02-03: 
+        - 03-04: 
+        - 04-05: 
+     - 08-10-2023 Thursday
+        - 09-10: 
+        - 10-11: 
+        - 11-12: 
+        - 12-01: 
+        - 01-02: 
+        - 02-03: 
+        - 03-04: 
+        - 04-05: 
+    - 08-09-2023 Wednesday
+        - 09-10: 
+        - 10-11:  
+        - 12-01: 
+        - 01-02: 
+        - 11-12: 
+        - 02-03: 
+        - 03-04: 
+        - 04-05: 
+    - 08-08-2023 Tuesday
+        - 09-10: 
+        - 10-11:  
+        - 11-12: 
+        - 12-01: 
+        - 01-02: 
+        - 02-03: 
+        - 03-04: 
+        - 04-05: 
+    - 08-07-2023 Monday
+        - 09-10: Code
+        - 10-11: Code 
+        - 11-12: Code
+        - 12-01: Code
+        - 01-02: Code
+        - 02-03: Code
+        - 03-04: Code
+        - 04-05: Code
 
 - Week 11 _ July 31 - 04
     - 08-04-2023 Friday
