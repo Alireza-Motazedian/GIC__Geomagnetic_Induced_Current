@@ -27,11 +27,13 @@ Folder PATH listing
 |       GIC Data Exploration.ipynb
 |       
 +---3. Data
-|   |   filled_merged_1995-2011_2015.parq.gzip
+|   |   filled_median_1995-2011_2015.parq.gzip
+|   |   filled_median_engineered_normalized_1995-2011_2015.parq.gzip
+|   |   merged_1995-2011_2015_Wierd_Values_replaced_with_NAs.parq.gzip
 |   |   merged_1995-2011_2015.parq.gzip
-|   |   README.md
 |   |   solar_wind_1995-2022.parq.gzip
 |   |   SuperMAG_1978-2021.parq.gzip
+|   |   README.md
 |   |   
 |   +---images_GIC_data_download
 |           1.png
