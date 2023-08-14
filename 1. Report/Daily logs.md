@@ -8,32 +8,32 @@ Daily logs (Summer 2023)
           
 - Week 12 _ August 07 - 11
     - 08-11-2023 Friday
-        - 09-10: 
-        - 10-11:  
-        - 11-12: 
-        - 12-01: 
-        - 01-02: 
-        - 02-03: 
-        - 03-04: 
-        - 04-05: 
+        - 09-10: Paper
+        - 10-11: Paper 
+        - 11-12: Paper
+        - 12-01: GitHub ErorrGitHub Erorr
+        - 01-02: GitHub Erorr
+        - 02-03: GitHub Erorr
+        - 03-04: GitHub Erorr
+        - 04-05: GitHub Erorr
      - 08-10-2023 Thursday
-        - 09-10: 
-        - 10-11: 
-        - 11-12: 
-        - 12-01: 
-        - 01-02: 
-        - 02-03: 
-        - 03-04: 
-        - 04-05: 
+        - 09-10: Report
+        - 10-11: Meeting
+        - 11-12: Concepts 
+        - 12-01: Concepts
+        - 01-02: Concepts
+        - 02-03: Concepts
+        - 03-04: Concepts
+        - 04-05: Concepts
     - 08-09-2023 Wednesday
-        - 09-10: 
-        - 10-11:  
-        - 12-01: 
-        - 01-02: 
-        - 11-12: 
-        - 02-03: 
-        - 03-04: 
-        - 04-05: 
+        - 09-10: Code
+        - 10-11: Code 
+        - 12-01: Code
+        - 01-02: Concepts
+        - 11-12: Concepts
+        - 02-03: Concepts
+        - 03-04: Report
+        - 04-05: Report
     - 08-08-2023 Tuesday
         - 09-10: Code
         - 10-11: Code 
