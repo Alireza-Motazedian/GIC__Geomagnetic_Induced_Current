@@ -35,14 +35,14 @@ Daily logs (Summer 2023)
         - 03-04: 
         - 04-05: 
     - 08-15-2023 Tuesday
-        - 09-10: 
-        - 10-11:  
-        - 11-12: 
-        - 12-01: 
-        - 01-02: 
-        - 02-03: 
-        - 03-04: 
-        - 04-05: 
+        - 09-10: Roadmap of the Paper
+        - 10-11: Roadmap of the Paper 
+        - 11-12: Roadmap of the Paper
+        - 12-01: Roadmap of the Paper
+        - 01-02: Roadmap of the Paper
+        - 02-03: Roadmap of the Paper 
+        - 03-04: Roadmap of the Paper
+        - 04-05: Roadmap of the Paper 
     - 08-14-2023 Monday
         - 09-10: Concepts
         - 10-11: Concepts 
