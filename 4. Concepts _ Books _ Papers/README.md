@@ -704,7 +704,35 @@ KNN assumes that the dataset has a metric space structure, which may not be the 
 ![Figure_22](./images_GIC/Figure_22.png)    
 *Figure_22: Regression: Mean*  
   
-### 5.4.8. Bayesian imputation 
+### 5.4.8. Bayesian imputation
+Bayesian imputation refers to a probabilistic method used to estimate missing values in a dataset by employing Bayesian principles. Unlike deterministic imputation methods, which fill missing data points with a single fixed value, Bayesian imputation takes into account the uncertainty associated with imputing missing values and often provides multiple plausible imputed datasets.
+
+Here's a high-level overview of Bayesian imputation:
+
+Prior Distribution: Bayesian methods rely on prior beliefs (prior distributions) about the parameters of interest. In the context of imputation, a prior distribution can reflect our beliefs about the process generating the missing values.
+
+Likelihood Function: The likelihood represents the probability of observing the data given some parameters. For imputation, the likelihood would describe the probability of observing the available data under different assumptions about the missing values and the parameters governing their distribution.
+
+Posterior Distribution: By combining the likelihood with the prior using Bayes' theorem, we get the posterior distribution. This posterior distribution gives updated beliefs about the parameters of interest after observing the data.
+
+Imputation Process:
+
+Randomly draw parameter values from the posterior distribution.
+Use these parameter values to impute the missing data points.
+This process is repeated many times to generate multiple complete datasets. Each dataset will have slightly different imputations based on the random draws from the posterior, reflecting the uncertainty about the missing values.
+Analysis: After obtaining multiple imputed datasets, an analysis (e.g., regression) can be performed on each dataset. The results are then combined to produce a single set of estimates that account for imputation uncertainty.
+
+Bayesian imputation offers several benefits:
+
+Uncertainty Handling: By generating multiple imputed datasets, Bayesian imputation provides a way to account for the uncertainty associated with filling in missing data.
+
+Flexibility: It can incorporate complex models and prior information.
+
+Rich Outputs: Instead of a single value, it offers a distribution of plausible values for the missing data, allowing for richer downstream analyses.
+
+However, Bayesian imputation can be computationally intensive due to the need to sample from the posterior distribution multiple times. Additionally, the choice of prior can sometimes be subjective, although non-informative priors can be used when little is known beforehand.
+
+In practice, Bayesian imputation is often performed using software like WinBUGS, JAGS, or Stan, which facilitate Bayesian modeling and inference.
 
 ### 5.4.9. Multiple imputation  
 
