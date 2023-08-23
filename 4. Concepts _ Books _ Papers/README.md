@@ -722,13 +722,13 @@ Use these parameter values to impute the missing data points.
 This process is repeated many times to generate multiple complete datasets. Each dataset will have slightly different imputations based on the random draws from the posterior, reflecting the uncertainty about the missing values.
 Analysis: After obtaining multiple imputed datasets, an analysis (e.g., regression) can be performed on each dataset. The results are then combined to produce a single set of estimates that account for imputation uncertainty.
 
-Bayesian imputation offers several benefits:
+**Benefits**:
 
-Uncertainty Handling: By generating multiple imputed datasets, Bayesian imputation provides a way to account for the uncertainty associated with filling in missing data.
+- **Uncertainty Handling**: By generating multiple imputed datasets, Bayesian imputation provides a way to account for the uncertainty associated with filling in missing data.
 
-Flexibility: It can incorporate complex models and prior information.
+- **Flexibilit**y: It can incorporate complex models and prior information.
 
-Rich Outputs: Instead of a single value, it offers a distribution of plausible values for the missing data, allowing for richer downstream analyses.
+- **Rich Outputs**: Instead of a single value, it offers a distribution of plausible values for the missing data, allowing for richer downstream analyses.
 
 However, Bayesian imputation can be computationally intensive due to the need to sample from the posterior distribution multiple times. Additionally, the choice of prior can sometimes be subjective, although non-informative priors can be used when little is known beforehand.
 
