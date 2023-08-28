@@ -709,18 +709,18 @@ Bayesian imputation refers to a probabilistic method used to estimate missing va
 
 Here's a high-level overview of Bayesian imputation:
 
-Prior Distribution: Bayesian methods rely on prior beliefs (prior distributions) about the parameters of interest. In the context of imputation, a prior distribution can reflect our beliefs about the process generating the missing values.
+**Prior Distribution**: Bayesian methods rely on prior beliefs (prior distributions) about the parameters of interest. In the context of imputation, a prior distribution can reflect our beliefs about the process generating the missing values.
 
-Likelihood Function: The likelihood represents the probability of observing the data given some parameters. For imputation, the likelihood would describe the probability of observing the available data under different assumptions about the missing values and the parameters governing their distribution.
+**Likelihood Function**: The likelihood represents the probability of observing the data given some parameters. For imputation, the likelihood would describe the probability of observing the available data under different assumptions about the missing values and the parameters governing their distribution.
 
-Posterior Distribution: By combining the likelihood with the prior using Bayes' theorem, we get the posterior distribution. This posterior distribution gives updated beliefs about the parameters of interest after observing the data.
+**Posterior Distribution**: By combining the likelihood with the prior using Bayes' theorem, we get the posterior distribution. This posterior distribution gives updated beliefs about the parameters of interest after observing the data.
 
-Imputation Process:
-
+**Imputation Process**:
 Randomly draw parameter values from the posterior distribution.
 Use these parameter values to impute the missing data points.
 This process is repeated many times to generate multiple complete datasets. Each dataset will have slightly different imputations based on the random draws from the posterior, reflecting the uncertainty about the missing values.
-Analysis: After obtaining multiple imputed datasets, an analysis (e.g., regression) can be performed on each dataset. The results are then combined to produce a single set of estimates that account for imputation uncertainty.
+
+**Analysis**: After obtaining multiple imputed datasets, an analysis (e.g., regression) can be performed on each dataset. The results are then combined to produce a single set of estimates that account for imputation uncertainty.
 
 **Benefits**:
 
