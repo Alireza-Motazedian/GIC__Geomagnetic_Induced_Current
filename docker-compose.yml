@@ -1,0 +1,16 @@
+services:
+  data-science-project:
+    build:
+      context: .
+      args:
+        - KERNEL_NAME=${PROJECT_NAME:-data-science-project}
+    image: ${PROJECT_NAME:-data-science-project}
+    container_name: ${PROJECT_NAME:-data-science-project}
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
+    ports:
+      - "8888:8888" # Jupyter Notebook
+    environment:
+      - KERNEL_NAME=${PROJECT_NAME:-data-science-project}
