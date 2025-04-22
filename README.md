@@ -57,6 +57,7 @@
     - [7.1.2. Question 2](#72-question-2) 
 - [8. Code optimization ](#8-code-optimization) 
     - [8.1. Pure Python to Scientific Python](#81-pure-python-to-scientific-phyton)  
+- [9. For Additional Questions ](#9-for-additional-questions) 
     
 
 
@@ -1001,5 +1002,6 @@ For example, instead of using a for loop to iterate over a list of numbers and a
 
 - **Profiling**: The other answer suggests using a profiler to find bottlenecks in the code. A profiler can help you to identify the parts of your code that are taking the most time to execute. Once you have identified the bottlenecks, you can focus your optimization efforts on those areas.  
 
-
+# 9. For Additional Questions
+If you have questions that are not covered in the resources above, the best way to reach [Alireza Motazedian @ Linkedin](https://www.linkedin.com/in/alireza-motazedian/).   
 
