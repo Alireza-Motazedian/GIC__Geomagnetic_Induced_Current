@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./4_Books_Papers/images_GIC/Figure_01.png" alt="logo" width="70%">
+    <img src="./Banner_GIC.png" alt="Banner_GIC" width="70%">
 </div>
 
 <h1 align="center">Geomagnetic Induced Currents (GIC)</h1>
